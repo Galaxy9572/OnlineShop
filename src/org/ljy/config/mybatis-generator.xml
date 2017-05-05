@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" 
+	"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+	<classPathEntry location="E:/mysql-connector-java-5.1.34-bin.jar" />
+	<context id="mybatis_gen">
+		<jdbcConnection connectionURL="jdbc:mysql://localhost:3306/onlineshop"
+			driverClass="com.mysql.jdbc.Driver" userId="root" password="1234" />
+			
+		<javaModelGenerator targetPackage="org.ljy.domain"
+			targetProject="OnlineShop">
+			<property name="enableSubPackages" value="true" />
+			<property name="constructorBased" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		
+		<sqlMapGenerator targetPackage="org.ljy.mapper"
+			targetProject="OnlineShop" />
+			
+		<javaClientGenerator targetPackage="org.ljy.dao"
+			targetProject="OnlineShop" type="XMLMAPPER">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		
+		<table tableName="bank_card" domainObjectName="BankCard"
+			enableCountByExample="true" enableUpdateByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			selectByExampleQueryId="true">
+		</table>
+		
+		<table tableName="goods" domainObjectName="Goods"
+			enableCountByExample="true" enableUpdateByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			selectByExampleQueryId="true">
+		</table>
+		
+		<table tableName="order" domainObjectName="Order"
+			enableCountByExample="true" enableUpdateByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			selectByExampleQueryId="true">
+		</table>
+		
+		<table tableName="payment" domainObjectName="Payment"
+			enableCountByExample="true" enableUpdateByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			selectByExampleQueryId="true">
+		</table>
+		
+		<table tableName="shop" domainObjectName="Shop"
+			enableCountByExample="true" enableUpdateByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			selectByExampleQueryId="true">
+		</table>
+		
+		<table tableName="shopping_cart" domainObjectName="ShoppingCart"
+			enableCountByExample="true" enableUpdateByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			selectByExampleQueryId="true">
+		</table>
+		
+		<table tableName="user" domainObjectName="User"
+			enableCountByExample="true" enableUpdateByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			selectByExampleQueryId="true">
+		</table>
+		
+	</context>
+</generatorConfiguration>

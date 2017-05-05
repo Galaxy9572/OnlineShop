@@ -1,0 +1,940 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="077aee50-2775-4cdf-ad95-b038feb5fc19" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/asm-3.3.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/cglib-2.2.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/commons-collections-3.2.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/commons-dbcp-1.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/commons-lang-2.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/commons-logging-1.1.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/commons-pool.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/fastjson-1.1.34.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/java-json.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/javassist-3.17.1-GA.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/javax.servlet.jsp.jstl-1.2.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/javax.servlet.jsp.jstl-api-1.2.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/log4j-1.2.17.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/mybatis-3.4.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/mybatis-spring-1.3.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/mysql-connector-java-5.1.34-bin.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/servlet-api.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/slf4j-api-1.7.5.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/slf4j-log4j12-1.7.5.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-aop-4.2.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-aspects-4.2.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-beans-4.2.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-context-4.2.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-context-support-4.2.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-core-4.2.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-expression-4.2.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-instrument-4.2.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-instrument-tomcat-4.2.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-jdbc-4.2.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-jms-4.2.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-messaging-4.2.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-orm-4.2.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-oxm-4.2.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-test-4.2.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-tx-4.2.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-web-4.2.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-webmvc-4.2.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-webmvc-portlet-4.2.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-websocket-4.2.5.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/a.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/b.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/beAlert/error.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/beAlert/info.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/beAlert/overlay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/beAlert/question.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/beAlert/success.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/beAlert/warning.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/catalog/digital.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/catalog/man.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/catalog/outdoor.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/catalog/read.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/catalog/woman.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/common/404.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/common/500.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/default-head.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/mybatis-logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/nivo-preloader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/pagination.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/qrcode.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/slider-left-arrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/slider-right-arrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/slides/Thumbs.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/slides/slide1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/slides/slide2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/slides/slide3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/slides/slide5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/slides/slide6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/spring-logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/.idea/artifacts/web_war_exploded.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/.idea/description.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/.idea/libraries/asm_3_3_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/.idea/project-template.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/OnlineShop.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/common/CharacterFliter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/common/Constants.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/common/Page.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/config/jdbc.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/config/log4j.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/config/mybatis-generator.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/config/spring-mybatis.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/config/springmvc-cfg.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/AdminController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/GoodsController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/OrderController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/SearchController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/ShopController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/ShoppingCartController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/UserController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/BankCardMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/GoodsMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/OrderMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/PaymentMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/ShopMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/ShoppingCartMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/UserCollectionMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/UserMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/UserMessageMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/BankCard.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/BankCardExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/Goods.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/GoodsExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/Order.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/OrderExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/Payment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/PaymentExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/Shop.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/ShopExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/ShoppingCart.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/ShoppingCartExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/User.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/UserCollection.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/UserCollectionExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/UserExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/UserMessage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/UserMessageExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/enums/GoodsStatement.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/enums/GoodsType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/enums/OrderStatement.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/enums/ShopStatement.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/enums/ShopType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/enums/UserMessageStatement.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/enums/UserType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/BankCardMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/GoodsMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/OrderMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/PaymentMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/ShopMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/ShoppingCartMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/UserCollectionMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/UserMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/UserMessageMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/BankCardService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/GoodsService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/OrderService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/PaymentService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/SearchService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/ShopService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/ShoppingCartService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/UserCollectionService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/UserMessageService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/UserService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/BankCardServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/GoodsServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/OrderServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/PaymentServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/SearchServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/ShopServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/ShoppingCartServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/UserCollectionServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/UserMessageServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/UserServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/util/AjaxUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/util/EncryptUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/util/EnvironmentUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/util/StringUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/admin/adminIndex.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/admin/adminLogin.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/common/404.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/common/500.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/goods/man.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/navi.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/search/searchResult.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/shop/openShop.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/shop/sellerCenter.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/user/buyerCenter.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/user/userInfo.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/user/userLogin.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/user/userReg.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/web.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/admin/adminIndex.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/admin/adminLogin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/beAlert.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/common.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/index.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/index_banner.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/navi.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/public.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/search/searchResult.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/shop/openShop.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/shop/sellerCenter.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/tables.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/user/buyerCenter.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/user/userInfo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/user/userLogin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/user/userReg.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/index.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/admin/adminIndex.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/admin/adminLogin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/banner.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/beAlert.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/echarts.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/jquery-1.8.3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/jquery.banner.revolution.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/shop/openShop.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/shop/sellerCenter.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/user/buyerCenter.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/user/userInfo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/user/userLogin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/user/userReg.js" />
+    </list>
+    <ignored path="$PROJECT_DIR$/../OnlineShop/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../OnlineShop/web/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1080">
+              <caret line="30" column="58" lean-forward="true" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../OnlineShop" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/web.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="alwaysUpdateSnapshots" value="false" />
+        <option name="checksumPolicy" value="FAIL" />
+        <option name="failureBehavior" value="FAST" />
+        <option name="localRepository" value="" />
+        <option name="mavenHome" value="" />
+        <option name="nonRecursive" value="false" />
+        <option name="outputLevel" value="INFO" />
+        <option name="pluginUpdatePolicy" value="DEFAULT" />
+        <option name="printErrorStackTraces" value="false" />
+        <option name="usePluginRegistry" value="false" />
+        <option name="userSettingsFile" value="" />
+        <option name="workOffline" value="false" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="createModuleGroups" value="false" />
+        <option name="createModulesForAggregators" value="true" />
+        <option name="dedicatedModuleDir" value="" />
+        <option name="downloadDocsAutomatically" value="false" />
+        <option name="downloadSourcesAutomatically" value="false" />
+        <option name="excludeTargetFolder" value="true" />
+        <option name="generatedSourcesFolder" value="AUTODETECT" />
+        <option name="importAutomatically" value="false" />
+        <option name="keepSourceFolders" value="true" />
+        <option name="lookForNested" value="false" />
+        <option name="updateFoldersOnImportPhase" value="process-resources" />
+        <option name="useMavenOutput" value="true" />
+      </MavenImportingSettings>
+    </option>
+    <option name="enabledProfiles">
+      <list />
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="3384" />
+    <option name="height" value="1844" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineShop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineShop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineShop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineShop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineShop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineShop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.0.36">
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../OnlineShop" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="OnlineShop" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="false" name="Tomcat 8.0.36" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.36" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:80/OnlineShop/" />
+      <deployment>
+        <artifact name="web:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/OnlineShop" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_8_0_36_OnlineShop_3" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="48651" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="web:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 8.0.36" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="077aee50-2775-4cdf-ad95-b038feb5fc19" name="Default" comment="" />
+      <created>1493984860920</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1493984860920</updated>
+      <workItem from="1493984864757" duration="232000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="232000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-12" y="-12" width="3384" height="1844" extended-state="6" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32987806" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="30" column="58" lean-forward="true" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

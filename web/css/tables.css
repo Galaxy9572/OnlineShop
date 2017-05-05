@@ -1,0 +1,33 @@
+.tableTitle{
+    width: 100%;
+    margin: 1% auto;
+    text-align: center;
+}
+
+.genTableTitle{
+    background: #ddd;
+}
+
+.genTable th{
+    height: 50px;
+    text-align: center;
+}
+
+.genTable td{
+    height: 50px;
+    text-align: center;
+}
+
+.genTable{
+    border-collapse:collapse;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.addTable{
+    height: 80%;
+    width: 45%;
+    text-align: center;
+    box-shadow: 0 0 20px #ccc;
+}

@@ -1,0 +1,79 @@
+@CHARSET "UTF-8";
+body {
+	margin: 0 0;
+	padding: 0 0;
+	font-family: 微软雅黑;
+	color:#686868;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	color: #3cf;
+}
+
+.logo {
+	margin: 0 0;
+	width: 15%;
+	height: 100%;
+	float: left;
+}
+
+.inputs {
+	-moz-box-shadow: 0 0 10px #ddd inset;
+	-webkit-box-shadow: 0 0 10px #ddd inset;
+	box-shadow: 0 0 10px #ddd inset;
+	border: 1px solid #ddd;
+	height: 30px;
+}
+
+.separator {
+	padding: 0 0;
+	margin: 0 10px;
+	border-right: 1px dashed;
+	color: #3cf;
+	width: 1px;
+	height: 100%;
+	float: left;
+}
+
+.bottom_separator{
+	text-align:center;
+	padding: 0 0;
+	margin: 0 auto;
+	border:0;
+	border-bottom: 1px solid #ccc;
+	color: #3cf;
+	width: 80%;
+	height: 1px;
+}
+
+.bottom_rights {
+	width: 100%;
+	height: 65px;
+    margin-top: 7%;
+	bottom: 0;
+	font-size: 12px;
+    position: relative;
+}
+
+.img_frameworks{
+	width: 90px;
+	height: 25px;
+}
+
+.submit{
+	width: 100%;
+	background-color: #3cf;
+	border: 0;
+	height: 35px;
+	color:#fff;
+}
+
+.select{
+    width: 80%;
+    height: 35px;
+    -moz-box-shadow: 0 0 10px #ddd inset;
+    -webkit-box-shadow: 0 0 10px #ddd inset;
+    box-shadow: 0 0 10px #ddd inset;
+    border: 1px solid #ddd;
+}
