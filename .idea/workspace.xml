@@ -2,222 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="077aee50-2775-4cdf-ad95-b038feb5fc19" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/asm-3.3.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/cglib-2.2.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/commons-collections-3.2.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/commons-dbcp-1.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/commons-lang-2.6.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/commons-logging-1.1.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/commons-pool.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/fastjson-1.1.34.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/java-json.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/javassist-3.17.1-GA.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/javax.servlet.jsp.jstl-1.2.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/javax.servlet.jsp.jstl-api-1.2.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/log4j-1.2.17.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/mybatis-3.4.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/mybatis-spring-1.3.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/mysql-connector-java-5.1.34-bin.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/servlet-api.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/slf4j-api-1.7.5.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/slf4j-log4j12-1.7.5.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-aop-4.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-aspects-4.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-beans-4.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-context-4.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-context-support-4.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-core-4.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-expression-4.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-instrument-4.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-instrument-tomcat-4.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-jdbc-4.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-jms-4.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-messaging-4.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-orm-4.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-oxm-4.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-test-4.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-tx-4.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-web-4.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-webmvc-4.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-webmvc-portlet-4.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-websocket-4.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/a.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/b.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/beAlert/error.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/beAlert/info.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/beAlert/overlay.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/beAlert/question.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/beAlert/success.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/beAlert/warning.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/catalog/digital.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/catalog/man.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/catalog/outdoor.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/catalog/read.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/catalog/woman.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/common/404.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/common/500.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/default-head.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/mybatis-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/nivo-preloader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/pagination.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/qrcode.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/search.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/slider-left-arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/slider-right-arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/slides/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/slides/slide1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/slides/slide2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/slides/slide3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/slides/slide5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/slides/slide6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/image/spring-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/.idea/artifacts/web_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/.idea/description.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/.idea/libraries/asm_3_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/.idea/project-template.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/OnlineShop.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/common/CharacterFliter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/common/Constants.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/common/Page.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/config/jdbc.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/config/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/config/mybatis-generator.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/config/spring-mybatis.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/config/springmvc-cfg.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/AdminController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/GoodsController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/OrderController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/SearchController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/ShopController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/ShoppingCartController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/UserController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/BankCardMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/GoodsMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/OrderMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/PaymentMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/ShopMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/ShoppingCartMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/UserCollectionMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/UserMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/UserMessageMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/BankCard.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/BankCardExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/Goods.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/GoodsExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/Order.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/OrderExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/Payment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/PaymentExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/Shop.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/ShopExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/ShoppingCart.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/ShoppingCartExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/UserCollection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/UserCollectionExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/UserExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/UserMessage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/UserMessageExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/enums/GoodsStatement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/enums/GoodsType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/enums/OrderStatement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/enums/ShopStatement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/enums/ShopType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/enums/UserMessageStatement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/enums/UserType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/BankCardMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/GoodsMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/OrderMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/PaymentMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/ShopMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/ShoppingCartMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/UserCollectionMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/UserMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/UserMessageMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/BankCardService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/GoodsService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/OrderService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/PaymentService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/SearchService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/ShopService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/ShoppingCartService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/UserCollectionService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/UserMessageService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/UserService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/BankCardServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/GoodsServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/OrderServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/PaymentServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/SearchServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/ShopServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/ShoppingCartServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/UserCollectionServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/UserMessageServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/UserServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/util/AjaxUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/util/EncryptUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/util/EnvironmentUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/util/StringUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/admin/adminIndex.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/admin/adminLogin.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/common/404.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/common/500.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/goods/man.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/navi.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/search/searchResult.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/shop/openShop.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/shop/sellerCenter.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/user/buyerCenter.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/user/userInfo.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/user/userLogin.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/user/userReg.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/admin/adminIndex.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/admin/adminLogin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/beAlert.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/common.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/index_banner.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/navi.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/public.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/search/searchResult.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/shop/openShop.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/shop/sellerCenter.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/tables.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/user/buyerCenter.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/user/userInfo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/user/userLogin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/user/userReg.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/admin/adminIndex.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/admin/adminLogin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/banner.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/beAlert.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/echarts.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/jquery-1.8.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/jquery.banner.revolution.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/shop/openShop.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/shop/sellerCenter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/user/buyerCenter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/user/userInfo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/user/userLogin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/user/userReg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../OnlineShop/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/../OnlineShop/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -867,12 +652,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1493984860920</updated>
-      <workItem from="1493984864757" duration="232000" />
+      <workItem from="1493984864757" duration="432000" />
     </task>
+    <task id="LOCAL-00001" summary="2017年5月5日19:52:45">
+      <created>1493985210962</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1493985210962</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="232000" />
+    <option name="totallyTimeSpent" value="432000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-12" y="-12" width="3384" height="1844" extended-state="6" />
@@ -880,7 +673,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32987806" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987806" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -901,7 +694,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -918,6 +711,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2017年5月5日19:52:45" />
+    <option name="LAST_COMMIT_MESSAGE" value="2017年5月5日19:52:45" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
