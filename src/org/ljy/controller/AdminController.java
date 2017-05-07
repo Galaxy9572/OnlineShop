@@ -1,7 +1,7 @@
 package org.ljy.controller;
 
 import org.apache.log4j.Logger;
-import org.ljy.common.Page;
+import org.ljy.common.PagedResult;
 import org.ljy.domain.*;
 import org.ljy.enums.UserType;
 import org.ljy.service.GoodsService;
@@ -24,7 +24,7 @@ import java.util.Map;
  * Created by ljy56 on 2017/4/11.
  */
 @Controller
-public class AdminController {
+public class AdminController extends BaseController{
     private static Logger LOG = Logger.getLogger(AdminController.class);
     @Resource
     private UserService userService;
@@ -95,55 +95,39 @@ public class AdminController {
 
     /**
      * 根据用户名查询用户
-     * @param userId 查询种类，userId，userName
-     * @param userName 查询参数
+     * @param userName 用户名
      */
-    @RequestMapping("/admin/queryBuyerByCondition")
-    public void queryBuyerByCondition(HttpServletRequest request,String userId,String userName){
+    @RequestMapping("/admin/queryUserByCondition")
+    @ResponseBody
+    public String queryUserByCondition(HttpServletRequest request,String userName,int userType,int pageNumber,int pageSize){
+        UserExample example = new UserExample();
+        PagedResult result = null;
         try {
-            if(StringUtil.isEmpty(userId) && !StringUtil.isEmpty(userName)){
-                UserExample example = new UserExample();
-                example.or().andUserNameLike("%"+userName+"%");
-                List<User> users = userService.selectByExample(example);
-                //TODO
+            if(!StringUtil.isEmpty(userName)){
+                example.or().andUserNameEqualTo(userName).andUserTypeEqualTo(userType);
+                result = userService.selectByExampleByPage(example,pageNumber,pageSize);
+                return responseSuccess(result);
+            }else{
+                if(userType == 0){//查询所有
+                    result = userService.selectByExampleByPage(null,pageNumber,pageSize);
+                }else{
+                    example.or().andUserTypeEqualTo(userType);
+                    result = userService.selectByExampleByPage(example,pageNumber,pageSize);
+                }
+                return responseSuccess(result);
             }
         } catch (Exception e) {
             LOG.warn(e.getMessage(),e);
+            return responseFail(e.getMessage());
         }
     }
 
     /**
      * 查询所有买家
      * @param request HttpServletRequest
-     * @param page Page
      */
-    private void queryAllBuyers(HttpServletRequest request,Page page){
-        try {
-            UserExample buyerExample = new UserExample();
-            buyerExample.or().andUserTypeEqualTo(UserType.BUYER.key());
-            List<User> allBuyers = userService.selectByExampleByPage(buyerExample,page);
-            request.setAttribute("allBuyers",allBuyers);
-        } catch (Exception e) {
-            LOG.warn(e.getMessage(),e);
-        }
-    }
+    private void queryAllBuyersByPage(HttpServletRequest request){
 
-    /**
-     * 查询所有买家
-     * @param request HttpServletRequest
-     * @param page Page
-     */
-    public String queryAllSellers(HttpServletRequest request,Page page){
-        try {
-            UserExample sellerExample = new UserExample();
-            sellerExample.or().andUserTypeEqualTo(UserType.SELLER.key());
-            List<User> allSellers = userService.selectByExampleByPage(sellerExample,page);
-            request.setAttribute("allSellers",allSellers);
-            return "admin/adminIndex";
-        } catch (Exception e) {
-            LOG.warn(e.getMessage(),e);
-            return "admin/adminIndex";
-        }
     }
 
     /**

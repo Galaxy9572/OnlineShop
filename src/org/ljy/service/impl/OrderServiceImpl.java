@@ -1,10 +1,12 @@
 package org.ljy.service.impl;
 
-import org.ljy.common.Page;
+import com.github.pagehelper.PageHelper;
+import org.ljy.common.PagedResult;
 import org.ljy.dao.OrderMapper;
 import org.ljy.domain.Order;
 import org.ljy.domain.OrderExample;
 import org.ljy.service.OrderService;
+import org.ljy.util.BeanUtil;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -47,8 +49,11 @@ public class OrderServiceImpl implements OrderService {
 	}
 
 	@Override
-	public List<Order> selectByExampleByPage(OrderExample example, Page page) {
-		return orderMapper.selectByExampleByPage(example, page);
+	public PagedResult selectByExampleByPage(OrderExample example, Integer pageNo, Integer pageSize) {
+		pageNo = pageNo == null?1:pageNo;
+		pageSize = pageSize == null?10:pageSize;
+		PageHelper.startPage(pageNo,pageSize);
+		return BeanUtil.toPagedResult(orderMapper.selectByExample(example));
 	}
 
 	@Override

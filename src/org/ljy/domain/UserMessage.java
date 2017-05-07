@@ -2,7 +2,7 @@ package org.ljy.domain;
 
 import java.util.Date;
 
-public class UserMessage {
+public class UserMessage{
 
 	private Long messageId;
 	private Long userId;

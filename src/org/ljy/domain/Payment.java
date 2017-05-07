@@ -2,7 +2,7 @@ package org.ljy.domain;
 
 import java.util.Date;
 
-public class Payment {
+public class Payment{
 
 	private Long paymentId;
 	private Long userId;

@@ -2,7 +2,7 @@ package org.ljy.domain;
 
 import java.util.Date;
 
-public class User {
+public class User{
 
 	private Long userId;
 	private String userName;

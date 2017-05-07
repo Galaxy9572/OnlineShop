@@ -1,6 +1,6 @@
 package org.ljy.service;
 
-import org.ljy.common.Page;
+import org.ljy.common.PagedResult;
 import org.ljy.domain.Order;
 import org.ljy.domain.OrderExample;
 
@@ -19,7 +19,7 @@ public interface OrderService {
 
     List<Order> selectByExample(OrderExample example);
 
-    List<Order> selectByExampleByPage(OrderExample example, Page page);
+    PagedResult selectByExampleByPage(OrderExample example, Integer pageNo, Integer pageSize);
 
     Order selectByPrimaryKey(Long orderId);
 

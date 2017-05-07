@@ -1,6 +1,6 @@
 package org.ljy.service;
 
-import org.ljy.common.Page;
+import org.ljy.common.PagedResult;
 import org.ljy.domain.Goods;
 import org.ljy.domain.GoodsExample;
 
@@ -21,9 +21,9 @@ public interface GoodsService {
 
     List<Goods> selectByExample(GoodsExample example);
 
-    List<Goods> selectByExampleWithBLOBsByPage(GoodsExample example,Page page);
+    PagedResult selectByExampleWithBLOBsByPage(GoodsExample example,Integer pageNo,Integer pageSize);
 
-    List<Goods> selectByExampleByPage(GoodsExample example,Page page);
+    PagedResult selectByExampleByPage(GoodsExample example,Integer pageNo,Integer pageSize);
 
     Goods selectByPrimaryKey(Long goodsId);
 

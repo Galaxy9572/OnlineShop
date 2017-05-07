@@ -1,7 +1,7 @@
 package org.ljy.dao;
 
+import com.github.pagehelper.Page;
 import org.apache.ibatis.annotations.Param;
-import org.ljy.common.Page;
 import org.ljy.domain.Payment;
 import org.ljy.domain.PaymentExample;
 

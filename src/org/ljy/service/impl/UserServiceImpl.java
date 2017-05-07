@@ -1,10 +1,12 @@
 package org.ljy.service.impl;
 
-import org.ljy.common.Page;
+import com.github.pagehelper.PageHelper;
+import org.ljy.common.PagedResult;
 import org.ljy.dao.UserMapper;
 import org.ljy.domain.User;
 import org.ljy.domain.UserExample;
 import org.ljy.service.UserService;
+import org.ljy.util.BeanUtil;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -46,8 +48,11 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public List<User> selectByExampleWithBLOBsByPage(UserExample example, Page page) {
-		return userMapper.selectByExampleWithBLOBsByPage(example,page);
+	public PagedResult selectByExampleWithBLOBsByPage(UserExample example, Integer pageNo, Integer pageSize ) {
+		pageNo = pageNo == null?1:pageNo;
+		pageSize = pageSize == null?10:pageSize;
+		PageHelper.startPage(pageNo,pageSize);  //startPage是告诉拦截器说我要开始分页了。分页参数是这两个。
+		return BeanUtil.toPagedResult(userMapper.selectByExampleWithBLOBs(example));
 	}
 
 	@Override
@@ -56,8 +61,11 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public List<User> selectByExampleByPage(UserExample example, Page page) {
-		return userMapper.selectByExampleByPage(example, page);
+	public PagedResult selectByExampleByPage(UserExample example, Integer pageNo, Integer pageSize ) {
+		pageNo = pageNo == null?1:pageNo;
+		pageSize = pageSize == null?10:pageSize;
+		PageHelper.startPage(pageNo,pageSize);
+		return BeanUtil.toPagedResult(userMapper.selectByExample(example));
 	}
 
 	@Override

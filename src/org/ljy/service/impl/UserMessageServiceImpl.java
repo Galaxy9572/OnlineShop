@@ -1,10 +1,12 @@
 package org.ljy.service.impl;
 
-import org.ljy.common.Page;
+import com.github.pagehelper.PageHelper;
+import org.ljy.common.PagedResult;
 import org.ljy.dao.UserMessageMapper;
 import org.ljy.domain.UserMessage;
 import org.ljy.domain.UserMessageExample;
 import org.ljy.service.UserMessageService;
+import org.ljy.util.BeanUtil;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -46,8 +48,11 @@ public class UserMessageServiceImpl implements UserMessageService {
     }
 
     @Override
-    public List<UserMessage> selectByExampleByPage(UserMessageExample example, Page page) {
-        return userMessageMapper.selectByExampleByPage(example, page);
+    public PagedResult selectByExampleByPage(UserMessageExample example, Integer pageNo, Integer pageSize) {
+        pageNo = pageNo == null?1:pageNo;
+        pageSize = pageSize == null?10:pageSize;
+        PageHelper.startPage(pageNo,pageSize);
+        return BeanUtil.toPagedResult(userMessageMapper.selectByExample(example));
     }
 
     @Override

@@ -10,11 +10,14 @@
 <html>
 <head>
     <title>OnlineShop管理系统</title>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/public.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/beAlert.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/admin/adminIndex.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/tables.css">
-    <script src="${pageContext.request.contextPath}/js/jquery-1.8.3.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/jQuery-1.12.3.js"></script>
+    <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/bootstrap-paginator.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/beAlert.js"></script>
     <script src="${pageContext.request.contextPath}/js/admin/adminIndex.js"></script>
 </head>
@@ -30,122 +33,46 @@
         <div id="div_left">
             <dl id="dl_userOperator">
                 <dd><a href="#div_info" class="a_userOperator">信息概览</a></dd>
-                <dd><a href="#div_buyerManage" class="a_userOperator">买家管理</a></dd>
-                <dd><a href="#div_sellerManage" class="a_userOperator">卖家管理</a></dd>
+                <dd><a href="#div_userManage" class="a_userOperator">用户管理</a></dd>
                 <dd><a href="#div_shopManage" class="a_userOperator">商店管理</a></dd>
                 <dd><a href="#div_goodsManage" class="a_userOperator">商品管理</a></dd>
                 <dd><a href="#div_data" class="a_userOperator">数据统计</a></dd>
             </dl>
         </div>
         <div id="div_right">
-            <div id="div_buyerManage" class="content">
+            <div id="div_userManage" class="content">
                 <h3 class="tableTitle">买家管理</h3>
-                <div id="div_buyerFilter">
-                    用户ID： <input type="text" id="buyerId" class="inputs">
-                    用户名： <input type="text" id="buyerName" class="inputs">
-                    当前页： <select>
-                                <c:if test="${requestScope.buyerPage != null}">
-                                    <c:forEach begin="1" end="${requestScope.buyerPage.totalPageCount}" varStatus="status">
-                                        <option value="${status.index}">${status.index}</option>
-                                    </c:forEach>
-                                </c:if>
+                <div id="div_userFilter">
+                    用户名： <input type="text" id="userName">
+                    用户类型：<select id="select_userType">
+                                <option value="0">全部</option>
+                                <option value="1">买家</option>
+                                <option value="2">卖家</option>
                             </select>
-                    <input type="button" value="搜索" id="bt_buyerQuerySubmit" class="bt_search">
+                    <input type="button" value="搜索" id="bt_userQuerySubmit" class="bt_search">
                     <br><br>
                 </div>
-                <table id="buyerManageTable" class="genTable">
+                <table id="userManageTable" class="genTable">
                     <thead class="genTableTitle">
                     <tr>
                         <th width="5%"><input type="checkbox">&nbsp;全选</th>
                         <th width="10%">ID</th>
-                        <th width="15%">用户名</th>
-                        <th width="10%">用户类型</th>
-                        <th width="15%">E-Mail</th>
+                        <th width="10%">用户名</th>
+                        <th width="8%">用户类型</th>
+                        <th width="12%">E-Mail</th>
                         <th width="10%">手机</th>
                         <th width="10%">状态</th>
-                        <th width="10%">创建时间</th>
-                        <th width="10%">修改时间</th>
-                        <th width="5%">操作</th>
+                        <th width="15%">创建时间</th>
+                        <th width="15%">修改时间</th>
+                        <th width="10%">操作</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <c:choose>
-                        <c:when test="${requestScope.allBuyers == null}">
-                            <tr><td colspan="10">暂无记录</td></tr>
-                        </c:when>
-                        <c:otherwise>
-                            <c:forEach var="item" items="${requestScope.allBuyers}">
-                                <tr>
-                                    <td><input type="checkbox"></td>
-                                    <td>${item.userId}</td>
-                                    <td>${item.userName}</td>
-                                    <td>${item.userType}</td>
-                                    <td>${item.email}</td>
-                                    <td>${item.phone}</td>
-                                    <td>${item.statement}</td>
-                                    <td>${item.createTime}</td>
-                                    <td>${item.modifyTime}</td>
-                                    <td><a href="">删除</a></td>
-                                </tr>
-                            </c:forEach>
-                        </c:otherwise>
-                    </c:choose>
+
+                    <tbody id="userManageTableBody">
                     </tbody>
                 </table>
-                <div class="div_page">
-                    ${requestScope.page.totalCount}
-                </div>
-            </div>
-            <div id="div_sellerManage" class="content">
-                <h3 class="tableTitle">卖家管理</h3>
-                <div id="div_sellerFilter">
-                    用户ID： <input type="text" id="sellerId" class="inputs">
-                    用户名： <input type="text" id="sellerName" class="inputs">
-                    <input type="button" value="搜索" id="bt_sellerQuerySubmit" class="bt_search">
-                    <br><br>
-                </div>
-                <table id="sellerManageTable" class="genTable">
-                    <thead class="genTableTitle">
-                    <tr>
-                        <th width="5%"><input type="checkbox">&nbsp;全选</th>
-                        <th width="10%">ID</th>
-                        <th width="15%">用户名</th>
-                        <th width="10%">用户类型</th>
-                        <th width="15%">E-Mail</th>
-                        <th width="10%">手机</th>
-                        <th width="10%">状态</th>
-                        <th width="10%">创建时间</th>
-                        <th width="10%">修改时间</th>
-                        <th width="5%">操作</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <c:choose>
-                        <c:when test="${requestScope.allSellers == null}">
-                            <tr><td colspan="10">暂无记录</td></tr>
-                        </c:when>
-                        <c:otherwise>
-                            <c:forEach var="item" items="${requestScope.allSellers}">
-                                <tr>
-                                    <td><input type="checkbox"></td>
-                                    <td>${item.userId}</td>
-                                    <td>${item.userName}</td>
-                                    <td>${item.userType}</td>
-                                    <td>${item.email}</td>
-                                    <td>${item.phone}</td>
-                                    <td>${item.statement}</td>
-                                    <td>${item.createTime}</td>
-                                    <td>${item.modifyTime}</td>
-                                    <td><a href="">删除</a></td>
-                                </tr>
-                            </c:forEach>
-                        </c:otherwise>
-                    </c:choose>
-                    </tbody>
-                </table>
-                <div class="div_page">
-                    ${requestScope.page.totalCount}
-                </div>
+                <!-- 底部分页按钮 -->
+                <div id="bottomTab"></div>
             </div>
             <div id="div_shopManage" class="content">
 

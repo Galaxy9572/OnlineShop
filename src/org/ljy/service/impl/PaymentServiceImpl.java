@@ -1,10 +1,12 @@
 package org.ljy.service.impl;
 
-import org.ljy.common.Page;
+import com.github.pagehelper.PageHelper;
+import org.ljy.common.PagedResult;
 import org.ljy.dao.PaymentMapper;
 import org.ljy.domain.Payment;
 import org.ljy.domain.PaymentExample;
 import org.ljy.service.PaymentService;
+import org.ljy.util.BeanUtil;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -47,8 +49,11 @@ public class PaymentServiceImpl implements PaymentService {
 	}
 
 	@Override
-	public List<Payment> selectByExampleByPage(PaymentExample example, Page page) {
-		return paymentMapper.selectByExampleByPage(example,page);
+	public PagedResult selectByExampleByPage(PaymentExample example, Integer pageNo, Integer pageSize) {
+		pageNo = pageNo == null?1:pageNo;
+		pageSize = pageSize == null?10:pageSize;
+		PageHelper.startPage(pageNo,pageSize);
+		return BeanUtil.toPagedResult(paymentMapper.selectByExample(example));
 	}
 
 	@Override

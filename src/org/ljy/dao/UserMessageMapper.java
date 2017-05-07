@@ -1,7 +1,6 @@
 package org.ljy.dao;
 
 import org.apache.ibatis.annotations.Param;
-import org.ljy.common.Page;
 import org.ljy.domain.UserMessage;
 import org.ljy.domain.UserMessageExample;
 
@@ -21,7 +20,7 @@ public interface UserMessageMapper {
 
 	List<UserMessage> selectByExample(UserMessageExample example);
 
-	List<UserMessage> selectByExampleByPage(@Param("example") UserMessageExample example, @Param("page")Page page);
+	List<UserMessage> selectByExampleByPage(@Param("example") UserMessageExample example);
 
 	UserMessage selectByPrimaryKey(Long messageId);
 

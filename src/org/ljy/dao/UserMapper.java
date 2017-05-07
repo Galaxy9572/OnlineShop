@@ -1,7 +1,6 @@
 package org.ljy.dao;
 
 import org.apache.ibatis.annotations.Param;
-import org.ljy.common.Page;
 import org.ljy.domain.User;
 import org.ljy.domain.UserExample;
 
@@ -21,11 +20,11 @@ public interface UserMapper {
 
 	List<User> selectByExampleWithBLOBs(UserExample example);
 
-	List<User> selectByExampleWithBLOBsByPage(@Param("example") UserExample example,@Param("page") Page page);
+	List<User> selectByExampleWithBLOBsByPage(@Param("example") UserExample example);
 
 	List<User> selectByExample(UserExample example);
 
-	List<User> selectByExampleByPage(@Param("example") UserExample example,@Param("page") Page page);
+	List<User> selectByExampleByPage(@Param("example") UserExample example);
 
 	User selectByPrimaryKey(Long userId);
 

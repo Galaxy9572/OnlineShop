@@ -1,6 +1,6 @@
 package org.ljy.service;
 
-import org.ljy.common.Page;
+import org.ljy.common.PagedResult;
 import org.ljy.domain.Payment;
 import org.ljy.domain.PaymentExample;
 
@@ -19,7 +19,7 @@ public interface PaymentService {
 
     List<Payment> selectByExample(PaymentExample example);
 
-    List<Payment> selectByExampleByPage(PaymentExample example, Page page);
+    PagedResult selectByExampleByPage(PaymentExample example, Integer pageNo, Integer pageSize);
 
     Payment selectByPrimaryKey(Long paymentId);
 

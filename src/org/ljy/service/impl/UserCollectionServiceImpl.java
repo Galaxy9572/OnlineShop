@@ -1,12 +1,12 @@
 package org.ljy.service.impl;
 
-import org.ljy.common.Page;
+import com.github.pagehelper.PageHelper;
+import org.ljy.common.PagedResult;
 import org.ljy.dao.UserCollectionMapper;
 import org.ljy.domain.UserCollection;
 import org.ljy.domain.UserCollectionExample;
-import org.ljy.domain.UserMessage;
-import org.ljy.domain.UserMessageExample;
 import org.ljy.service.UserCollectionService;
+import org.ljy.util.BeanUtil;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -48,8 +48,11 @@ public class UserCollectionServiceImpl implements UserCollectionService {
     }
 
     @Override
-    public List<UserMessage> selectByExampleByPage(UserMessageExample example, Page page) {
-        return userCollectionMapper.selectByExampleByPage(example, page);
+    public PagedResult selectByExampleByPage(UserCollectionExample example, Integer pageNo, Integer pageSize) {
+        pageNo = pageNo == null?1:pageNo;
+        pageSize = pageSize == null?10:pageSize;
+        PageHelper.startPage(pageNo,pageSize);
+        return BeanUtil.toPagedResult(userCollectionMapper.selectByExample(example));
     }
 
     @Override

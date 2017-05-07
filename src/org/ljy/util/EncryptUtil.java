@@ -1,8 +1,6 @@
 package org.ljy.util;
 
-import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 
 /**
  * MD5加密
@@ -14,7 +12,7 @@ public class EncryptUtil {
 
 	/**
 	 * MD5加密
-	 * @param 明文
+	 * @param plain 明文
 	 * @return 返回32位小写数字加字母
 	 */
 	public static String encrypt(String plain) {
@@ -34,9 +32,7 @@ public class EncryptUtil {
 				buf.append(Integer.toHexString(i));
 			}
 			re_md5 = buf.toString();
-		} catch (NoSuchAlgorithmException e) {
-			e.printStackTrace();
-		} catch (UnsupportedEncodingException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return re_md5;

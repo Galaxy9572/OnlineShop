@@ -2,7 +2,7 @@ package org.ljy.domain;
 
 import java.util.Date;
 
-public class Shop {
+public class Shop{
 
 	private Long shopId;
 	private Long userId;

@@ -1,7 +1,7 @@
 package org.ljy.service;
 
 import org.apache.ibatis.annotations.Param;
-import org.ljy.common.Page;
+import org.ljy.common.PagedResult;
 import org.ljy.domain.BankCard;
 import org.ljy.domain.BankCardExample;
 
@@ -20,7 +20,7 @@ public interface BankCardService {
 
     List<BankCard> selectByExample(BankCardExample example);
 
-    List<BankCard> selectByExampleByPage(BankCardExample example,Page page);
+    PagedResult selectByExampleByPage(BankCardExample example,Integer pageNo,Integer pageSize);
 
     BankCard selectByPrimaryKey(Long bankCardId);
 

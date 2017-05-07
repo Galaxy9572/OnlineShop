@@ -98,7 +98,7 @@ public class UserController {
     @RequestMapping("/user/logout")
     public String userLogout(HttpSession session, User user) {
         session.removeAttribute("user");
-        return index();
+        return "redirect:../";
     }
 
     /**

@@ -2,7 +2,7 @@ package org.ljy.domain;
 
 import java.util.Date;
 
-public class BankCard {
+public class BankCard{
 
 	private Long bankCardId;
 	private String userId;

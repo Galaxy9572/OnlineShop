@@ -1,6 +1,6 @@
 package org.ljy.service;
 
-import org.ljy.common.Page;
+import org.ljy.common.PagedResult;
 import org.ljy.domain.UserMessage;
 import org.ljy.domain.UserMessageExample;
 
@@ -22,7 +22,7 @@ public interface UserMessageService {
 
     List<UserMessage> selectByExample(UserMessageExample example);
 
-    List<UserMessage> selectByExampleByPage(UserMessageExample example,Page page);
+    PagedResult selectByExampleByPage(UserMessageExample example, Integer pageNo, Integer pageSize);
 
     UserMessage selectByPrimaryKey(Long messageId);
 

@@ -1,10 +1,12 @@
 package org.ljy.service.impl;
 
-import org.ljy.common.Page;
+import com.github.pagehelper.PageHelper;
+import org.ljy.common.PagedResult;
 import org.ljy.dao.GoodsMapper;
 import org.ljy.domain.Goods;
 import org.ljy.domain.GoodsExample;
 import org.ljy.service.GoodsService;
+import org.ljy.util.BeanUtil;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -52,13 +54,19 @@ public class GoodsServiceImpl implements GoodsService {
 	}
 
 	@Override
-	public List<Goods> selectByExampleWithBLOBsByPage(GoodsExample example, Page page) {
-		return goodsMapper.selectByExampleWithBLOBsByPage(example, page);
+	public PagedResult selectByExampleWithBLOBsByPage(GoodsExample example,Integer pageNo,Integer pageSize) {
+		pageNo = pageNo == null?1:pageNo;
+		pageSize = pageSize == null?10:pageSize;
+		PageHelper.startPage(pageNo,pageSize);
+		return BeanUtil.toPagedResult(goodsMapper.selectByExampleWithBLOBs(example));
 	}
 
 	@Override
-	public List<Goods> selectByExampleByPage(GoodsExample example, Page page) {
-		return goodsMapper.selectByExampleByPage(example, page);
+	public PagedResult selectByExampleByPage(GoodsExample example,Integer pageNo,Integer pageSize) {
+		pageNo = pageNo == null?1:pageNo;
+		pageSize = pageSize == null?10:pageSize;
+		PageHelper.startPage(pageNo,pageSize);
+		return BeanUtil.toPagedResult(goodsMapper.selectByExample(example));
 	}
 
 	@Override

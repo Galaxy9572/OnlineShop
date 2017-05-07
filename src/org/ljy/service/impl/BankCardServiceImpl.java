@@ -1,10 +1,12 @@
 package org.ljy.service.impl;
 
-import org.ljy.common.Page;
+import com.github.pagehelper.PageHelper;
+import org.ljy.common.PagedResult;
 import org.ljy.dao.BankCardMapper;
 import org.ljy.domain.BankCard;
 import org.ljy.domain.BankCardExample;
 import org.ljy.service.BankCardService;
+import org.ljy.util.BeanUtil;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -46,8 +48,11 @@ public class BankCardServiceImpl implements BankCardService {
 	}
 
 	@Override
-	public List<BankCard> selectByExampleByPage(BankCardExample example, Page page) {
-		return bankCardMapper.selectByExampleByPage(example, page);
+	public PagedResult selectByExampleByPage(BankCardExample example, Integer pageNo, Integer pageSize) {
+		pageNo = pageNo == null?1:pageNo;
+		pageSize = pageSize == null?10:pageSize;
+		PageHelper.startPage(pageNo,pageSize);  //startPage是告诉拦截器说我要开始分页了。分页参数是这两个。
+		return BeanUtil.toPagedResult(bankCardMapper.selectByExample(example));
 	}
 
 	@Override

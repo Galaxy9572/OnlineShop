@@ -144,24 +144,6 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByExampleWithBLOBsByPage" parameterType="map" resultMap="ResultMapWithBLOBs">
-    select
-    <if test="distinct">
-      distinct
-    </if>
-    'true' as QUERYID,
-    <include refid="Base_Column_List" />
-    ,
-    <include refid="Blob_Column_List" />
-    from user
-    <if test="_parameter != null">
-      <include refid="Example_Where_Clause" />
-    </if>
-    <if test="orderByClause != null">
-      order by ${orderByClause}
-    </if>
-    limit #{page.startPos},#{page.pageSize}
-  </select>
   <select id="selectByExample" parameterType="org.ljy.domain.UserExample" resultMap="BaseResultMap">
     <!--
       WARNING - @mbg.generated

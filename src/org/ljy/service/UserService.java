@@ -1,6 +1,6 @@
 package org.ljy.service;
 
-import org.ljy.common.Page;
+import org.ljy.common.PagedResult;
 import org.ljy.domain.User;
 import org.ljy.domain.UserExample;
 
@@ -24,11 +24,11 @@ public interface UserService {
 
     List<User> selectByExampleWithBLOBs(UserExample example);
 
-    List<User> selectByExampleWithBLOBsByPage(UserExample example, Page page);
+    PagedResult selectByExampleWithBLOBsByPage(UserExample example, Integer pageNo, Integer pageSize );
 
     List<User> selectByExample(UserExample example);
 
-    List<User> selectByExampleByPage(UserExample example,Page page);
+    PagedResult selectByExampleByPage(UserExample example, Integer pageNo, Integer pageSize );
 
     User selectByPrimaryKey(Long userId);
 

@@ -1,7 +1,6 @@
 package org.ljy.dao;
 
 import org.apache.ibatis.annotations.Param;
-import org.ljy.common.Page;
 import org.ljy.domain.UserCollection;
 import org.ljy.domain.UserCollectionExample;
 import org.ljy.domain.UserMessage;
@@ -23,7 +22,7 @@ public interface UserCollectionMapper {
 
 	List<UserCollection> selectByExample(UserCollectionExample example);
 
-	List<UserMessage> selectByExampleByPage(@Param("example") UserMessageExample example, @Param("page")Page page);
+	List<UserMessage> selectByExampleByPage(@Param("example") UserMessageExample example);
 
 	UserCollection selectByPrimaryKey(Long collectionId);
 

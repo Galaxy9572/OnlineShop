@@ -1,7 +1,6 @@
 package org.ljy.dao;
 
 import org.apache.ibatis.annotations.Param;
-import org.ljy.common.Page;
 import org.ljy.domain.BankCard;
 import org.ljy.domain.BankCardExample;
 
@@ -21,7 +20,7 @@ public interface BankCardMapper {
 
 	List<BankCard> selectByExample(BankCardExample example);
 
-	List<BankCard> selectByExampleByPage(@Param("example") BankCardExample example, @Param("page")Page page);
+	List<BankCard> selectByExampleByPage(@Param("example") BankCardExample example);
 
 	BankCard selectByPrimaryKey(Long bankCardId);
 

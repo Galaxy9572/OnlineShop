@@ -1,7 +1,6 @@
 package org.ljy.dao;
 
 import org.apache.ibatis.annotations.Param;
-import org.ljy.common.Page;
 import org.ljy.domain.Shop;
 import org.ljy.domain.ShopExample;
 
@@ -23,9 +22,9 @@ public interface ShopMapper {
 
 	List<Shop> selectByExample(ShopExample example);
 
-	List<Shop> selectByExampleWithBLOBsByPage(@Param("example") ShopExample example, @Param("page")Page page);
+	List<Shop> selectByExampleWithBLOBsByPage(@Param("example") ShopExample example);
 
-	List<Shop> selectByExampleByPage(@Param("example") ShopExample example,@Param("page") Page page);
+	List<Shop> selectByExampleByPage(@Param("example") ShopExample example);
 
 	Shop selectByPrimaryKey(Long shopId);
 

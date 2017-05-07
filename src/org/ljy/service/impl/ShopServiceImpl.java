@@ -1,10 +1,12 @@
 package org.ljy.service.impl;
 
-import org.ljy.common.Page;
+import com.github.pagehelper.PageHelper;
+import org.ljy.common.PagedResult;
 import org.ljy.dao.ShopMapper;
 import org.ljy.domain.Shop;
 import org.ljy.domain.ShopExample;
 import org.ljy.service.ShopService;
+import org.ljy.util.BeanUtil;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -52,13 +54,19 @@ public class ShopServiceImpl implements ShopService {
 	}
 
 	@Override
-	public List<Shop> selectByExampleWithBLOBsByPage(ShopExample example, Page page) {
-		return shopMapper.selectByExampleWithBLOBsByPage(example, page);
+	public PagedResult selectByExampleWithBLOBsByPage(ShopExample example, Integer pageNo, Integer pageSize) {
+		pageNo = pageNo == null?1:pageNo;
+		pageSize = pageSize == null?10:pageSize;
+		PageHelper.startPage(pageNo,pageSize);
+		return BeanUtil.toPagedResult(shopMapper.selectByExampleWithBLOBs(example));
 	}
 
 	@Override
-	public List<Shop> selectByExampleByPage(ShopExample example, Page page) {
-		return shopMapper.selectByExampleByPage(example, page);
+	public PagedResult selectByExampleByPage(ShopExample example, Integer pageNo, Integer pageSize) {
+		pageNo = pageNo == null?1:pageNo;
+		pageSize = pageSize == null?10:pageSize;
+		PageHelper.startPage(pageNo,pageSize);
+		return BeanUtil.toPagedResult(shopMapper.selectByExample(example));
 	}
 
 	@Override

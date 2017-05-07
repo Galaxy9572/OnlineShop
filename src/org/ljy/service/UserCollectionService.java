@@ -1,10 +1,8 @@
 package org.ljy.service;
 
-import org.ljy.common.Page;
+import org.ljy.common.PagedResult;
 import org.ljy.domain.UserCollection;
 import org.ljy.domain.UserCollectionExample;
-import org.ljy.domain.UserMessage;
-import org.ljy.domain.UserMessageExample;
 
 import java.util.List;
 
@@ -24,7 +22,7 @@ public interface UserCollectionService {
 
     List<UserCollection> selectByExample(UserCollectionExample example);
 
-    List<UserMessage> selectByExampleByPage(UserMessageExample example,Page page);
+    PagedResult selectByExampleByPage(UserCollectionExample example, Integer pageNo, Integer pageSize);
 
     UserCollection selectByPrimaryKey(Long collectionId);
 

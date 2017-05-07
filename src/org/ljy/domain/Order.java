@@ -2,7 +2,7 @@ package org.ljy.domain;
 
 import java.util.Date;
 
-public class Order {
+public class Order{
 
 	private Long orderId;
 	private Long userId;

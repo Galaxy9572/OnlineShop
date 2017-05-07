@@ -1,6 +1,6 @@
 package org.ljy.service;
 
-import org.ljy.common.Page;
+import org.ljy.common.PagedResult;
 import org.ljy.domain.Shop;
 import org.ljy.domain.ShopExample;
 
@@ -21,9 +21,9 @@ public interface ShopService {
 
     List<Shop> selectByExample(ShopExample example);
 
-    List<Shop> selectByExampleWithBLOBsByPage(ShopExample example, Page page);
+    PagedResult selectByExampleWithBLOBsByPage(ShopExample example, Integer pageNo, Integer pageSize);
 
-    List<Shop> selectByExampleByPage(ShopExample example,Page page);
+    PagedResult selectByExampleByPage(ShopExample example,Integer pageNo, Integer pageSize);
 
     Shop selectByPrimaryKey(Long shopId);
 
