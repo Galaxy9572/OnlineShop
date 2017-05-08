@@ -2,104 +2,121 @@ package org.ljy.domain;
 
 import java.util.Date;
 
-public class Shop{
+public class Shop {
+    private Long shopId;
 
-	private Long shopId;
-	private Long userId;
-	private String shopName;
-	private String location;
-	private Double rank;
-	private Integer statement;
-	private Date createTime;
-	private Date modifyTime;
-	private byte[] portrait;
+    private Long userId;
 
-	public Shop(Long shopId, Long userId, String shopName, String location, Double rank, Integer statement,
-			Date createTime, Date modifyTime, byte[] portrait) {
-		this.shopId = shopId;
-		this.userId = userId;
-		this.shopName = shopName;
-		this.location = location;
-		this.rank = rank;
-		this.statement = statement;
-		this.createTime = createTime;
-		this.modifyTime = modifyTime;
-		this.portrait = portrait;
-	}
+    private Integer shopType;
 
-	public Shop() {
-		super();
-	}
+    private String shopName;
 
-	public Long getShopId() {
-		return shopId;
-	}
+    private String location;
 
-	public void setShopId(Long shopId) {
-		this.shopId = shopId;
-	}
+    private Double rank;
 
-	public Long getUserId() {
-		return userId;
-	}
+    private Integer statement;
 
-	public void setUserId(Long userId) {
-		this.userId = userId;
-	}
+    private Date createTime;
 
-	public String getShopName() {
-		return shopName;
-	}
+    private Date modifyTime;
 
-	public void setShopName(String shopName) {
-		this.shopName = shopName == null ? null : shopName.trim();
-	}
+    private byte[] portrait;
 
-	public String getLocation() {
-		return location;
-	}
+    public Shop(Long shopId, Long userId, Integer shopType, String shopName, String location, Double rank, Integer statement, Date createTime, Date modifyTime, byte[] portrait) {
+        this.shopId = shopId;
+        this.userId = userId;
+        this.shopType = shopType;
+        this.shopName = shopName;
+        this.location = location;
+        this.rank = rank;
+        this.statement = statement;
+        this.createTime = createTime;
+        this.modifyTime = modifyTime;
+        this.portrait = portrait;
+    }
 
-	public void setLocation(String location) {
-		this.location = location == null ? null : location.trim();
-	}
+    public Shop() {
+        super();
+    }
 
-	public Double getRank() {
-		return rank;
-	}
+    public Long getShopId() {
+        return shopId;
+    }
 
-	public void setRank(Double rank) {
-		this.rank = rank;
-	}
+    public void setShopId(Long shopId) {
+        this.shopId = shopId;
+    }
 
-	public Integer getStatement() {
-		return statement;
-	}
+    public Long getUserId() {
+        return userId;
+    }
 
-	public void setStatement(Integer statement) {
-		this.statement = statement;
-	}
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
 
-	public Date getCreateTime() {
-		return createTime;
-	}
+    public Integer getShopType() {
+        return shopType;
+    }
 
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
+    public void setShopType(Integer shopType) {
+        this.shopType = shopType;
+    }
 
-	public Date getModifyTime() {
-		return modifyTime;
-	}
+    public String getShopName() {
+        return shopName;
+    }
 
-	public void setModifyTime(Date modifyTime) {
-		this.modifyTime = modifyTime;
-	}
+    public void setShopName(String shopName) {
+        this.shopName = shopName == null ? null : shopName.trim();
+    }
 
-	public byte[] getPortrait() {
-		return portrait;
-	}
+    public String getLocation() {
+        return location;
+    }
 
-	public void setPortrait(byte[] portrait) {
-		this.portrait = portrait;
-	}
+    public void setLocation(String location) {
+        this.location = location == null ? null : location.trim();
+    }
+
+    public Double getRank() {
+        return rank;
+    }
+
+    public void setRank(Double rank) {
+        this.rank = rank;
+    }
+
+    public Integer getStatement() {
+        return statement;
+    }
+
+    public void setStatement(Integer statement) {
+        this.statement = statement;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getModifyTime() {
+        return modifyTime;
+    }
+
+    public void setModifyTime(Date modifyTime) {
+        this.modifyTime = modifyTime;
+    }
+
+    public byte[] getPortrait() {
+        return portrait;
+    }
+
+    public void setPortrait(byte[] portrait) {
+        this.portrait = portrait;
+    }
 }

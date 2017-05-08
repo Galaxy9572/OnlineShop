@@ -7,36 +7,31 @@ import org.ljy.domain.ShopExample;
 import java.util.List;
 
 public interface ShopMapper {
+    long countByExample(ShopExample example);
 
-	long countByExample(ShopExample example);
+    int deleteByExample(ShopExample example);
 
-	int deleteByExample(ShopExample example);
+    int deleteByPrimaryKey(Long shopId);
 
-	int deleteByPrimaryKey(Long shopId);
+    int insert(Shop record);
 
-	int insert(Shop record);
+    int insertSelective(Shop record);
 
-	int insertSelective(Shop record);
+    List<Shop> selectByExampleWithBLOBs(ShopExample example);
 
-	List<Shop> selectByExampleWithBLOBs(ShopExample example);
+    List<Shop> selectByExample(ShopExample example);
 
-	List<Shop> selectByExample(ShopExample example);
+    Shop selectByPrimaryKey(Long shopId);
 
-	List<Shop> selectByExampleWithBLOBsByPage(@Param("example") ShopExample example);
+    int updateByExampleSelective(@Param("record") Shop record, @Param("example") ShopExample example);
 
-	List<Shop> selectByExampleByPage(@Param("example") ShopExample example);
+    int updateByExampleWithBLOBs(@Param("record") Shop record, @Param("example") ShopExample example);
 
-	Shop selectByPrimaryKey(Long shopId);
+    int updateByExample(@Param("record") Shop record, @Param("example") ShopExample example);
 
-	int updateByExampleSelective(@Param("record") Shop record, @Param("example") ShopExample example);
+    int updateByPrimaryKeySelective(Shop record);
 
-	int updateByExampleWithBLOBs(@Param("record") Shop record, @Param("example") ShopExample example);
+    int updateByPrimaryKeyWithBLOBs(Shop record);
 
-	int updateByExample(@Param("record") Shop record, @Param("example") ShopExample example);
-
-	int updateByPrimaryKeySelective(Shop record);
-
-	int updateByPrimaryKeyWithBLOBs(Shop record);
-
-	int updateByPrimaryKey(Shop record);
+    int updateByPrimaryKey(Shop record);
 }

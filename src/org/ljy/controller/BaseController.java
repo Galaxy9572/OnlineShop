@@ -14,7 +14,7 @@ import java.util.Date;
  * Created by ljy56 on 2017/5/6.
  */
 public class BaseController {
-    protected Logger logger = LoggerFactory.getLogger(this.getClass());
+    protected Logger LOG = LoggerFactory.getLogger(this.getClass());
 
     protected final static String DATE_FORMATE = "yyyy-MM-dd";
 
@@ -28,11 +28,11 @@ public class BaseController {
     public String responseResult(Object obj){
         JSONObject jsonObj = null;
         if(obj != null){
-            logger.info("后端返回对象：{}", obj);
+            LOG.info("后端返回对象：{}", obj);
             JsonConfig jsonConfig = new JsonConfig();
             jsonConfig.registerJsonValueProcessor(Date.class,new JsonDateValueProcessor());
             jsonObj = JSONObject.fromObject(obj, jsonConfig);
-            logger.info("后端返回数据：" + jsonObj);
+            LOG.info("后端返回数据：" + jsonObj);
             if(Constants.SERVICE_RESPONSE_SUCCESS_CODE.equals(jsonObj.getString(Constants.SERVICE_RESPONSE_RESULT_FLAG))){
                 jsonObj.element(Constants.RESPONSE_RESULT_FLAG_ISERROR, false);
                 jsonObj.element(Constants.SERVICE_RESPONSE_RESULT_MSG, "");
@@ -42,7 +42,7 @@ public class BaseController {
                 jsonObj.element(Constants.SERVICE_RESPONSE_RESULT_MSG, errMsg==null?Constants.SERVICE_RESPONSE_NULL:errMsg);
             }
         }
-        logger.info("输出结果：{}", jsonObj.toString());
+        LOG.info("输出结果：{}", jsonObj.toString());
         return jsonObj.toString();
     }
 
@@ -54,15 +54,15 @@ public class BaseController {
     public String responseSuccess(Object obj){
         JSONObject jsonObj = null;
         if(obj != null){
-            logger.info("后端返回对象：{}", obj);
+            LOG.info("后端返回对象：{}", obj);
             JsonConfig jsonConfig = new JsonConfig();
             jsonConfig.registerJsonValueProcessor(Date.class, new JsonDateValueProcessor());
             jsonObj = JSONObject.fromObject(obj, jsonConfig);
-            logger.info("后端返回数据：" + jsonObj);
+            LOG.info("后端返回数据：" + jsonObj);
             jsonObj.element(Constants.RESPONSE_RESULT_FLAG_ISERROR, false);
             jsonObj.element(Constants.SERVICE_RESPONSE_RESULT_MSG, "");
         }
-        logger.info("输出结果：{}", jsonObj.toString());
+        LOG.info("输出结果：{}", jsonObj.toString());
         return jsonObj.toString();
     }
 
@@ -74,13 +74,13 @@ public class BaseController {
     public String responseArraySuccess(Object obj){
         JSONArray jsonObj = null;
         if(obj != null){
-            logger.info("后端返回对象：{}", obj);
+            LOG.info("后端返回对象：{}", obj);
             JsonConfig jsonConfig = new JsonConfig();
             jsonConfig.registerJsonValueProcessor(Date.class, new JsonDateValueProcessor());
             jsonObj = JSONArray.fromObject(obj, jsonConfig);
-            logger.info("后端返回数据：" + jsonObj);
+            LOG.info("后端返回数据：" + jsonObj);
         }
-        logger.info("输出结果：{}", jsonObj.toString());
+        LOG.info("输出结果：{}", jsonObj.toString());
         return jsonObj.toString();
     }
 
@@ -92,15 +92,15 @@ public class BaseController {
     public String responseSuccess(Object obj, String msg){
         JSONObject jsonObj = null;
         if(obj != null){
-            logger.info("后端返回对象：{}", obj);
+            LOG.info("后端返回对象：{}", obj);
             JsonConfig jsonConfig = new JsonConfig();
             jsonConfig.registerJsonValueProcessor(Date.class, new JsonDateValueProcessor());
             jsonObj = JSONObject.fromObject(obj, jsonConfig);
-            logger.info("后端返回数据：" + jsonObj);
+            LOG.info("后端返回数据：" + jsonObj);
             jsonObj.element(Constants.RESPONSE_RESULT_FLAG_ISERROR, false);
             jsonObj.element(Constants.SERVICE_RESPONSE_RESULT_MSG, msg);
         }
-        logger.info("输出结果：{}", jsonObj.toString());
+        LOG.info("输出结果：{}", jsonObj.toString());
         return jsonObj.toString();
     }
 
@@ -113,7 +113,7 @@ public class BaseController {
         JSONObject jsonObj = new JSONObject();
         jsonObj.put(Constants.RESPONSE_RESULT_FLAG_ISERROR, true);
         jsonObj.put(Constants.SERVICE_RESPONSE_RESULT_MSG, errorMsg);
-        logger.info("输出结果：{}", jsonObj.toString());
+        LOG.info("输出结果：{}", jsonObj.toString());
         return jsonObj.toString();
     }
 }
