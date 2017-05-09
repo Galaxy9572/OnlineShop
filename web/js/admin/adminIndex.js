@@ -269,12 +269,13 @@ function shopManageTable(shopName, shopType, pageNumber, pageSize) {
                             $("#shopManageTableBody").append('<tr>')
                                 .append("<td>" + "<input type='checkbox' class='shopCheckboxes' data-shopId='" + this.shopId + "'</td>")
                                 .append("<td>" + this.shopId + "</td>")
+                                .append("<td>" + this.userId + "</td>")
                                 .append("<td>" + this.shopName + "</td>")
                                 .append("<td>" + this.shopType + "</td>")
                                 .append("<td>" + this.location + "</td>")
                                 .append("<td>" + this.rank + "</td>")
                                 .append("<td>" + this.statement + "</td>")
-                                .append("<td>" + this.regTime + "</td>")
+                                .append("<td>" + this.createTime + "</td>")
                                 .append("<td>" + this.modifyTime + "</td>")
                                 .append("<td>" + '<input type="button" value="删除">' + "</td>")
                                 .append('</tr>');
@@ -378,7 +379,7 @@ function goodsManageTable(goodsName, goodsType, pageNumber, pageSize) {
                                 .append("<td>" + this.discout + "</td>")
                                 .append("<td>" + this.rank + "</td>")
                                 .append("<td>" + this.statement + "</td>")
-                                .append("<td>" + this.regTime + "</td>")
+                                .append("<td>" + this.createTime + "</td>")
                                 .append("<td>" + this.modifyTime + "</td>")
                                 .append("<td>" + '<input type="button" value="删除">' + "</td>")
                                 .append('</tr>');

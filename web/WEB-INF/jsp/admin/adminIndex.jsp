@@ -85,9 +85,10 @@
                     <thead class="genTableTitle">
                     <tr>
                         <th width="5%"><input type="checkbox">&nbsp;全选</th>
-                        <th width="10%">ID</th>
-                        <th width="10%">店主</th>
+                        <th width="5%">ID</th>
+                        <th width="10%">店主ID</th>
                         <th width="8%">商店名</th>
+                        <th width="5%">类型</th>
                         <th width="12%">地点</th>
                         <th width="10%">评分</th>
                         <th width="10%">状态</th>
@@ -96,7 +97,6 @@
                         <th width="10%">操作</th>
                     </tr>
                     </thead>
-
                     <tbody id="shopManageTableBody">
                     </tbody>
                 </table>

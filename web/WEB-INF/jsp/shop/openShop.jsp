@@ -41,7 +41,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <td>
                         <select id="select_shopType" class="select">
                             <c:forEach var="type" items="${requestScope.shopType}" varStatus="status">
-                                <option value="${type}">${type}</option>
+                                <option value="${type.key()}">${type.value()}</option>
                             </c:forEach>
                         </select>
                     </td>
@@ -50,8 +50,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <td>地点：</td>
                     <td>
                         <div id="city_1">
-                            省份：<select class="prov"></select>
-                            市/区：<select class="city" disabled="disabled"></select>
+                            省份：<select id="select_province">
+                                    <option value="湖南">湖南</option>
+                                </select>
+                            市/区：<select id="select_city">
+                                    <option value="益阳">益阳</option>
+                                </select>
                         </div>
                     </td>
                 </tr>

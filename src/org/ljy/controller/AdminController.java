@@ -1,6 +1,7 @@
 package org.ljy.controller;
 
 import org.apache.log4j.Logger;
+import org.ljy.common.MsgConstants;
 import org.ljy.common.PagedResult;
 import org.ljy.domain.GoodsExample;
 import org.ljy.domain.ShopExample;
@@ -8,11 +9,11 @@ import org.ljy.domain.User;
 import org.ljy.domain.UserExample;
 import org.ljy.enums.ShopType;
 import org.ljy.enums.UserType;
+import org.ljy.service.AdminService;
 import org.ljy.service.GoodsService;
 import org.ljy.service.ShopService;
 import org.ljy.service.UserService;
 import org.ljy.util.AjaxUtil;
-import org.ljy.util.EncryptUtil;
 import org.ljy.util.StringUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +22,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by ljy56 on 2017/4/11.
@@ -29,6 +33,9 @@ import java.util.*;
 @Controller
 public class AdminController extends BaseController {
     private static Logger LOG = Logger.getLogger(AdminController.class);
+    @Resource
+    private AdminService adminService;
+
     @Resource
     private UserService userService;
 
@@ -75,33 +82,22 @@ public class AdminController extends BaseController {
     public Map<String, String> adminLogin(HttpSession session, User user) {
         Map<String, String> ajaxMap = AjaxUtil.createDefaultAjaxMap();
         try {
-            String userName = user.getUserName();
-            String password = EncryptUtil.encrypt(user.getPassword());
-            if (StringUtil.isNotNullAndNotEmpty(userName) && StringUtil.isNotNullAndNotEmpty(password)) {
-                UserExample example = new UserExample();
-                example.or().andUserNameEqualTo(userName).andPasswordEqualTo(password).andUserTypeEqualTo(UserType.ADMIN.key());
-                List<User> users = userService.selectByExampleWithBLOBs(example);
-                if (users != null && users.size() > 0) {
-                    user = users.get(0);
-                    if (user.getUserType() == UserType.ADMIN.key()) {
-                        session.setAttribute("user", user);
-                        ajaxMap.put("status", "1");
-                        ajaxMap.put("msg", "登录成功");
-                    } else {
-                        ajaxMap.put("status", "0");
-                        ajaxMap.put("msg", "你没有管理员权限");
-                    }
-                } else {
+            User result = userService.userLogin(user);
+            if(result != null){
+                if(result.getUserType() == UserType.ADMIN.key()){
+                    ajaxMap.put("status", "1");
+                    ajaxMap.put("msg", MsgConstants.LOGIN_SUCCESS);
+                }else{
                     ajaxMap.put("status", "0");
-                    ajaxMap.put("msg", "用户名或者密码错误");
+                    ajaxMap.put("msg", MsgConstants.NO_PRIVILEGE);
                 }
-            } else {
+            }else{
                 ajaxMap.put("status", "0");
-                ajaxMap.put("msg", "参数提交错误");
+                ajaxMap.put("msg", MsgConstants.LOGIN_FAILURE);
             }
         } catch (Exception e) {
             ajaxMap.put("status", "0");
-            ajaxMap.put("msg", "系统错误");
+            ajaxMap.put("msg", MsgConstants.SYSTEM_ERROR);
             LOG.warn(e.getMessage(), e);
             return ajaxMap;
         }
@@ -116,21 +112,21 @@ public class AdminController extends BaseController {
             if(StringUtil.isNotNullAndNotEmpty(userId)){
                 UserExample example = new UserExample();
                 example.or().andUserIdEqualTo(Long.parseLong(userId));
-                int flag = userService.deleteByExample(example);
-                if(flag > 0){
+                boolean flag = adminService.deleteUser(example);
+                if(flag){
                     ajaxMap.put("status","1");
-                    ajaxMap.put("msg","删除成功");
+                    ajaxMap.put("msg",MsgConstants.OPERATE_SUCCESS);
                 }else{
                     ajaxMap.put("status","0");
-                    ajaxMap.put("msg","删除失败");
+                    ajaxMap.put("msg",MsgConstants.OPERATE_FAILURE);
                 }
             }else{
                 ajaxMap.put("status","0");
-                ajaxMap.put("msg","参数错误");
+                ajaxMap.put("msg",MsgConstants.WRONG_PARAMETERS);
             }
         } catch (NumberFormatException e) {
             ajaxMap.put("status","0");
-            ajaxMap.put("msg","系统错误");
+            ajaxMap.put("msg",MsgConstants.SYSTEM_ERROR);
         }
         return ajaxMap;
     }
@@ -163,11 +159,11 @@ public class AdminController extends BaseController {
                 }
                 return responseSuccess(result);
             } else {
-                return responseFail("参数错误");
+                return responseFail(MsgConstants.WRONG_PARAMETERS);
             }
         } catch (Exception e) {
             LOG.warn(e.getMessage(), e);
-            return responseFail("系统错误：" + e.getMessage());
+            return responseFail(MsgConstants.SYSTEM_ERROR + e.getMessage());
         }
     }
 
@@ -179,7 +175,7 @@ public class AdminController extends BaseController {
      */
     @RequestMapping("/admin/queryShopByCondition")
     @ResponseBody
-    public String queryAllShops(HttpServletRequest request, String shopName, String shopType, int pageNumber, int pageSize) {
+    public String queryShopByCondition(HttpServletRequest request, String shopName, String shopType, int pageNumber, int pageSize) {
         ShopExample example = new ShopExample();
         PagedResult result = null;
         int shopTypeInt = 0;
@@ -200,11 +196,11 @@ public class AdminController extends BaseController {
                 }
                 return responseSuccess(result);
             }else{
-                return responseFail("参数错误");
+                return responseFail(MsgConstants.WRONG_PARAMETERS);
             }
         } catch (Exception e) {
             LOG.warn(e.getMessage(), e);
-            return responseFail("系统错误");
+            return responseFail(MsgConstants.SYSTEM_ERROR);
         }
     }
 
@@ -236,11 +232,11 @@ public class AdminController extends BaseController {
                 }
                 return responseSuccess(result);
             }else{
-                return responseFail("参数错误");
+                return responseFail(MsgConstants.WRONG_PARAMETERS);
             }
         } catch (Exception e) {
             LOG.warn(e.getMessage(), e);
-            return responseFail("系统错误");
+            return responseFail(MsgConstants.SYSTEM_ERROR);
         }
     }
 }

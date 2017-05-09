@@ -3,39 +3,19 @@ package org.ljy.service;
 import org.ljy.common.PagedResult;
 import org.ljy.domain.Shop;
 import org.ljy.domain.ShopExample;
-
-import java.util.List;
+import org.ljy.domain.User;
 
 public interface ShopService {
     long countByExample(ShopExample example);
 
-    int deleteByExample(ShopExample example);
+    boolean checkIfCanOpen(User user,Shop shop);
 
-    int deleteByPrimaryKey(Long shopId);
+    Shop openShop(User user, Shop shop);
 
-    int insert(Shop record);
-
-    int insertSelective(Shop record);
-
-    List<Shop> selectByExampleWithBLOBs(ShopExample example);
-
-    List<Shop> selectByExample(ShopExample example);
+    Shop getShop(ShopExample example);
 
     PagedResult selectByExampleWithBLOBsByPage(ShopExample example, Integer pageNo, Integer pageSize);
 
     PagedResult selectByExampleByPage(ShopExample example,Integer pageNo, Integer pageSize);
 
-    Shop selectByPrimaryKey(Long shopId);
-
-    int updateByExampleSelective(Shop record, ShopExample example);
-
-    int updateByExampleWithBLOBs(Shop record, ShopExample example);
-
-    int updateByExample(Shop record, ShopExample example);
-
-    int updateByPrimaryKeySelective(Shop record);
-
-    int updateByPrimaryKeyWithBLOBs(Shop record);
-
-    int updateByPrimaryKey(Shop record);
 }

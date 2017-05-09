@@ -1,10 +1,7 @@
 package org.ljy.controller;
 
 import org.apache.log4j.Logger;
-import org.ljy.domain.*;
-import org.ljy.service.GoodsService;
-import org.ljy.service.ShopService;
-import org.ljy.service.UserService;
+import org.ljy.service.SearchService;
 import org.ljy.util.AjaxUtil;
 import org.ljy.util.StringUtil;
 import org.springframework.stereotype.Controller;
@@ -22,13 +19,7 @@ public class SearchController{
 	private static Logger LOG = Logger.getLogger(SearchController.class);
 
 	@Resource
-	private UserService userService;
-
-	@Resource
-	private ShopService shopService;
-
-	@Resource
-	private GoodsService goodsService;
+	private SearchService searchService;
 
 	/**
 	 * 返回搜索结果页面
@@ -43,36 +34,35 @@ public class SearchController{
     @ResponseBody
 	public String search(HttpServletRequest request, String keyWord, String type){
 	    Map<String,String> ajaxMap = AjaxUtil.createDefaultAjaxMap();
-		boolean bool = StringUtil.isEmpty(keyWord) && StringUtil.isEmpty(type);
-        if(!bool){//非空
-        	int typeInt = Integer.parseInt(type);
-        	switch (typeInt){
-				case 1://用户
-					UserExample userExample = new UserExample();
-					userExample.or().andUserNameLike("%"+keyWord+"%");
-					List<User> users = userService.selectByExample(userExample);
-					request.setAttribute("userSearchResult",users);
-					break;
-				case 2://商品
-                    GoodsExample goodsExample = new GoodsExample();
-				    goodsExample.or().andGoodsNameLike("%"+keyWord+"%");
-                    List<Goods> goods = goodsService.selectByExample(goodsExample);
-                    request.setAttribute("goodsSearchResult",goods);
-                    break;
-                case 3://商家
-                    ShopExample shopExample = new ShopExample();
-                    shopExample.or().andShopNameLike("%"+keyWord+"%");
-                    List<Shop> shops = shopService.selectByExample(shopExample);
-                    request.setAttribute("shopSearchResult",shops);
-                    break;
-				default:
-				    ajaxMap.put("status","0");
-				    return searchResultPage();
+		boolean bool = StringUtil.isNotNullAndNotEmpty(keyWord) && StringUtil.isNotNullAndNotEmpty(type);
+		try {
+			if(bool){//非空
+                int typeInt = Integer.parseInt(type);
+                switch (typeInt){
+                    case 1://用户
+                        List<?> users = searchService.search(keyWord,typeInt);
+                        request.setAttribute("userSearchResult",users);
+                        break;
+                    case 2://商品
+                        List<?> goods = searchService.search(keyWord,typeInt);
+                        request.setAttribute("goodsSearchResult",goods);
+                        break;
+                    case 3://商家
+                        List<?> shops = searchService.search(keyWord,typeInt);
+                        request.setAttribute("shopSearchResult",shops);
+                        break;
+                    default:
+                        ajaxMap.put("status","0");
+                        return searchResultPage();
+                }
+            }else{
+                request.setAttribute("searchResult",null);
+                ajaxMap.put("status","0");
             }
-        }else{
-            request.setAttribute("searchResult",null);
-            ajaxMap.put("status","0");
-        }
+		} catch (NumberFormatException e) {
+			LOG.warn("searchService异常"+e.getMessage(),e);
+			ajaxMap.put("status","0");
+		}
 		return searchResultPage();
 	}
 }

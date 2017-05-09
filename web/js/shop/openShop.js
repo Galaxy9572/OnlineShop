@@ -5,6 +5,7 @@
     var userId = $("#hidden_userId").val();
     var shopName = $("#input_shopName").val();
     var shopType = $("#select_shopType").find("option:selected").val();
+    var location = $("#select_province").find("option:selected").val()+","+$("#select_city").find("option:selected").val();
     $.ajax({
         url:"shop/openShop/confirm",
         type:"post",
@@ -12,7 +13,8 @@
         data:{
             "userId":userId,
             "shopName":shopName,
-            "shopType":shopType
+            "shopType":shopType,
+            "location":location
         },
         success:function (data) {
             var status = data.status;

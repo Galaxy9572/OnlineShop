@@ -3,38 +3,24 @@ var submit = function(){
 		return;
 	}
     $.ajax({
-        type: "post",
-        url: "user/reg/checkIfCanReg",
-        data: {
-            "userName": $("#input_userName").val()
+        type:"post",
+        url:"user/reg/userRegister",
+        data:{
+            "userName":$("#input_userName").val(),
+            "password":$("#input_password").val()
         },
-        dataType: "json",
-        success: function (data) {
-            var status = data.status;
-            var msg = data.msg;
-            console.log(status+","+msg);
-            if (status === "0") {
-                alert("提示",msg,null,null);
-            }else if(status === "1"){
-                $.ajax({
-                    type:"post",
-                    url:"user/reg/userRegister",
-                    data:{
-                        "userName":$("#input_userName").val(),
-                        "password":$("#input_password").val()
-                    },
-                    dataType:"json",
-                    success:function(data2){
-                        if(data2.status==="1"){
-                            alert("提示",data2.msg,null,null);
-                            window.location.href="";//返回首页
-                        }
-                    }
-                });
-            }
+        dataType:"json",
+        success:function(data){
+        	var status = data.status;
+        	var msg = data.msg;
+            if(status==="1"){
+                alert("提示",msg,null,{type:'success'});
+                window.location.href="";//返回首页
+            }else{
+                alert("提示",msg,null,{type:'error'});
+			}
         }
     });
-
 };
 
 var checkRegInfo = function(){

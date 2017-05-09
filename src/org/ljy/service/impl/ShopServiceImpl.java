@@ -1,59 +1,91 @@
 package org.ljy.service.impl;
 
 import com.github.pagehelper.PageHelper;
+import org.apache.log4j.Logger;
 import org.ljy.common.PagedResult;
 import org.ljy.dao.ShopMapper;
+import org.ljy.dao.UserMapper;
 import org.ljy.domain.Shop;
 import org.ljy.domain.ShopExample;
+import org.ljy.domain.User;
+import org.ljy.domain.UserExample;
+import org.ljy.enums.UserType;
 import org.ljy.service.ShopService;
+import org.ljy.service.UserService;
 import org.ljy.util.BeanUtil;
+import org.ljy.util.StringUtil;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
 
 @Service("shopService")
 public class ShopServiceImpl implements ShopService {
+    private static Logger LOG = Logger.getLogger(ShopServiceImpl.class);
+    @Resource
+    private UserMapper userMapper;
 
 	@Resource
 	private ShopMapper shopMapper;
 
-	@Override
-	public long countByExample(ShopExample example) {
-		return shopMapper.countByExample(example);
-	}
+    @Override
+    public long countByExample(ShopExample example) {
+        return shopMapper.countByExample(example);
+    }
 
-	@Override
-	public int deleteByExample(ShopExample example) {
-		return shopMapper.deleteByExample(example);
-	}
+    @Override
+    public boolean checkIfCanOpen(User user, Shop shop) {
+        boolean bool = false;
+        try {
+            if(user.getUserId() !=null && StringUtil.isNotNullAndNotEmpty(shop.getShopName())){
+                ShopExample example = new ShopExample();
+                example.or().andUserIdEqualTo(user.getUserId());
+                long result = shopMapper.countByExample(example);
+                if(result <= 0){
+                    bool = true;
+                }
+            }
+            return bool;
+        } catch (Exception e) {
+            LOG.warn(e.getMessage(),e);
+            return false;
+        }
+    }
 
-	@Override
-	public int deleteByPrimaryKey(Long shopId) {
-		return shopMapper.deleteByPrimaryKey(shopId);
-	}
+    @Override
+	public Shop openShop(User user, Shop shop) {
+		Shop result = null;
+        try {
+            if(user.getUserId() !=null && StringUtil.isNotNullAndNotEmpty(shop.getShopName())){
+                Long userId = user.getUserId();
+                Date date = new Date();
+                ShopExample example =new ShopExample();
+                example.or().andUserIdEqualTo(userId);
+                shop.setUserId(userId);
+                shop.setCreateTime(date);
+                shop.setModifyTime(date);
+                int flag = shopMapper.insertSelective(shop);
+                List<Shop> userShop = shopMapper.selectByExampleWithBLOBs(example);
+                user.setUserType(UserType.SELLER.key());
+                int isSuccess = userMapper.updateByPrimaryKeySelective(user);
+                if(flag > 0 && isSuccess > 0){
+                    result = userShop.get(0);
+                }
+            }
+            return result;
+        } catch (Exception e) {
+            LOG.warn(e.getMessage(),e);
+            return null;
+        }
+    }
 
-	@Override
-	public int insert(Shop record) {
-		return shopMapper.insert(record);
-	}
+    @Override
+    public Shop getShop(ShopExample example) {
+        return shopMapper.selectByExampleWithBLOBs(example).get(0);
+    }
 
-	@Override
-	public int insertSelective(Shop record) {
-		return shopMapper.insertSelective(record);
-	}
-
-	@Override
-	public List<Shop> selectByExampleWithBLOBs(ShopExample example) {
-		return shopMapper.selectByExampleWithBLOBs(example);
-	}
-
-	@Override
-	public List<Shop> selectByExample(ShopExample example) {
-		return shopMapper.selectByExample(example);
-	}
-
-	@Override
+    @Override
 	public PagedResult selectByExampleWithBLOBsByPage(ShopExample example, Integer pageNo, Integer pageSize) {
 		pageNo = pageNo == null?1:pageNo;
 		pageSize = pageSize == null?10:pageSize;
@@ -66,42 +98,7 @@ public class ShopServiceImpl implements ShopService {
 		pageNo = pageNo == null?1:pageNo;
 		pageSize = pageSize == null?10:pageSize;
 		PageHelper.startPage(pageNo,pageSize);
-		return BeanUtil.toPagedResult(shopMapper.selectByExample(example));
-	}
-
-	@Override
-	public Shop selectByPrimaryKey(Long shopId) {
-		return shopMapper.selectByPrimaryKey(shopId);
-	}
-
-	@Override
-	public int updateByExampleSelective(Shop record, ShopExample example) {
-		return shopMapper.updateByExampleSelective(record, example);
-	}
-
-	@Override
-	public int updateByExampleWithBLOBs(Shop record, ShopExample example) {
-		return shopMapper.updateByExampleWithBLOBs(record, example);
-	}
-
-	@Override
-	public int updateByExample(Shop record, ShopExample example) {
-		return shopMapper.updateByExample(record, example);
-	}
-
-	@Override
-	public int updateByPrimaryKeySelective(Shop record) {
-		return shopMapper.updateByPrimaryKey(record);
-	}
-
-	@Override
-	public int updateByPrimaryKeyWithBLOBs(Shop record) {
-		return shopMapper.updateByPrimaryKeyWithBLOBs(record);
-	}
-
-	@Override
-	public int updateByPrimaryKey(Shop record) {
-		return shopMapper.updateByPrimaryKey(record);
+		return BeanUtil.toPagedResult(shopMapper.selectByExampleWithBLOBs(example));
 	}
 
 }

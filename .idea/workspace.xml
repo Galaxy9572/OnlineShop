@@ -2,17 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="077aee50-2775-4cdf-ad95-b038feb5fc19" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/common/MsgConstants.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/AdminService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/AdminServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/shop/shopManage.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/shop/shopManage.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/shop/shopManage.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../OnlineShop/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/AdminController.java" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/AdminController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/BaseController.java" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/BaseController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/ShopMapper.java" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/ShopMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/Shop.java" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/Shop.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/ShopExample.java" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/ShopExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/ShopMapper.xml" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/ShopMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/util/StringUtil.java" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/util/StringUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/SearchController.java" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/SearchController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/ShopController.java" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/ShopController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/UserController.java" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/UserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/SearchService.java" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/SearchService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/ShopService.java" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/ShopService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/UserService.java" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/SearchServiceImpl.java" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/SearchServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/ShopServiceImpl.java" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/ShopServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/UserServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/admin/adminIndex.jsp" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/admin/adminIndex.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/web/css/admin/adminIndex.css" afterPath="$PROJECT_DIR$/../OnlineShop/web/css/admin/adminIndex.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/shop/openShop.jsp" afterPath="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/shop/openShop.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/web/js/admin/adminIndex.js" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/admin/adminIndex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/web/js/shop/openShop.js" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/shop/openShop.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../OnlineShop/web/js/user/userReg.js" afterPath="$PROJECT_DIR$/../OnlineShop/web/js/user/userReg.js" />
     </list>
     <ignored path="$PROJECT_DIR$/../OnlineShop/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,27 +44,41 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.46086413">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
           <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/AdminController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-5">
-                  <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+                <state relative-caret-position="1092">
+                  <caret line="125" column="13" lean-forward="true" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="13" />
                   <folding>
-                    <element signature="e#1566#1576#0" expanded="true" />
+                    <element signature="e#1743#1753#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="adminIndex.jsp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/admin/adminIndex.jsp">
+          <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/UserController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="576">
-                  <caret line="39" column="54" lean-forward="true" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
+                <state relative-caret-position="-393">
+                  <caret line="101" column="31" lean-forward="false" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="31" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ShopController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/ShopController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="936">
+                  <caret line="57" column="39" lean-forward="true" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
+                  <folding>
+                    <element signature="e#2182#2192#0" expanded="true" />
+                    <element signature="e#2436#2437#0" expanded="true" />
+                    <element signature="e#2476#2477#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -61,22 +86,42 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-          <file leaf-file-name="adminIndex.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/../OnlineShop/web/js/admin/adminIndex.js">
+        <leaf>
+          <file leaf-file-name="shopManage.jsp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/shop/shopManage.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1064">
-                  <caret line="155" column="29" lean-forward="true" selection-start-line="155" selection-start-column="29" selection-end-line="155" selection-end-column="29" />
+                <state relative-caret-position="1755">
+                  <caret line="51" column="29" lean-forward="false" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="adminIndex.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../OnlineShop/web/css/admin/adminIndex.css">
+          <file leaf-file-name="shopManage.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../OnlineShop/web/js/shop/shopManage.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="894">
-                  <caret line="63" column="13" lean-forward="false" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="shopManage.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../OnlineShop/web/css/shop/shopManage.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1713">
+                  <caret line="65" column="1" lean-forward="false" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="openShop.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../OnlineShop/web/css/shop/openShop.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1713">
+                  <caret line="65" column="1" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="65" selection-end-column="1" />
                   <folding />
                 </state>
               </provider>
@@ -89,7 +134,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -128,29 +177,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/common/Page.java" />
-        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/common/BaseEntity.java" />
-        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/util/BeanUtil.java" />
-        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/common/Constants.java" />
-        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/common/JsonDateValueProcessor.java" />
-        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/common/PageResult.java" />
-        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/common/PagedResult.java" />
-        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/config/mybatis-cofig.xml" />
-        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/UserService.java" />
-        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/PaymentMapper.java" />
-        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/OrderMapper.java" />
-        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/GoodsMapper.java" />
-        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/BankCardService.java" />
-        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/BankCardServiceImpl.java" />
-        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/GoodsService.java" />
-        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/GoodsServiceImpl.java" />
         <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/OrderService.java" />
         <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/OrderServiceImpl.java" />
         <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/PaymentService.java" />
         <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/PaymentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/ShopService.java" />
-        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/ShopServiceImpl.java" />
         <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/UserCollectionServiceImpl.java" />
         <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/UserCollectionService.java" />
         <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/UserMessageService.java" />
@@ -176,9 +206,28 @@
         <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/ShopExample.java" />
         <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/Shop.java" />
         <option value="$PROJECT_DIR$/../OnlineShop/web/css/admin/adminIndex.css" />
-        <option value="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/admin/adminIndex.jsp" />
+        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/SearchService.java" />
+        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/SearchController.java" />
+        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/SearchServiceImpl.java" />
+        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/common/UserConstants.java" />
+        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/UserService.java" />
+        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/AdminService.java" />
+        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/AdminServiceImpl.java" />
+        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/../OnlineShop/web/js/user/userReg.js" />
+        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/common/MsgConstants.java" />
+        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/shop/openShop.jsp" />
+        <option value="$PROJECT_DIR$/../OnlineShop/web/js/shop/openShop.js" />
         <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/AdminController.java" />
         <option value="$PROJECT_DIR$/../OnlineShop/web/js/admin/adminIndex.js" />
+        <option value="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/admin/adminIndex.jsp" />
+        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/ShopService.java" />
+        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/ShopServiceImpl.java" />
+        <option value="$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/ShopController.java" />
+        <option value="$PROJECT_DIR$/../OnlineShop/web/js/shop/shopManage.js" />
+        <option value="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/shop/shopManage.jsp" />
+        <option value="$PROJECT_DIR$/../OnlineShop/web/css/shop/shopManage.css" />
       </list>
     </option>
   </component>
@@ -227,8 +276,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -292,7 +339,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="jsp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -315,6 +362,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -341,6 +392,84 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineShop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineShop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="search" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineShop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineShop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="goods" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineShop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineShop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -428,6 +557,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineShop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineShop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -447,6 +598,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineShop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineShop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shop" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -669,21 +842,28 @@
               <option name="myItemId" value="ljy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="adminIndex&#9;FILE&#9;file://E:/OnlineShop/web/css/admin/adminIndex.css&#10;sta&#9;ACTION&#9;ActivateStatisticToolWindow&#10;stat&#9;ACTION&#9;ActivateStatisticToolWindow&#10;statis&#9;ACTION&#9;ActivateStatisticToolWindow&#10;Page&#9;FILE&#9;file://E:/OnlineShop/src/org/ljy/common/Page.java" />
+    <property name="SearchEverywhereHistoryKey" value="stat&#9;ACTION&#9;ActivateStatisticToolWindow&#10;index.jsp&#9;FILE&#9;file://E:/OnlineShop/web/index.jsp&#10;shopT&#9;PSI&#9;JAVA://org.ljy.enums.ShopType&#10;openS&#9;FILE&#9;file://E:/OnlineShop/web/WEB-INF/jsp/shop/openShop.jsp&#10;shopser&#9;FILE&#9;file://E:/OnlineShop/src/org/ljy/service/impl/ShopServiceImpl.java&#10;adminIndex&#9;FILE&#9;file://E:/OnlineShop/web/css/admin/adminIndex.css&#10;sta&#9;ACTION&#9;ActivateStatisticToolWindow&#10;statis&#9;ACTION&#9;ActivateStatisticToolWindow&#10;Page&#9;FILE&#9;file://E:/OnlineShop/src/org/ljy/common/Page.java" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/mysql-connector-java-5.1.34-bin.jar" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1197,7 +1377,8 @@
       <workItem from="1493984864757" duration="7279000" />
       <workItem from="1494031614103" duration="25830000" />
       <workItem from="1494120823569" duration="12829000" />
-      <workItem from="1494206021132" duration="26528000" />
+      <workItem from="1494206021132" duration="26591000" />
+      <workItem from="1494296549436" duration="25949000" />
     </task>
     <task id="LOCAL-00001" summary="2017年5月5日19:52:45">
       <created>1493985210962</created>
@@ -1220,11 +1401,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494131143453</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="2017年5月8日19:25:00">
+      <created>1494242719457</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1494242719457</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72466000" />
+    <option name="totallyTimeSpent" value="98478000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="3866" height="2106" extended-state="6" />
@@ -1255,7 +1443,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16822916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962963" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1263,6 +1450,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962963" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1274,21 +1462,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2017年5月5日19:52:45" />
     <MESSAGE value="2017年5月7日12:24:54" />
-    <option name="LAST_COMMIT_MESSAGE" value="2017年5月7日12:24:54" />
+    <MESSAGE value="2017年5月8日19:25:00" />
+    <option name="LAST_COMMIT_MESSAGE" value="2017年5月8日19:25:00" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/AdminController.java</url>
-          <line>112</line>
-          <properties class="org.ljy.controller.AdminController" method="deleteUser">
+          <url>file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/UserController.java</url>
+          <line>94</line>
+          <properties class="org.ljy.controller.UserController" method="userRegister">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="11" />
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="12" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1297,375 +1486,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/OrderMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="897">
-          <caret line="23" column="96" lean-forward="false" selection-start-line="23" selection-start-column="96" selection-end-line="23" selection-end-column="96" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/GoodsMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1101">
-          <caret line="62" column="13" lean-forward="true" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/BankCardService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="22" column="93" lean-forward="true" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="93" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/GoodsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="25" column="90" lean-forward="false" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="90" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/GoodsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2145">
-          <caret line="67" column="46" lean-forward="false" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="21" column="92" lean-forward="false" selection-start-line="21" selection-start-column="92" selection-end-line="21" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/util/BeanUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="17" column="49" lean-forward="true" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/OrderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1287">
-          <caret line="55" column="19" lean-forward="false" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/PaymentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="21" column="94" lean-forward="false" selection-start-line="21" selection-start-column="94" selection-end-line="21" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/PaymentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1248">
-          <caret line="54" column="46" lean-forward="false" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/ShoppingCartService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/SearchService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/ShopServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="68" column="64" lean-forward="false" selection-start-line="68" selection-start-column="64" selection-end-line="68" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/UserCollectionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="24" column="59" lean-forward="false" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/UserCollectionServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="53" column="46" lean-forward="false" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/BankCardServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="51" column="8" lean-forward="false" selection-start-line="51" selection-start-column="8" selection-end-line="53" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/BankCardMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="22" column="82" lean-forward="false" selection-start-line="22" selection-start-column="82" selection-end-line="22" selection-end-column="82" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/UserMessageServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="53" column="46" lean-forward="false" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/UserMessageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="24" column="98" lean-forward="false" selection-start-line="24" selection-start-column="98" selection-end-line="24" selection-end-column="98" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/UserCollectionMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="24" column="88" lean-forward="false" selection-start-line="24" selection-start-column="88" selection-end-line="24" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="26" column="74" lean-forward="false" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/UserMessageMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="22" column="88" lean-forward="false" selection-start-line="22" selection-start-column="88" selection-end-line="22" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/15c49dbc-766f-4c1a-997b-1b4bbf959931/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/GoodsMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
-          <folding>
-            <marker date="1494071171829" expanded="true" signature="7342:7693" ph="select disti... goods" />
-            <marker date="1494071171829" expanded="true" signature="8004:8162" ph="select , fro... " />
-            <marker date="1494071171829" expanded="true" signature="8442:8507" ph="delete from " />
-            <marker date="1494071171829" expanded="true" signature="8797:8814" ph="delete from " />
-            <marker date="1494071171829" expanded="true" signature="9180:9691" ph="insert into goods... " />
-            <marker date="1494071171829" expanded="true" signature="12082:12108" ph="select count... goods" />
-            <marker date="1494071171829" expanded="true" signature="14088:14694" ph="update goods... " />
-            <marker date="1494071171829" expanded="true" signature="15062:15614" ph="update goods... " />
-            <marker date="1494071171829" expanded="true" signature="16011:17048" ph="update goods... " />
-            <marker date="1494071171829" expanded="true" signature="17343:17875" ph="update goods... " />
-            <marker date="1494071171829" expanded="true" signature="18161:18646" ph="update goods... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/BankCardMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="790">
-          <caret line="114" column="6" lean-forward="false" selection-start-line="114" selection-start-column="6" selection-end-line="114" selection-end-column="6" />
-          <folding>
-            <marker date="1494071171840" expanded="true" signature="4914:5036" ph="select from bank_card" />
-            <marker date="1494071171840" expanded="true" signature="5316:5392" ph="delete from " />
-            <marker date="1494071171840" expanded="true" signature="5685:5706" ph="delete from " />
-            <marker date="1494071171840" expanded="true" signature="6075:6396" ph="insert into bank_card... " />
-            <marker date="1494071171840" expanded="true" signature="8089:8119" ph="select count... bank_card" />
-            <marker date="1494071171840" expanded="true" signature="9575:9935" ph="update bank_... " />
-            <marker date="1494071171840" expanded="true" signature="10335:10924" ph="update bank_... " />
-            <marker date="1494071171840" expanded="true" signature="11213:11534" ph="update bank_... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/OrderMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="114" column="13" lean-forward="false" selection-start-line="114" selection-start-column="13" selection-end-line="114" selection-end-column="13" />
-          <folding>
-            <marker date="1494071171825" expanded="true" signature="4887:4998" ph="select from order" />
-            <marker date="1494071171825" expanded="true" signature="5278:5343" ph="delete from " />
-            <marker date="1494071171825" expanded="true" signature="5633:5650" ph="delete from " />
-            <marker date="1494071171825" expanded="true" signature="6016:6322" ph="insert into order... " />
-            <marker date="1494071171825" expanded="true" signature="7986:8012" ph="select count... order" />
-            <marker date="1494071171825" expanded="true" signature="9449:9794" ph="update order... " />
-            <marker date="1494071171825" expanded="true" signature="10191:10764" ph="update order... " />
-            <marker date="1494071171825" expanded="true" signature="11050:11356" ph="update order... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/PaymentMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-184">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1492658560368" expanded="true" signature="4815:4932" ph="select from payment" />
-            <marker date="1492658560368" expanded="true" signature="5212:5283" ph="delete from " />
-            <marker date="1492658560368" expanded="true" signature="5575:5594" ph="delete from " />
-            <marker date="1492658560368" expanded="true" signature="5962:6225" ph="insert into payment... " />
-            <marker date="1492658560368" expanded="true" signature="7762:7790" ph="select count... payment" />
-            <marker date="1492658560368" expanded="true" signature="9132:9434" ph="update payme... " />
-            <marker date="1492658560368" expanded="true" signature="9833:10323" ph="update payme... " />
-            <marker date="1492658560368" expanded="true" signature="10611:10881" ph="update payme... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/ShoppingCartMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-184">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1492657565699" expanded="true" signature="4825:4942" ph="select from shopping_cart" />
-            <marker date="1492657565699" expanded="true" signature="5222:5293" ph="delete from " />
-            <marker date="1492657565699" expanded="true" signature="5590:5615" ph="delete from " />
-            <marker date="1492657565699" expanded="true" signature="5988:6245" ph="insert into shopping_cart... " />
-            <marker date="1492657565699" expanded="true" signature="7774:7808" ph="select count... shopping_cart" />
-            <marker date="1492657565699" expanded="true" signature="9138:9434" ph="update shopp... " />
-            <marker date="1492657565699" expanded="true" signature="9838:10319" ph="update shopp... " />
-            <marker date="1492657565699" expanded="true" signature="10612:10876" ph="update shopp... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/UserCollectionMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="114" column="11" lean-forward="false" selection-start-line="114" selection-start-column="11" selection-end-line="114" selection-end-column="11" />
-          <folding>
-            <marker date="1494071171833" expanded="true" signature="4932:5063" ph="select from user_collection" />
-            <marker date="1494071171833" expanded="true" signature="5343:5428" ph="delete from " />
-            <marker date="1494071171833" expanded="true" signature="5727:5754" ph="delete from " />
-            <marker date="1494071171833" expanded="true" signature="6129:6451" ph="insert into user_collection... " />
-            <marker date="1494071171833" expanded="true" signature="8153:8189" ph="select count... user_collection" />
-            <marker date="1494071171833" expanded="true" signature="9644:10005" ph="update user_... " />
-            <marker date="1494071171833" expanded="true" signature="10411:10997" ph="update user_... " />
-            <marker date="1494071171833" expanded="true" signature="11292:11614" ph="update user_... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="146" column="11" lean-forward="false" selection-start-line="146" selection-start-column="11" selection-end-line="146" selection-end-column="11" />
-          <folding>
-            <marker date="1494071171809" expanded="true" signature="7167:7523" ph="select disti... user" />
-            <marker date="1494071171809" expanded="true" signature="7834:7989" ph="select , fro... " />
-            <marker date="1494071171809" expanded="true" signature="8269:8331" ph="delete from " />
-            <marker date="1494071171809" expanded="true" signature="8620:8636" ph="delete from " />
-            <marker date="1494071171809" expanded="true" signature="9001:9474" ph="insert into user... " />
-            <marker date="1494071171809" expanded="true" signature="11715:11740" ph="select count... user" />
-            <marker date="1494071171809" expanded="true" signature="13612:14166" ph="update user " />
-            <marker date="1494071171809" expanded="true" signature="14534:15028" ph="update user " />
-            <marker date="1494071171809" expanded="true" signature="15424:16368" ph="update user " />
-            <marker date="1494071171809" expanded="true" signature="16662:17149" ph="update user " />
-            <marker date="1494071171809" expanded="true" signature="17434:17868" ph="update user " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/mapper/UserMessageMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="115" column="11" lean-forward="false" selection-start-line="115" selection-start-column="11" selection-end-line="115" selection-end-column="11" />
-          <folding>
-            <marker date="1494071171836" expanded="true" signature="5014:5136" ph="select from user_message" />
-            <marker date="1494071171836" expanded="true" signature="5416:5492" ph="delete from " />
-            <marker date="1494071171836" expanded="true" signature="5788:5812" ph="delete from " />
-            <marker date="1494071171836" expanded="true" signature="6184:6547" ph="insert into user_message... " />
-            <marker date="1494071171836" expanded="true" signature="8398:8431" ph="select count... user_message" />
-            <marker date="1494071171836" expanded="true" signature="9999:10415" ph="update user_... " />
-            <marker date="1494071171836" expanded="true" signature="10818:11506" ph="update user_... " />
-            <marker date="1494071171836" expanded="true" signature="11798:12168" ph="update user_... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/config/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1443">
-          <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/config/spring-mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="44" column="16" lean-forward="false" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/web/css/public.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1557">
-          <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/enums/UserType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
@@ -1679,40 +1499,8 @@
         <state relative-caret-position="-429">
           <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/shop/openShop.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-819">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/ShopController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/ShopService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="819">
-          <caret line="25" column="15" lean-forward="false" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/ShopMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="35" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1732,16 +1520,262 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/Shop.java">
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/shop/sellerCenter.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2543">
-          <caret line="118" column="7" lean-forward="false" selection-start-line="118" selection-start-column="7" selection-end-line="118" selection-end-column="7" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/web/css/tables.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/web/css/admin/adminIndex.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="63" column="13" lean-forward="false" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/OrderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/SearchController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1511">
+          <caret line="63" column="38" lean-forward="false" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/SearchService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/GoodsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/PaymentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1248">
+          <caret line="54" column="46" lean-forward="false" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/web/js/user/userLogin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/user/userLogin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="18" column="62" lean-forward="false" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="10" column="45" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/AdminService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="11" column="43" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/dao/ShopMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/GoodsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../OnlineShop/web/WEB-INF/lib/spring-web-4.2.5.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/SearchServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/AdminServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
           <folding>
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="e#1119#1120#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#1197#1198#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/user/userReg.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="15" column="84" lean-forward="false" selection-start-line="15" selection-start-column="84" selection-end-line="15" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/web/js/user/userReg.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="19" column="48" lean-forward="false" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1212">
+          <caret line="107" column="36" lean-forward="false" selection-start-line="107" selection-start-column="36" selection-end-line="107" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/common/MsgConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="46" column="47" lean-forward="false" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/enums/ShopType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-546">
+          <caret line="4" column="58" lean-forward="false" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/web/js/shop/openShop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/shop/openShop.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1209">
+          <caret line="55" column="55" lean-forward="false" selection-start-line="55" selection-start-column="55" selection-end-line="55" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JDK1.8/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JDK1.8/src.zip!/java/util/AbstractCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JDK1.8/src.zip!/java/util/AbstractList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JDK1.8/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+          <folding>
+            <element signature="e#6252#6253#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JDK1.8/src.zip!/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="5398" column="0" lean-forward="false" selection-start-line="5398" selection-start-column="0" selection-end-line="5398" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1764,52 +1798,128 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/shop/sellerCenter.jsp">
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/Shop.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/web/css/tables.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/web/css/admin/adminIndex.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="894">
-          <caret line="63" column="13" lean-forward="false" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/admin/adminIndex.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="39" column="54" lean-forward="true" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+        <state relative-caret-position="779">
+          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
           <folding>
-            <element signature="e#1566#1576#0" expanded="true" />
+            <element signature="e#2457#2458#0" expanded="false" />
+            <element signature="e#2497#2498#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../OnlineShop/web/js/admin/adminIndex.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="155" column="29" lean-forward="true" selection-start-line="155" selection-start-column="29" selection-end-line="155" selection-end-column="29" />
+        <state relative-caret-position="887">
+          <caret line="270" column="37" lean-forward="false" selection-start-line="270" selection-start-column="37" selection-end-line="270" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/goods/man.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/ShopService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/service/impl/ShopServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="894">
+          <caret line="84" column="65" lean-forward="false" selection-start-line="84" selection-start-column="65" selection-end-line="84" selection-end-column="65" />
+          <folding>
+            <element signature="e#932#933#0" expanded="true" />
+            <element signature="e#989#990#0" expanded="true" />
+            <element signature="e#2750#2751#0" expanded="true" />
+            <element signature="e#2824#2825#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/ShopController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="57" column="39" lean-forward="true" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
+          <folding>
+            <element signature="e#2182#2192#0" expanded="true" />
+            <element signature="e#2436#2437#0" expanded="true" />
+            <element signature="e#2476#2477#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/web/js/shop/shopManage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/shop/shopManage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1755">
+          <caret line="51" column="29" lean-forward="false" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/web/WEB-INF/jsp/admin/adminIndex.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1755">
+          <caret line="78" column="32" lean-forward="false" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/web/css/shop/openShop.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1713">
+          <caret line="65" column="1" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="65" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/domain/UserExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="597">
+          <caret line="91" column="23" lean-forward="false" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-393">
+          <caret line="101" column="31" lean-forward="false" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/src/org/ljy/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="125" column="13" lean-forward="true" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="13" />
+          <folding>
+            <element signature="e#1743#1753#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../OnlineShop/web/css/shop/shopManage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1713">
+          <caret line="65" column="1" lean-forward="false" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
           <folding />
         </state>
       </provider>
