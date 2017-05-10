@@ -1,3 +1,8 @@
+a:link,a:visited{
+    text-decoration: none;
+    color: #000;
+}
+
 #div_top {
     width: 100%;
     height: 8%;
@@ -30,30 +35,50 @@
     height: 60%;
 }
 
-#div_shop_table {
-    text-align: center;
-    padding: 2% 3%;
-    margin: 2% auto;
-    width: 20%;
-    height: 80%;
-    background: #fff;
+#div_left{
+    width: 10%;
+    height: 25%;
+    position: fixed;
+    top: 40%;
+    left: 0;
     box-shadow: 0 0 20px #ccc;
 }
 
-#shop_table {
-    text-align: center;
-    padding: 2% 3%;
-    margin: 3% auto;
+dl{
     width: 100%;
     height: 100%;
-    color: #aaa;
 }
 
-#portrait {
-    width: 80px;
-    height: 80px;
-    border-radius: 80px;
-    border: 1px solid #3cf;
+dd{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    height: 15%;
+}
+
+.chosen{
+    color:#bcf;
+    font-size: 16px;
+}
+
+#div_right div{
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content{
+    width: 85%;
+    height: 85%;
+    position: absolute;
+    left: 12%;
+    top:12%;
+    background: #fff;
+}
+
+.content:target{
+    z-index: 3!important;
 }
 
 #div_bottom {

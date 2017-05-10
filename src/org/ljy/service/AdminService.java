@@ -11,4 +11,7 @@ public interface AdminService {
 
     boolean deleteUsers(UserExample example);
 
+    boolean deleteShopById(Long id);
+
+    boolean deleteGoodsById(Long id);
 }

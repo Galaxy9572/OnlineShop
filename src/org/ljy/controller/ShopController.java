@@ -8,6 +8,7 @@ import org.ljy.domain.User;
 import org.ljy.enums.GoodsType;
 import org.ljy.enums.ShopType;
 import org.ljy.enums.UserType;
+import org.ljy.service.GoodsService;
 import org.ljy.service.ShopService;
 import org.ljy.service.UserService;
 import org.ljy.util.AjaxUtil;
@@ -31,6 +32,9 @@ public class ShopController {
 
     @Resource
     private ShopService shopService;
+
+    @Resource
+    private GoodsService goodsService;
 
     /**
      * 返回卖家中心页面
@@ -69,35 +73,35 @@ public class ShopController {
 
     @RequestMapping("/shop/shopManage")
     public String shopManagePage(HttpServletRequest request){
+        List<GoodsType> goods = new ArrayList<GoodsType>();
+        Collections.addAll(goods,GoodsType.values());//将GoodsType的所有值加入List
+        long allUserGoodsNum = goodsService.countByExample(null);
+        request.setAttribute("goodsType",goods);
         return "shop/shopManage";
     }
 
     @RequestMapping("/shop/openShop/confirm")
     @ResponseBody
     public Map<String,String> openShop(HttpSession session, User user,Shop shop){
-        Map<String,String> ajaxMap = AjaxUtil.createDefaultAjaxMap();
+        Map<String,String> ajaxMap;
         try {
             boolean bool = shopService.checkIfCanOpen(user, shop);
             if(!bool){
-                ajaxMap.put("status","0");
-                ajaxMap.put("msg", MsgConstants.SHOP_OPENED);
+                ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.SHOP_OPENED);
                 return ajaxMap;
             }
             Shop result = shopService.openShop(user,shop);
             if(result != null){
                 session.setAttribute("shop",result);
-                ajaxMap.put("status","1");
-                ajaxMap.put("msg", MsgConstants.OPERATE_SUCCESS);
+                ajaxMap = AjaxUtil.generateResponseAjax("1",MsgConstants.OPERATE_SUCCESS);
             }else{
-                ajaxMap.put("status","0");
-                ajaxMap.put("msg", MsgConstants.OPERATE_FAILURE);
+                ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.OPERATE_FAILURE);
             }
+            return ajaxMap;
         } catch (Exception e) {
-            ajaxMap.put("status", "0");
-            ajaxMap.put("msg", MsgConstants.SYSTEM_ERROR);
+            ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.SYSTEM_ERROR);
             LOG.info(e.getMessage(),e);
+            return ajaxMap;
         }
-        return ajaxMap;
     }
-
 }

@@ -3,12 +3,10 @@ package org.ljy.controller;
 import org.apache.log4j.Logger;
 import org.ljy.common.MsgConstants;
 import org.ljy.common.PagedResult;
-import org.ljy.domain.GoodsExample;
 import org.ljy.domain.ShopExample;
 import org.ljy.domain.User;
 import org.ljy.domain.UserExample;
 import org.ljy.enums.ShopType;
-import org.ljy.enums.UserType;
 import org.ljy.service.AdminService;
 import org.ljy.service.GoodsService;
 import org.ljy.service.ShopService;
@@ -55,7 +53,7 @@ public class AdminController extends BaseController {
     public String adminPage(HttpSession session, HttpServletRequest request) {
         User user = (User) session.getAttribute("user");
         if (user == null) {
-            return "admin/adminLogin";
+            return "user/userLogin";
         } else {
             List<ShopType> shopTypes = new ArrayList<ShopType>();
             Collections.addAll(shopTypes, ShopType.values());
@@ -70,63 +68,25 @@ public class AdminController extends BaseController {
         }
     }
 
-    /**
-     * 管理员登录
-     *
-     * @param session HttpSession
-     * @param user    User
-     * @return ajaxMap
-     */
-    @RequestMapping("/admin/login")
-    @ResponseBody
-    public Map<String, String> adminLogin(HttpSession session, User user) {
-        Map<String, String> ajaxMap = AjaxUtil.createDefaultAjaxMap();
-        try {
-            User result = userService.userLogin(user);
-            if(result != null){
-                if(result.getUserType() == UserType.ADMIN.key()){
-                    ajaxMap.put("status", "1");
-                    ajaxMap.put("msg", MsgConstants.LOGIN_SUCCESS);
-                }else{
-                    ajaxMap.put("status", "0");
-                    ajaxMap.put("msg", MsgConstants.NO_PRIVILEGE);
-                }
-            }else{
-                ajaxMap.put("status", "0");
-                ajaxMap.put("msg", MsgConstants.LOGIN_FAILURE);
-            }
-        } catch (Exception e) {
-            ajaxMap.put("status", "0");
-            ajaxMap.put("msg", MsgConstants.SYSTEM_ERROR);
-            LOG.warn(e.getMessage(), e);
-            return ajaxMap;
-        }
-        return ajaxMap;
-    }
-
     @RequestMapping("/admin/deleteUser")
     @ResponseBody
     public Map<String, String> deleteUser(String userId){
-        Map<String, String> ajaxMap = AjaxUtil.createDefaultAjaxMap();
+        Map<String, String> ajaxMap = null;
         try {
             if(StringUtil.isNotNullAndNotEmpty(userId)){
                 UserExample example = new UserExample();
                 example.or().andUserIdEqualTo(Long.parseLong(userId));
                 boolean flag = adminService.deleteUser(example);
                 if(flag){
-                    ajaxMap.put("status","1");
-                    ajaxMap.put("msg",MsgConstants.OPERATE_SUCCESS);
+                    ajaxMap = AjaxUtil.generateResponseAjax("1",MsgConstants.OPERATE_SUCCESS);
                 }else{
-                    ajaxMap.put("status","0");
-                    ajaxMap.put("msg",MsgConstants.OPERATE_FAILURE);
+                    ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.OPERATE_FAILURE);
                 }
             }else{
-                ajaxMap.put("status","0");
-                ajaxMap.put("msg",MsgConstants.WRONG_PARAMETERS);
+                ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.WRONG_PARAMETERS);
             }
         } catch (NumberFormatException e) {
-            ajaxMap.put("status","0");
-            ajaxMap.put("msg",MsgConstants.SYSTEM_ERROR);
+            ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.SYSTEM_ERROR);
         }
         return ajaxMap;
     }
@@ -204,39 +164,45 @@ public class AdminController extends BaseController {
         }
     }
 
-    /**
-     * 按商品名查询商品
-     *
-     * @param request   HttpServletRequest
-     * @param goodsName 商品名
-     */
-    @RequestMapping("/admin/queryGoodsByCondition")
+    @RequestMapping("/admin/deleteShop")
     @ResponseBody
-    public String queryGoodsByCondition(HttpServletRequest request, String goodsName, String goodsType, int pageNumber, int pageSize) {
-        GoodsExample example = new GoodsExample();
-        PagedResult result = null;
+    public Map<String, String> deleteShop(String shopId){
+        Map<String, String> ajaxMap = null;
         try {
-            if (StringUtil.isNotNullAndNotEmpty(goodsType)) {
-                int goodsTypeInt = 0;
-                if(StringUtil.isNotNullAndNotEmpty(goodsName)){
-                    example.or().andGoodsNameLike("%" + goodsName + "%");
+            if(StringUtil.isNotNullAndNotEmpty(shopId)){
+                boolean flag = adminService.deleteShopById(Long.parseLong(shopId));
+                if(flag){
+                    ajaxMap = AjaxUtil.generateResponseAjax("1",MsgConstants.OPERATE_SUCCESS);
+                }else{
+                    ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.OPERATE_FAILURE);
                 }
-                switch (goodsTypeInt){
-                    case 0 :
-                        result = goodsService.selectByExampleByPage(example,pageNumber,pageSize);
-                        break;
-                    default :
-                        example.or().andGoodsTypeEqualTo(goodsTypeInt);
-                        result = goodsService.selectByExampleByPage(example,pageNumber,pageSize);
-                        break;
-                }
-                return responseSuccess(result);
             }else{
-                return responseFail(MsgConstants.WRONG_PARAMETERS);
+                ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.WRONG_PARAMETERS);
             }
         } catch (Exception e) {
-            LOG.warn(e.getMessage(), e);
-            return responseFail(MsgConstants.SYSTEM_ERROR);
+            ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.SYSTEM_ERROR);
         }
+        return ajaxMap;
+    }
+
+    @RequestMapping("/admin/deleteGoods")
+    @ResponseBody
+    public Map<String, String> deleteGoods(String goodsId){
+        Map<String, String> ajaxMap = null;
+        try {
+            if(StringUtil.isNotNullAndNotEmpty(goodsId)){
+                boolean flag = adminService.deleteGoodsById(Long.parseLong(goodsId));
+                if(flag){
+                    ajaxMap = AjaxUtil.generateResponseAjax("1",MsgConstants.OPERATE_SUCCESS);
+                }else{
+                    ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.OPERATE_FAILURE);
+                }
+            }else{
+                ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.WRONG_PARAMETERS);
+            }
+        } catch (Exception e) {
+            ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.SYSTEM_ERROR);
+        }
+        return ajaxMap;
     }
 }

@@ -9,34 +9,14 @@ import java.util.List;
 public interface GoodsService {
     long countByExample(GoodsExample example);
 
-    int deleteByExample(GoodsExample example);
+    boolean addGoods(Goods goods);
 
-    int deleteByPrimaryKey(Long goodsId);
+    boolean deleteGoodsById(Long goodsId);
 
-    int insert(Goods record);
+    boolean updateGoods(Goods goods);
 
-    int insertSelective(Goods record);
+    List<Goods> queryGoods(GoodsExample example);
 
-    List<Goods> selectByExampleWithBLOBs(GoodsExample example);
-
-    List<Goods> selectByExample(GoodsExample example);
-
-    PagedResult selectByExampleWithBLOBsByPage(GoodsExample example,Integer pageNo,Integer pageSize);
-
-    PagedResult selectByExampleByPage(GoodsExample example,Integer pageNo,Integer pageSize);
-
-    Goods selectByPrimaryKey(Long goodsId);
-
-    int updateByExampleSelective(Goods record, GoodsExample example);
-
-    int updateByExampleWithBLOBs(Goods record, GoodsExample example);
-
-    int updateByExample(Goods record, GoodsExample example);
-
-    int updateByPrimaryKeySelective(Goods record);
-
-    int updateByPrimaryKeyWithBLOBs(Goods record);
-
-    int updateByPrimaryKey(Goods record);
+    PagedResult queryGoodsByPage(String goodsType,String goodsName ,Integer pageNumber,Integer pageSize);
 }
 

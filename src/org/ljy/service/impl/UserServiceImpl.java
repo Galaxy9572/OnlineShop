@@ -20,6 +20,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -99,17 +100,14 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public boolean checkIfCanReg(User user) {
-		boolean bool = false;
+        List<User> result = new ArrayList<User>();
 		try {
 			if (user != null && !StringUtil.isEmpty(user.getUserName())) {
 				UserExample example = new UserExample();
 				example.or().andUserNameEqualTo(user.getUserName());
-				List<User> result = userMapper.selectByExample(example);
-				if (result.size() <= 0) {
-					bool = true;
-				}
+				result = userMapper.selectByExample(example);
 			}
-			return bool;
+			return result.size() <= 0;
 		} catch (Exception e) {
 			LOG.info("userService checkIfCanReg异常\n"+e.getMessage(), e);
 			return false;
@@ -118,18 +116,15 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean checkIfCanLogin(User user) {
-	    boolean bool = false;
+        List<User> result = new ArrayList<User>();
         try {
             if (user != null && StringUtil.isNotNullAndNotEmpty(user.getUserName())) {
                 UserExample example = new UserExample();
                 example.or().andUserNameEqualTo(user.getUserName())
                 .andPasswordEqualTo(EncryptUtil.encrypt(user.getPassword()));
-                List<User> result = userMapper.selectByExample(example);
-                if (result.size() > 0) {
-                    bool = true;
-                }
+                result = userMapper.selectByExample(example);
             }
-            return bool;
+            return result.size() > 0;
         } catch (Exception e) {
             LOG.info("userService checkIfCanLogin异常\n"+e.getMessage(), e);
             return false;
@@ -139,17 +134,13 @@ public class UserServiceImpl implements UserService {
     @Override
 	public boolean modifyInfo(User user) {
         int isSuccess = 0;
-        boolean bool = false;
         try {
             if (user != null && !StringUtil.isEmpty(user.getUserName())) {
                 UserExample example = new UserExample();
                 example.or().andUserNameEqualTo(user.getUserName());
                 isSuccess = userMapper.updateByExampleWithBLOBs(user, example);
             }
-            if (isSuccess > 0) {
-                bool = true;
-            }
-            return bool;
+            return isSuccess > 0;
         } catch (Exception e) {
             LOG.info("userService modifyInfo异常\n"+e.getMessage(), e);
             return false;

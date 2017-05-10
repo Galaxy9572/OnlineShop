@@ -5,10 +5,11 @@
 }
 
 .genTableTitle{
-    background: #ddd;
+    background: #eee;
 }
 
 .genTable th{
+    font-weight: normal;
     height: 50px;
     text-align: center;
 }

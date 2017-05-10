@@ -2,8 +2,12 @@ package org.ljy.controller;
 
 import org.apache.log4j.Logger;
 import org.ljy.common.MsgConstants;
+import org.ljy.domain.Shop;
+import org.ljy.domain.ShopExample;
 import org.ljy.domain.User;
+import org.ljy.enums.UserType;
 import org.ljy.service.PaymentService;
+import org.ljy.service.ShopService;
 import org.ljy.service.ShoppingCartService;
 import org.ljy.service.UserService;
 import org.ljy.util.AjaxUtil;
@@ -25,6 +29,9 @@ public class UserController {
 
     @Resource
     private UserService userService;
+
+    @Resource
+    private ShopService shopService;
 
     @Resource
     private PaymentService paymentService;
@@ -93,27 +100,23 @@ public class UserController {
     @Transactional
     @ResponseBody
     public Map<String, String> userRegister(HttpSession session, User user) {
-        Map<String, String> ajaxMap = AjaxUtil.createDefaultAjaxMap();
+        Map<String, String> ajaxMap = null;
         try {
             boolean bool = userService.checkIfCanReg(user);
             if (!bool) {
-                ajaxMap.put("status", "0");
-                ajaxMap.put("msg", MsgConstants.USER_REGED);
+                ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.USER_REGED);
                 return ajaxMap;
             }
             User regUser = userService.userRegister(user);
             if (regUser != null) {
                 session.setAttribute("user", regUser);
-                ajaxMap.put("status", "1");
-                ajaxMap.put("msg", MsgConstants.REG_SUCCESS);
+                ajaxMap = AjaxUtil.generateResponseAjax("1",MsgConstants.REG_SUCCESS);
             } else {
-                ajaxMap.put("status", "0");
-                ajaxMap.put("msg", MsgConstants.SYSTEM_ERROR);
+                ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.SYSTEM_ERROR);
             }
             return ajaxMap;
         } catch (Exception e) {
-            ajaxMap.put("status", "0");
-            ajaxMap.put("msg", "注册失败，用户控制器异常");
+            ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.SYSTEM_ERROR);
             LOG.warn("userController userRegister异常\n" + e.getMessage(), e);
             return ajaxMap;
         }
@@ -129,27 +132,29 @@ public class UserController {
     @RequestMapping("/user/login/userLogin")
     @ResponseBody
     public Map<String, String> userLogin(HttpSession session, User user) {
-        Map<String, String> ajaxMap = AjaxUtil.createDefaultAjaxMap();
+        Map<String, String> ajaxMap = null;
         try {
             boolean canLogin = userService.checkIfCanLogin(user);
             if (!canLogin) {
-                ajaxMap.put("status", "0");
-                ajaxMap.put("msg", MsgConstants.WRONG_USER_NAME_PSW);
+                ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.WRONG_USER_NAME_PSW);
                 return ajaxMap;
             }
             User loginUser = userService.userLogin(user);
             if (loginUser != null) {
                 session.setAttribute("user", loginUser);
-                ajaxMap.put("status", "1");
-                ajaxMap.put("msg", MsgConstants.LOGIN_SUCCESS);
+                if(loginUser.getUserType() == UserType.SELLER.key()){
+                    ShopExample example = new ShopExample();
+                    example.or().andUserIdEqualTo(loginUser.getUserId());
+                    Shop shop = shopService.getShop(example);
+                    session.setAttribute("userShop", shop);
+                }
+                ajaxMap = AjaxUtil.generateResponseAjax("1",MsgConstants.LOGIN_SUCCESS);
             } else {
-                ajaxMap.put("status", "0");
-                ajaxMap.put("msg", MsgConstants.SYSTEM_ERROR);
+                ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.SYSTEM_ERROR);
             }
             return ajaxMap;
         } catch (Exception e) {
-            ajaxMap.put("status", "0");
-            ajaxMap.put("msg", "登录失败，用户控制器异常");
+            ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.SYSTEM_ERROR);
             LOG.warn("userController userLogin异常\n" + e.getMessage(), e);
             return ajaxMap;
         }
@@ -178,20 +183,17 @@ public class UserController {
     @RequestMapping("/user/modifyInfo")
     @ResponseBody
     public Map<String, String> modifyInfo(HttpSession session, User user) {
-        Map<String, String> ajaxMap = AjaxUtil.createDefaultAjaxMap();
+        Map<String, String> ajaxMap = null;
         try {
             boolean bool = userService.modifyInfo(user);
             if (!bool) {
-                ajaxMap.put("status", "0");
-                ajaxMap.put("msg", MsgConstants.OPERATE_FAILURE);
+                ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.OPERATE_FAILURE);
             } else {
-                ajaxMap.put("status", "1");
-                ajaxMap.put("msg", MsgConstants.OPERATE_SUCCESS);
+                ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.OPERATE_SUCCESS);
             }
             return ajaxMap;
         } catch (Exception e) {
-            ajaxMap.put("status", "0");
-            ajaxMap.put("msg", "修改失败，用户控制器异常");
+            ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.SYSTEM_ERROR);
             LOG.warn("userController modifyInfo异常\n" + e.getMessage(), e);
             return ajaxMap;
         }

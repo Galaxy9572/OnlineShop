@@ -7,6 +7,7 @@ import org.ljy.domain.Goods;
 import org.ljy.domain.GoodsExample;
 import org.ljy.service.GoodsService;
 import org.ljy.util.BeanUtil;
+import org.ljy.util.StringUtil;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -15,93 +16,58 @@ import java.util.List;
 @Service("goodsService")
 public class GoodsServiceImpl implements GoodsService {
 
-	@Resource
-	private GoodsMapper goodsMapper;
+    @Resource
+    private GoodsMapper goodsMapper;
 
-	@Override
-	public long countByExample(GoodsExample example) {
-		return goodsMapper.countByExample(example);
-	}
+    @Override
+    public long countByExample(GoodsExample example) {
+        return goodsMapper.countByExample(example);
+    }
 
-	@Override
-	public int deleteByExample(GoodsExample example) {
-		return goodsMapper.deleteByExample(example);
-	}
+    @Override
+    public boolean addGoods(Goods goods) {
+        int flag = goodsMapper.insertSelective(goods);
+        return flag > 0;
+    }
 
-	@Override
-	public int deleteByPrimaryKey(Long goodsId) {
-		return goodsMapper.deleteByPrimaryKey(goodsId);
-	}
+    @Override
+    public boolean deleteGoodsById(Long goodsId) {
+        int flag = goodsMapper.deleteByPrimaryKey(goodsId);
+        return flag > 0;
+    }
 
-	@Override
-	public int insert(Goods record) {
-		return goodsMapper.insert(record);
-	}
+    @Override
+    public boolean updateGoods(Goods goods) {
+        int flag = goodsMapper.updateByPrimaryKeySelective(goods);
+        return flag > 0;
+    }
 
-	@Override
-	public int insertSelective(Goods record) {
-		return goodsMapper.insertSelective(record);
-	}
+    @Override
+    public List<Goods> queryGoods(GoodsExample example) {
+        return goodsMapper.selectByExampleWithBLOBs(example);
+    }
 
-	@Override
-	public List<Goods> selectByExampleWithBLOBs(GoodsExample example) {
-		return goodsMapper.selectByExampleWithBLOBs(example);
-	}
-
-	@Override
-	public List<Goods> selectByExample(GoodsExample example) {
-		return goodsMapper.selectByExample(example);
-	}
-
-	@Override
-	public PagedResult selectByExampleWithBLOBsByPage(GoodsExample example,Integer pageNo,Integer pageSize) {
-		pageNo = pageNo == null?1:pageNo;
-		pageSize = pageSize == null?10:pageSize;
-		PageHelper.startPage(pageNo,pageSize);
-		return BeanUtil.toPagedResult(goodsMapper.selectByExampleWithBLOBs(example));
-	}
-
-	@Override
-	public PagedResult selectByExampleByPage(GoodsExample example,Integer pageNo,Integer pageSize) {
-		pageNo = pageNo == null?1:pageNo;
-		pageSize = pageSize == null?10:pageSize;
-		PageHelper.startPage(pageNo,pageSize);
-		return BeanUtil.toPagedResult(goodsMapper.selectByExample(example));
-	}
-
-	@Override
-	public Goods selectByPrimaryKey(Long goodsId) {
-		return goodsMapper.selectByPrimaryKey(goodsId);
-	}
-
-	@Override
-	public int updateByExampleSelective(Goods record, GoodsExample example) {
-		return goodsMapper.updateByExampleSelective(record, example);
-	}
-
-	@Override
-	public int updateByExampleWithBLOBs(Goods record, GoodsExample example) {
-		return goodsMapper.updateByExampleWithBLOBs(record, example);
-	}
-
-	@Override
-	public int updateByExample(Goods record, GoodsExample example) {
-		return goodsMapper.updateByExample(record, example);
-	}
-
-	@Override
-	public int updateByPrimaryKeySelective(Goods record) {
-		return goodsMapper.updateByPrimaryKeySelective(record);
-	}
-
-	@Override
-	public int updateByPrimaryKeyWithBLOBs(Goods record) {
-		return goodsMapper.updateByPrimaryKeyWithBLOBs(record);
-	}
-
-	@Override
-	public int updateByPrimaryKey(Goods record) {
-		return goodsMapper.updateByPrimaryKey(record);
-	}
+    @Override
+    public PagedResult queryGoodsByPage(String goodsType, String goodsName, Integer pageNo, Integer pageSize) {
+        pageNo = pageNo == null ? 1 : pageNo;
+        pageSize = pageSize == null ? 10 : pageSize;
+        PageHelper.startPage(pageNo, pageSize);
+        List<Goods> result = null;
+        GoodsExample example = new GoodsExample();
+        int goodsTypeInt = 0;
+        if (StringUtil.isNotNullAndNotEmpty(goodsName)) {
+            example.or().andGoodsNameLike("%" + goodsName + "%");
+        }
+        switch (goodsTypeInt) {
+            case 0:
+                result = goodsMapper.selectByExample(example);
+                break;
+            default:
+                example.or().andGoodsTypeEqualTo(goodsTypeInt);
+                result = goodsMapper.selectByExample(example);
+                break;
+        }
+        return BeanUtil.toPagedResult(result);
+    }
 
 }

@@ -13,9 +13,18 @@ $(window).load(function () {
         } else {
             selectAllCheckboxes("user", false);
         }
-
     });
 });
+
+var showInfo = function (data) {
+    var status = data.status;
+    var msg = data.msg;
+    if (status === 1) {
+        alert("提示", msg, null, {type: 'success'});
+    } else {
+        alert("提示", msg, null, {type: 'error'});
+    }
+};
 
 /**
  * 根据指定的复选框类型和选择状态选择复选框
@@ -54,7 +63,7 @@ var deleteUser = function (userId) {
                     "userId":userId
                 },
                 success: function (data) {
-
+                    showInfo(data);
                 }
             });
         } else {
@@ -68,18 +77,50 @@ var deleteUsers = function () {
         if (isConfirm) {
             var userIds = getSelectedUserIds();
             $.ajax({
-                url: "deleteUserById",
+                url: "deleteUser",
                 type: "post",
                 dataType: "json",
                 data: {"userIds": userIds},
                 success: function (data) {
-                    var status = data.status;
-                    var msg = data.msg;
-                    if (status === 1) {
-                        alert("提示", msg, null, {type: 'success'});
-                    } else {
-                        alert("提示", msg, null, {type: 'error'});
-                    }
+                    showInfo(data);
+                }
+            });
+        } else {
+            //取消按钮：什么都不干
+        }
+    }, {confirmButtonText: '确定', cancelButtonText: '取消', width: 400});
+};
+
+var deleteShop = function (shopId) {
+    confirm("你确定要删除吗", "操作将无法复原！", function (isConfirm) {
+        if (isConfirm) {
+            $.ajax({
+                url: "deleteShop",
+                type: "post",
+                dataType: "json",
+                data: {
+                    "shopId":shopId
+                },
+                success: function (data) {
+                    showInfo(data);
+                }
+            });
+        } else {
+            //取消按钮：什么都不干
+        }
+    }, {confirmButtonText: '确定', cancelButtonText: '取消', width: 400});
+};
+
+var deleteGoods = function (goodsId) {
+    confirm("你确定要删除吗", "操作将无法复原！", function (isConfirm) {
+        if (isConfirm) {
+            $.ajax({
+                url: "deleteGoods",
+                type: "post",
+                dataType: "json",
+                data: {"goodsId": goodsId},
+                success: function (data) {
+                    showInfo(data);
                 }
             });
         } else {
@@ -277,7 +318,7 @@ function shopManageTable(shopName, shopType, pageNumber, pageSize) {
                                 .append("<td>" + this.statement + "</td>")
                                 .append("<td>" + this.createTime + "</td>")
                                 .append("<td>" + this.modifyTime + "</td>")
-                                .append("<td>" + '<input type="button" value="删除">' + "</td>")
+                                .append("<td>" + "<input type='button' value='删除' onclick='deleteShop("+this.shopId+");'>" + "</td>")
                                 .append('</tr>');
                         });
                     } else {
@@ -322,7 +363,7 @@ var goodsTableOptions = {
 
 //生成表格
 function goodsManageTable(goodsName, goodsType, pageNumber, pageSize) {
-    var url = "queryGoodsByCondition"; //请求的URL
+    var url = "../goods/queryGoodsByCondition"; //请求的URL
     var reqParams = {
         'goodsName': goodsName,
         'goodsType': goodsType,
@@ -370,7 +411,7 @@ function goodsManageTable(goodsName, goodsType, pageNumber, pageSize) {
                     if (dataList.length > 0) {
                         $(dataList).each(function () {//重新生成
                             $("#goodsManageTableBody").append('<tr>')
-                                .append("<td>" + "<input type='checkbox' data-goodsId='" + this.goodsId + "'</td>")
+                                .append("<td>" + "<input type='checkbox' class='goodsCheckboxes' data-goodsId='" + this.goodsId + "'</td>")
                                 .append("<td>" + this.goodsId + "</td>")
                                 .append("<td>" + this.shopId + "</td>")
                                 .append("<td>" + this.goodsName + "</td>")
@@ -381,8 +422,8 @@ function goodsManageTable(goodsName, goodsType, pageNumber, pageSize) {
                                 .append("<td>" + this.statement + "</td>")
                                 .append("<td>" + this.createTime + "</td>")
                                 .append("<td>" + this.modifyTime + "</td>")
-                                .append("<td>" + '<input type="button" value="删除">' + "</td>")
-                                .append('</tr>');
+                                .append("<td>" + "<input type='button' value='删除' onclick='deleteGoods("+this.goodsId+")'>" + "</td>")
+                                .append("</tr>");
                         });
                     } else {
                         $("#goodsManageTableBody").append('<tr><th colspan ="12"><center>暂无数据</center></th></tr>');

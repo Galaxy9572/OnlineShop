@@ -25,8 +25,6 @@ public interface GoodsMapper {
 
     List<Goods> selectByExampleWithBLOBsByPage(@Param("example") GoodsExample example, @Param("page")Page page);
 
-    List<Goods> selectByExampleByPage(@Param("example") GoodsExample example, @Param("page")Page page);
-
 	Goods selectByPrimaryKey(Long goodsId);
 
 	int updateByExampleSelective(@Param("record") Goods record, @Param("example") GoodsExample example);

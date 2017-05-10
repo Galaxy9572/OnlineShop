@@ -36,17 +36,14 @@ public class ShopServiceImpl implements ShopService {
 
     @Override
     public boolean checkIfCanOpen(User user, Shop shop) {
-        boolean bool = false;
+        long result = 0;
         try {
             if(user.getUserId() !=null && StringUtil.isNotNullAndNotEmpty(shop.getShopName())){
                 ShopExample example = new ShopExample();
                 example.or().andUserIdEqualTo(user.getUserId());
-                long result = shopMapper.countByExample(example);
-                if(result <= 0){
-                    bool = true;
-                }
+                result = shopMapper.countByExample(example);
             }
-            return bool;
+            return result <= 0;
         } catch (Exception e) {
             LOG.warn(e.getMessage(),e);
             return false;

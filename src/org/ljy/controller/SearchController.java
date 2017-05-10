@@ -33,7 +33,7 @@ public class SearchController{
 	@RequestMapping(value = "/search", method= RequestMethod.GET)
     @ResponseBody
 	public String search(HttpServletRequest request, String keyWord, String type){
-	    Map<String,String> ajaxMap = AjaxUtil.createDefaultAjaxMap();
+	    Map<String,String> ajaxMap = null;
 		boolean bool = StringUtil.isNotNullAndNotEmpty(keyWord) && StringUtil.isNotNullAndNotEmpty(type);
 		try {
 			if(bool){//非空
@@ -52,16 +52,16 @@ public class SearchController{
                         request.setAttribute("shopSearchResult",shops);
                         break;
                     default:
-                        ajaxMap.put("status","0");
+                        ajaxMap = AjaxUtil.generateResponseAjax("0", null);
                         return searchResultPage();
                 }
             }else{
                 request.setAttribute("searchResult",null);
-                ajaxMap.put("status","0");
+                ajaxMap = AjaxUtil.generateResponseAjax("0", null);
             }
 		} catch (NumberFormatException e) {
 			LOG.warn("searchService异常"+e.getMessage(),e);
-			ajaxMap.put("status","0");
+            ajaxMap = AjaxUtil.generateResponseAjax("0", null);
 		}
 		return searchResultPage();
 	}

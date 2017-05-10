@@ -1,6 +1,8 @@
 package org.ljy.service.impl;
 
 import org.apache.log4j.Logger;
+import org.ljy.dao.GoodsMapper;
+import org.ljy.dao.ShopMapper;
 import org.ljy.dao.UserMapper;
 import org.ljy.domain.UserExample;
 import org.ljy.service.AdminService;
@@ -17,18 +19,34 @@ public class AdminServiceImpl implements AdminService {
     @Resource
     private UserMapper userMapper;
 
+    @Resource
+    private ShopMapper shopMapper;
+
+    @Resource
+    private GoodsMapper goodsMapper;
+
     @Override
     public boolean deleteUser(UserExample example) {
-        boolean bool = false;
         int flag = userMapper.deleteByExample(example);
-        if(flag > 0){
-            bool = true;
-        }
-        return bool;
+        return flag > 0;
     }
 
     @Override
     public boolean deleteUsers(UserExample example) {
         return false;
     }
+
+    @Override
+    public boolean deleteShopById(Long id) {
+        int flag = shopMapper.deleteByPrimaryKey(id);
+        return flag > 0;
+    }
+
+    @Override
+    public boolean deleteGoodsById(Long id) {
+        int flag = goodsMapper.deleteByPrimaryKey(id);
+        return flag > 0;
+    }
+
+
 }

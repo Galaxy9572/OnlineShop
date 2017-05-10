@@ -52,7 +52,7 @@ public class BaseController {
      * @return 输出成功的JSON格式数据
      */
     public String responseSuccess(Object obj){
-        JSONObject jsonObj = null;
+        JSONObject jsonObj = new JSONObject();
         if(obj != null){
             LOG.info("后端返回对象：{}", obj);
             JsonConfig jsonConfig = new JsonConfig();
