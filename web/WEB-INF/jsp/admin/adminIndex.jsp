@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/beAlert.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/admin/adminIndex.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/tables.css">
-    <script src="${pageContext.request.contextPath}/js/jQuery-1.12.3.js"></script>
+    <script src="${pageContext.request.contextPath}/js/jquery-1.12.3.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/bootstrap-paginator.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/beAlert.js"></script>

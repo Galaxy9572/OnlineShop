@@ -14,7 +14,7 @@
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/user/userLogin.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/public.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/beAlert.css">
-<script src="${pageContext.request.contextPath}/js/jQuery-1.12.3.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery-1.12.3.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/beAlert.js"></script>
 <script src="${pageContext.request.contextPath}/js/user/userLogin.js"></script>
 </head>
