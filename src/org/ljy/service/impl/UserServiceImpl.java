@@ -3,9 +3,7 @@ package org.ljy.service.impl;
 import com.github.pagehelper.PageHelper;
 import org.apache.log4j.Logger;
 import org.ljy.common.PagedResult;
-import org.ljy.dao.ShoppingCartMapper;
 import org.ljy.dao.UserMapper;
-import org.ljy.domain.ShoppingCart;
 import org.ljy.domain.User;
 import org.ljy.domain.UserExample;
 import org.ljy.enums.UserType;
@@ -24,11 +22,11 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
     private static Logger LOG = Logger.getLogger(UserServiceImpl.class);
 
-	@Resource
-	private UserMapper userMapper;
+    @Resource
+    private UserMapper userMapper;
 
-	@Override
-	public User userRegister(User user) {
+    @Override
+    public User userRegister(User user) {
         User result = null;
         try {
             if (user != null && StringUtil.isNotNullAndNotEmpty(user.getUserName())) {
@@ -45,14 +43,14 @@ public class UserServiceImpl implements UserService {
                 }
             }
             return result;
-        }catch (Exception e){
-            LOG.info("userService checkIfCanReg异常\n"+e.getMessage(), e);
+        } catch (Exception e) {
+            LOG.info("userService checkIfCanReg异常\n" + e.getMessage(), e);
             return null;
         }
-	}
+    }
 
-	@Override
-	public User userLogin(User user) {
+    @Override
+    public User userLogin(User user) {
         User result = null;
         try {
             String encryptedPassword = EncryptUtil.encrypt(user.getPassword());
@@ -64,26 +62,26 @@ public class UserServiceImpl implements UserService {
             }
             return result;
         } catch (Exception e) {
-            LOG.warn("userService userLogin异常\n" +e.getMessage(), e);
+            LOG.warn("userService userLogin异常\n" + e.getMessage(), e);
             return null;
         }
-	}
+    }
 
-	@Override
-	public boolean checkIfCanReg(User user) {
+    @Override
+    public boolean checkIfCanReg(User user) {
         List<User> result = new ArrayList<User>();
-		try {
-			if (user != null && !StringUtil.isEmpty(user.getUserName())) {
-				UserExample example = new UserExample();
-				example.or().andUserNameEqualTo(user.getUserName());
-				result = userMapper.selectByExample(example);
-			}
-			return result.size() <= 0;
-		} catch (Exception e) {
-			LOG.info("userService checkIfCanReg异常\n"+e.getMessage(), e);
-			return false;
-		}
-	}
+        try {
+            if (user != null && !StringUtil.isEmpty(user.getUserName())) {
+                UserExample example = new UserExample();
+                example.or().andUserNameEqualTo(user.getUserName());
+                result = userMapper.selectByExample(example);
+            }
+            return result.size() <= 0;
+        } catch (Exception e) {
+            LOG.info("userService checkIfCanReg异常\n" + e.getMessage(), e);
+            return false;
+        }
+    }
 
     @Override
     public boolean checkIfCanLogin(User user) {
@@ -92,18 +90,18 @@ public class UserServiceImpl implements UserService {
             if (user != null && StringUtil.isNotNullAndNotEmpty(user.getUserName())) {
                 UserExample example = new UserExample();
                 example.or().andUserNameEqualTo(user.getUserName())
-                .andPasswordEqualTo(EncryptUtil.encrypt(user.getPassword()));
+                        .andPasswordEqualTo(EncryptUtil.encrypt(user.getPassword()));
                 result = userMapper.selectByExample(example);
             }
             return result.size() > 0;
         } catch (Exception e) {
-            LOG.info("userService checkIfCanLogin异常\n"+e.getMessage(), e);
+            LOG.info("userService checkIfCanLogin异常\n" + e.getMessage(), e);
             return false;
         }
     }
 
     @Override
-	public boolean modifyInfo(User user) {
+    public boolean modifyInfo(User user) {
         int isSuccess = 0;
         try {
             if (user != null && !StringUtil.isEmpty(user.getUserName())) {
@@ -113,26 +111,26 @@ public class UserServiceImpl implements UserService {
             }
             return isSuccess > 0;
         } catch (Exception e) {
-            LOG.info("userService modifyInfo异常\n"+e.getMessage(), e);
+            LOG.info("userService modifyInfo异常\n" + e.getMessage(), e);
             return false;
         }
-	}
+    }
 
-	@Override
-	public PagedResult selectByExampleWithBLOBsByPage(UserExample example, Integer pageNo, Integer pageSize ) {
-		pageNo = pageNo == null?1:pageNo;
-		pageSize = pageSize == null?10:pageSize;
-		PageHelper.startPage(pageNo,pageSize);  //startPage是告诉拦截器说我要开始分页了。分页参数是这两个。
-		return BeanUtil.toPagedResult(userMapper.selectByExampleWithBLOBs(example));
-	}
+    @Override
+    public PagedResult selectByExampleWithBLOBsByPage(UserExample example, Integer pageNo, Integer pageSize) {
+        pageNo = pageNo == null ? 1 : pageNo;
+        pageSize = pageSize == null ? 10 : pageSize;
+        PageHelper.startPage(pageNo, pageSize);  //startPage是告诉拦截器说我要开始分页了。分页参数是这两个。
+        return BeanUtil.toPagedResult(userMapper.selectByExampleWithBLOBs(example));
+    }
 
-	@Override
-	public PagedResult selectByExampleByPage(UserExample example, Integer pageNo, Integer pageSize ) {
-		pageNo = pageNo == null?1:pageNo;
-		pageSize = pageSize == null?10:pageSize;
-		PageHelper.startPage(pageNo,pageSize);
-		return BeanUtil.toPagedResult(userMapper.selectByExample(example));
-	}
+    @Override
+    public PagedResult selectByExampleByPage(UserExample example, Integer pageNo, Integer pageSize) {
+        pageNo = pageNo == null ? 1 : pageNo;
+        pageSize = pageSize == null ? 10 : pageSize;
+        PageHelper.startPage(pageNo, pageSize);
+        return BeanUtil.toPagedResult(userMapper.selectByExample(example));
+    }
 
     @Override
     public long countByExample(UserExample example) {
