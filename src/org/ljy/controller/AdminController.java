@@ -181,6 +181,7 @@ public class AdminController extends BaseController {
             }
         } catch (Exception e) {
             ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.SYSTEM_ERROR);
+            LOG.warn(e.getMessage(),e);
         }
         return ajaxMap;
     }

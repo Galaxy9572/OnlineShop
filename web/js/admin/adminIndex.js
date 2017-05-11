@@ -19,7 +19,7 @@ $(window).load(function () {
 var showInfo = function (data) {
     var status = data.status;
     var msg = data.msg;
-    if (status === 1) {
+    if (status === "1") {
         alert("提示", msg, null, {type: 'success'});
     } else {
         alert("提示", msg, null, {type: 'error'});
@@ -322,7 +322,7 @@ function shopManageTable(shopName, shopType, pageNumber, pageSize) {
                                 .append('</tr>');
                         });
                     } else {
-                        $("#shopManageTableBody").append('<tr><th colspan ="10"><center>暂无数据</center></th></tr>');
+                        $("#shopManageTableBody").append('<tr><th colspan ="11"><center>暂无数据</center></th></tr>');
                     }
                 } else {
                     alert(data.errorMsg);

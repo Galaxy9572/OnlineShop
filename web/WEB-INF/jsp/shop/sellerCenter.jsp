@@ -1,19 +1,25 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+            + path + "/";
+%>
 <html>
 <head>
     <title>卖家中心</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/public.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/beAlert.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/shop/sellerCenter.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/tables.css">
-    <script src="${pageContext.request.contextPath}/js/jquery-1.12.3.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/beAlert.js"></script>
-    <script src="${pageContext.request.contextPath}/js/shop/sellerCenter.js"></script>
+    <link rel="stylesheet" type="text/css" href="<%=path%>/css/public.css">
+    <link rel="stylesheet" type="text/css" href="<%=path%>/css/beAlert.css">
+    <link rel="stylesheet" type="text/css" href="<%=path%>/css/shop/sellerCenter.css">
+    <link rel="stylesheet" type="text/css" href="<%=path%>/css/tables.css">
+    <script src="<%=path%>/js/jquery-1.12.3.min.js"></script>
+    <script src="<%=path%>/js/jquery-1.8.3.min.js"></script>
+    <script src="<%=path%>/js/beAlert.js"></script>
+    <script src="<%=path%>/js/shop/sellerCenter.js"></script>
 </head>
 <body>
 <div id="div_top">
-    <a href="${pageContext.request.contextPath}"><img class="logo" alt="LOGO" src="${pageContext.request.contextPath}/image/logo.png"/></a>
+    <a href="<%=path%>"><img class="logo" alt="LOGO" src="<%=path%>/image/logo.png"/></a>
     <div class="separator"></div>
     <div id="div_title">
         <h1>卖家中心</h1>

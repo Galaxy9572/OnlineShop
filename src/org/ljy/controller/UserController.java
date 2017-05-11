@@ -6,7 +6,7 @@ import org.ljy.domain.Shop;
 import org.ljy.domain.ShopExample;
 import org.ljy.domain.User;
 import org.ljy.enums.UserType;
-import org.ljy.service.PaymentService;
+import org.ljy.service.BankCardService;
 import org.ljy.service.ShopService;
 import org.ljy.service.ShoppingCartService;
 import org.ljy.service.UserService;
@@ -34,7 +34,7 @@ public class UserController {
     private ShopService shopService;
 
     @Resource
-    private PaymentService paymentService;
+    private BankCardService paymentService;
 
     @Resource
     private ShoppingCartService shoppingCartService;

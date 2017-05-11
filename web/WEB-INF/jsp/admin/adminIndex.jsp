@@ -1,22 +1,28 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+            + path + "/";
+%>
 <html>
 <head>
     <title>OnlineShop管理系统</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/public.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/beAlert.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/admin/adminIndex.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/tables.css">
-    <script src="${pageContext.request.contextPath}/js/jquery-1.12.3.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/bootstrap-paginator.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/beAlert.js"></script>
-    <script src="${pageContext.request.contextPath}/js/admin/adminIndex.js"></script>
+    <link rel="stylesheet" type="text/css" href="<%=path%>/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<%=path%>/css/public.css">
+    <link rel="stylesheet" type="text/css" href="<%=path%>/css/beAlert.css">
+    <link rel="stylesheet" type="text/css" href="<%=path%>/css/admin/adminIndex.css">
+    <link rel="stylesheet" type="text/css" href="<%=path%>/css/tables.css">
+    <script src="<%=path%>/js/jquery-1.12.3.min.js"></script>
+    <script src="<%=path%>/js/jquery-1.8.3.min.js"></script>
+    <script src="<%=path%>/js/bootstrap.min.js"></script>
+    <script src="<%=path%>/js/bootstrap-paginator.min.js"></script>
+    <script src="<%=path%>/js/beAlert.js"></script>
+    <script src="<%=path%>/js/admin/adminIndex.js"></script>
 </head>
 <body>
     <div id="div_top">
-        <a href="${pageContext.request.contextPath}"><img class="logo" alt="LOGO" src="${pageContext.request.contextPath}/image/logo.png"/></a>
+        <a href="<%=path%>"><img class="logo" alt="LOGO" src="<%=path%>/image/logo.png"/></a>
         <div class="separator"></div>
         <div id="div_title">
             <h1>OnlineShop管理系统</h1>

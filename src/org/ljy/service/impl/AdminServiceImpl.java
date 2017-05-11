@@ -4,7 +4,9 @@ import org.apache.log4j.Logger;
 import org.ljy.dao.GoodsMapper;
 import org.ljy.dao.ShopMapper;
 import org.ljy.dao.UserMapper;
+import org.ljy.domain.User;
 import org.ljy.domain.UserExample;
+import org.ljy.enums.UserType;
 import org.ljy.service.AdminService;
 import org.springframework.stereotype.Service;
 
@@ -38,8 +40,13 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public boolean deleteShopById(Long id) {
-        int flag = shopMapper.deleteByPrimaryKey(id);
-        return flag > 0;
+        Long userId = shopMapper.selectByPrimaryKey(id).getUserId();
+        User user = new User();
+        user.setUserId(userId);
+        user.setUserType(UserType.BUYER.key());
+        int flag1 = userMapper.updateByPrimaryKeySelective(user);
+        int flag2 = shopMapper.deleteByPrimaryKey(id);
+        return flag1 > 0 && flag2 > 0;
     }
 
     @Override

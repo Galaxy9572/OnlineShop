@@ -7,13 +7,15 @@ import org.ljy.domain.BankCard;
 import org.ljy.domain.BankCardExample;
 import org.ljy.service.BankCardService;
 import org.ljy.util.BeanUtil;
+import org.ljy.util.StringUtil;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
 
-@Service("bankCardService")
+@Service("paymentService")
 public class BankCardServiceImpl implements BankCardService {
+
 	@Resource
 	private BankCardMapper bankCardMapper;
 
@@ -23,61 +25,46 @@ public class BankCardServiceImpl implements BankCardService {
 	}
 
 	@Override
-	public int deleteByExample(BankCardExample example) {
-		return bankCardMapper.deleteByExample(example);
+	public boolean addBankCard(BankCard bankCard) {
+		int flag = bankCardMapper.insertSelective(bankCard);
+		return flag > 0;
 	}
 
 	@Override
-	public int deleteByPrimaryKey(Long bankCardId) {
-		return bankCardMapper.deleteByPrimaryKey(bankCardId);
+	public boolean deleteBankCardByBankCardId(Long id) {
+		int flag = bankCardMapper.deleteByPrimaryKey(id);
+		return flag > 0;
 	}
 
 	@Override
-	public int insert(BankCard record) {
-		return bankCardMapper.insert(record);
+	public boolean updateBankCard(BankCard bankCard) {
+		int flag = bankCardMapper.updateByPrimaryKeySelective(bankCard);
+		return flag > 0;
 	}
 
 	@Override
-	public int insertSelective(BankCard record) {
-		return bankCardMapper.insertSelective(record);
-	}
-
-	@Override
-	public List<BankCard> selectByExample(BankCardExample example) {
-		return bankCardMapper.selectByExample(example);
-	}
-
-	@Override
-	public PagedResult selectByExampleByPage(BankCardExample example, Integer pageNo, Integer pageSize) {
+	public PagedResult queryBankCardByConditionByPage(String queryType, String condition, Integer pageNo, Integer pageSize) {
 		pageNo = pageNo == null?1:pageNo;
 		pageSize = pageSize == null?10:pageSize;
 		PageHelper.startPage(pageNo,pageSize);  //startPage是告诉拦截器说我要开始分页了。分页参数是这两个。
-		return BeanUtil.toPagedResult(bankCardMapper.selectByExample(example));
-	}
-
-	@Override
-	public BankCard selectByPrimaryKey(Long bankCardId) {
-		return bankCardMapper.selectByPrimaryKey(bankCardId);
-	}
-
-	@Override
-	public int updateByExampleSelective(BankCard record, BankCardExample example) {
-		return bankCardMapper.updateByExampleSelective(record, example);
-	}
-
-	@Override
-	public int updateByExample(BankCard record, BankCardExample example) {
-		return bankCardMapper.updateByExample(record, example);
-	}
-
-	@Override
-	public int updateByPrimaryKeySelective(BankCard record) {
-		return bankCardMapper.updateByPrimaryKeySelective(record);
-	}
-
-	@Override
-	public int updateByPrimaryKey(BankCard record) {
-		return bankCardMapper.updateByPrimaryKey(record);
+		List<BankCard> result = null;
+		BankCardExample example = new BankCardExample();
+		if(StringUtil.isNotNullAndNotEmpty(queryType)){
+			int queryInt = Integer.parseInt(queryType);
+			switch (queryInt){
+				case 0 :
+					result = bankCardMapper.selectByExample(example);
+					break;
+				case 1 :
+					example.or().andBankNameEqualTo(condition);
+					result = bankCardMapper.selectByExample(example);
+					break;
+				default :
+					example.or().andBankCardIdEqualTo(Long.parseLong(condition));
+					result = bankCardMapper.selectByExample(example);
+			}
+		}
+		return BeanUtil.toPagedResult(result);
 	}
 
 }

@@ -7,28 +7,25 @@ import org.ljy.domain.BankCardExample;
 import java.util.List;
 
 public interface BankCardMapper {
+    long countByExample(BankCardExample example);
 
-	long countByExample(BankCardExample example);
+    int deleteByExample(BankCardExample example);
 
-	int deleteByExample(BankCardExample example);
+    int deleteByPrimaryKey(Long bankCardId);
 
-	int deleteByPrimaryKey(Long bankCardId);
+    int insert(BankCard record);
 
-	int insert(BankCard record);
+    int insertSelective(BankCard record);
 
-	int insertSelective(BankCard record);
+    List<BankCard> selectByExample(BankCardExample example);
 
-	List<BankCard> selectByExample(BankCardExample example);
+    BankCard selectByPrimaryKey(Long bankCardId);
 
-	List<BankCard> selectByExampleByPage(@Param("example") BankCardExample example);
+    int updateByExampleSelective(@Param("record") BankCard record, @Param("example") BankCardExample example);
 
-	BankCard selectByPrimaryKey(Long bankCardId);
+    int updateByExample(@Param("record") BankCard record, @Param("example") BankCardExample example);
 
-	int updateByExampleSelective(@Param("record") BankCard record, @Param("example") BankCardExample example);
+    int updateByPrimaryKeySelective(BankCard record);
 
-	int updateByExample(@Param("record") BankCard record, @Param("example") BankCardExample example);
-
-	int updateByPrimaryKeySelective(BankCard record);
-
-	int updateByPrimaryKey(BankCard record);
+    int updateByPrimaryKey(BankCard record);
 }

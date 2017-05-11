@@ -75,8 +75,8 @@
 						<p class="catalog_name">男装</p>
 						<hr class="catalog_separator">
 						<ul>
-							<li><a href="">外套</a></li>
-							<li><a href="">鞋裤</a></li>
+							<li><a href="javascript:void(0)" onclick="goodsList('manSuit')">外套</a></li>
+							<li><a href="javascript:goodsList('manShoePants');">鞋裤</a></li>
 						</ul>
 					</div>
 					<div id="div_middle_catalog_woman" class="div_catalog">

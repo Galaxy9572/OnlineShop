@@ -2,73 +2,77 @@ package org.ljy.domain;
 
 import java.util.Date;
 
-public class BankCard{
+public class BankCard {
+    private Long bankCardId;
 
-	private Long bankCardId;
-	private String userId;
-	private String bankName;
-	private Long paymentId;
-	private Date createTime;
-	private Date modifyTime;
+    private String userId;
 
-	public BankCard(Long bankCardId, String userId, String bankName, Long paymentId, Date createTime, Date modifyTime) {
-		this.bankCardId = bankCardId;
-		this.userId = userId;
-		this.bankName = bankName;
-		this.paymentId = paymentId;
-		this.createTime = createTime;
-		this.modifyTime = modifyTime;
-	}
+    private String bankName;
 
-	public BankCard() {
-		super();
-	}
+    private Long paymentId;
 
-	public Long getBankCardId() {
-		return bankCardId;
-	}
+    private Date createTime;
 
-	public void setBankCardId(Long bankCardId) {
-		this.bankCardId = bankCardId;
-	}
+    private Date modifyTime;
 
-	public String getUserId() {
-		return userId;
-	}
+    public BankCard(Long bankCardId, String userId, String bankName, Long paymentId, Date createTime, Date modifyTime) {
+        this.bankCardId = bankCardId;
+        this.userId = userId;
+        this.bankName = bankName;
+        this.paymentId = paymentId;
+        this.createTime = createTime;
+        this.modifyTime = modifyTime;
+    }
 
-	public void setUserId(String userId) {
-		this.userId = userId == null ? null : userId.trim();
-	}
+    public BankCard() {
+        super();
+    }
 
-	public String getBankName() {
-		return bankName;
-	}
+    public Long getBankCardId() {
+        return bankCardId;
+    }
 
-	public void setBankName(String bankName) {
-		this.bankName = bankName == null ? null : bankName.trim();
-	}
+    public void setBankCardId(Long bankCardId) {
+        this.bankCardId = bankCardId;
+    }
 
-	public Long getPaymentId() {
-		return paymentId;
-	}
+    public String getUserId() {
+        return userId;
+    }
 
-	public void setPaymentId(Long paymentId) {
-		this.paymentId = paymentId;
-	}
+    public void setUserId(String userId) {
+        this.userId = userId == null ? null : userId.trim();
+    }
 
-	public Date getCreateTime() {
-		return createTime;
-	}
+    public String getBankName() {
+        return bankName;
+    }
 
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
+    public void setBankName(String bankName) {
+        this.bankName = bankName == null ? null : bankName.trim();
+    }
 
-	public Date getModifyTime() {
-		return modifyTime;
-	}
+    public Long getPaymentId() {
+        return paymentId;
+    }
 
-	public void setModifyTime(Date modifyTime) {
-		this.modifyTime = modifyTime;
-	}
+    public void setPaymentId(Long paymentId) {
+        this.paymentId = paymentId;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getModifyTime() {
+        return modifyTime;
+    }
+
+    public void setModifyTime(Date modifyTime) {
+        this.modifyTime = modifyTime;
+    }
 }

@@ -12,9 +12,9 @@
 
 <title>搜索结果</title>
 <link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/css/common.css">
+	href="<%=path%>/css/common.css">
 <link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/css/search/searchResult.css">
+	href="<%=path%>/css/search/searchResult.css">
 
 </head>
 
@@ -22,7 +22,7 @@
 	<div id="body">
 		<div id="div_top">
 			<div id="div_top_logo" class="div_tops">
-				<img id="img_logo" src="${pageContext.request.contextPath}/image/logo.png">
+				<img id="img_logo" src="<%=path%>/image/logo.png">
 			</div>
 			<div id="div_search" class="div_tops">
 				<select id="select_search">
@@ -100,8 +100,8 @@
 				<hr class="bottom_separator">
 				<p>
 					基于SpringMVC、Spring和MyBatis的网上商城<br> 1306102-04 廖俊瑶 毕业设计 <br>
-					<img class="img_frameworks" alt="Spring" src="${pageContext.request.contextPath}/image/spring-logo.png" />
-					<img class="img_frameworks" alt="MyBatis" src="${pageContext.request.contextPath}/image/mybatis-logo.png" />
+					<img class="img_frameworks" alt="Spring" src="<%=path%>/image/spring-logo.png" />
+					<img class="img_frameworks" alt="MyBatis" src="<%=path%>/image/mybatis-logo.png" />
 					<br>
 				</p>
 			</div>
