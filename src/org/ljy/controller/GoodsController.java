@@ -19,6 +19,25 @@ public class GoodsController extends BaseController{
     @Resource
     private GoodsService goodsService;
 
+    @RequestMapping("/goods/list")
+    public String goodsListPage(HttpServletRequest request,int type){
+        String goodsType = "";
+        switch (type){
+            case 1:goodsType = "男上衣";break;
+            case 2:goodsType = "男裤";break;
+            case 3:goodsType = "男鞋";break;
+            case 4:goodsType = "女上衣";break;
+            case 5:goodsType = "女裤";break;
+            case 6:goodsType = "女鞋";break;
+            case 7:goodsType = "电脑";break;
+            case 8:goodsType = "手机";break;
+            case 9:goodsType = "书籍";break;
+        }
+
+        request.setAttribute("goodsType",goodsType);
+        return "goods/goodsList";
+    }
+
     @RequestMapping("/goods/addGoods")
     @ResponseBody
     public Map<String,String> addGoods(Goods goods){

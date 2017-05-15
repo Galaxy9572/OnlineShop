@@ -1,13 +1,10 @@
 package org.ljy.controller;
 
-import org.apache.log4j.Logger;
 import org.ljy.common.MsgConstants;
 import org.ljy.domain.Shop;
 import org.ljy.domain.ShopExample;
 import org.ljy.domain.User;
-import org.ljy.enums.GoodsType;
-import org.ljy.enums.ShopType;
-import org.ljy.enums.UserType;
+import org.ljy.enums.*;
 import org.ljy.service.GoodsService;
 import org.ljy.service.ShopService;
 import org.ljy.service.UserService;
@@ -25,8 +22,7 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-public class ShopController {
-    private static Logger LOG = Logger.getLogger(ShopController.class);
+public class ShopController extends BaseController{
     @Resource
     private UserService userService;
 
@@ -59,6 +55,12 @@ public class ShopController {
             List<GoodsType> goods = new ArrayList<GoodsType>();
             Collections.addAll(goods,GoodsType.values());//将GoodsType的所有值加入List
             request.setAttribute("goodsType",goods);
+            List<OrderStatement> orders = new ArrayList<OrderStatement>();
+            Collections.addAll(orders,OrderStatement.values());
+            request.setAttribute("orderStatement",orders);
+            List<UserMessageStatement> msgs = new ArrayList<UserMessageStatement>();
+            Collections.addAll(msgs,UserMessageStatement.values());
+            request.setAttribute("userMsgStatement",msgs);
             return "shop/sellerCenter";
         }
     }
@@ -77,7 +79,7 @@ public class ShopController {
         Collections.addAll(goods,GoodsType.values());//将GoodsType的所有值加入List
         long allUserGoodsNum = goodsService.countByExample(null);
         request.setAttribute("goodsType",goods);
-        return "shop/shopManage";
+        return "shop/sellerCenter";
     }
 
     @RequestMapping("/shop/openShop/confirm")
@@ -104,4 +106,5 @@ public class ShopController {
             return ajaxMap;
         }
     }
+
 }

@@ -7,28 +7,25 @@ import org.ljy.domain.UserMessageExample;
 import java.util.List;
 
 public interface UserMessageMapper {
+    long countByExample(UserMessageExample example);
 
-	long countByExample(UserMessageExample example);
+    int deleteByExample(UserMessageExample example);
 
-	int deleteByExample(UserMessageExample example);
+    int deleteByPrimaryKey(Long messageId);
 
-	int deleteByPrimaryKey(Long messageId);
+    int insert(UserMessage record);
 
-	int insert(UserMessage record);
+    int insertSelective(UserMessage record);
 
-	int insertSelective(UserMessage record);
+    List<UserMessage> selectByExample(UserMessageExample example);
 
-	List<UserMessage> selectByExample(UserMessageExample example);
+    UserMessage selectByPrimaryKey(Long messageId);
 
-	List<UserMessage> selectByExampleByPage(@Param("example") UserMessageExample example);
+    int updateByExampleSelective(@Param("record") UserMessage record, @Param("example") UserMessageExample example);
 
-	UserMessage selectByPrimaryKey(Long messageId);
+    int updateByExample(@Param("record") UserMessage record, @Param("example") UserMessageExample example);
 
-	int updateByExampleSelective(@Param("record") UserMessage record, @Param("example") UserMessageExample example);
+    int updateByPrimaryKeySelective(UserMessage record);
 
-	int updateByExample(@Param("record") UserMessage record, @Param("example") UserMessageExample example);
-
-	int updateByPrimaryKeySelective(UserMessage record);
-
-	int updateByPrimaryKey(UserMessage record);
+    int updateByPrimaryKey(UserMessage record);
 }

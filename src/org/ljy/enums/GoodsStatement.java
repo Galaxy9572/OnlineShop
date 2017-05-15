@@ -8,19 +8,19 @@ public enum GoodsStatement {
     ILLEGAL(2,"违规"),
     DELETED(0,"删除");
 
-    private int statement;
+    private int key;
     private String value;
 
     GoodsStatement(int statement, String value) {
-        this.statement = statement;
+        this.key = statement;
         this.value = value;
     }
 
-    public int getStatement() {
-        return statement;
+    public int key() {
+        return key;
     }
 
-    public String getValue() {
+    public String value() {
         return value;
     }
 }

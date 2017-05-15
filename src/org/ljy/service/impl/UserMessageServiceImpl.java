@@ -7,6 +7,11 @@ import org.ljy.domain.UserMessage;
 import org.ljy.domain.UserMessageExample;
 import org.ljy.service.UserMessageService;
 import org.ljy.util.BeanUtil;
+import org.ljy.util.StringUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.dao.DataAccessException;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -14,7 +19,9 @@ import java.util.List;
 /**
  * Created by ljy56 on 2017/4/19.
  */
+@Service("userMessageService")
 public class UserMessageServiceImpl implements UserMessageService {
+    private Logger LOG = LoggerFactory.getLogger(this.getClass());
     @Resource
     private UserMessageMapper userMessageMapper;
     @Override
@@ -23,60 +30,64 @@ public class UserMessageServiceImpl implements UserMessageService {
     }
 
     @Override
-    public int deleteByExample(UserMessageExample example) {
-        return userMessageMapper.deleteByExample(example);
+    public boolean sendMessage(UserMessage message) {
+        try {
+            int flag = userMessageMapper.insertSelective(message);
+            return flag > 0;
+        } catch (DataAccessException e) {
+            LOG.warn(e.getMessage(),e);
+            return false;
+        }
     }
 
     @Override
-    public int deleteByPrimaryKey(Long messageId) {
-        return userMessageMapper.deleteByPrimaryKey(messageId);
+    public boolean deleteMessageByUserId(Long messageId) {
+        try {
+            int flag = userMessageMapper.deleteByPrimaryKey(messageId);
+            return flag > 0;
+        } catch (DataAccessException e) {
+            LOG.warn(e.getMessage(),e);
+            return false;
+        }
     }
 
     @Override
-    public int insert(UserMessage record) {
-        return userMessageMapper.insert(record);
+    public boolean updateMessage(UserMessage message) {
+        try {
+            int flag = userMessageMapper.updateByPrimaryKey(message);
+            return flag > 0;
+        } catch (DataAccessException e) {
+            LOG.warn(e.getMessage(),e);
+            return false;
+        }
     }
 
     @Override
-    public int insertSelective(UserMessage record) {
-        return userMessageMapper.insertSelective(record);
-    }
-
-    @Override
-    public List<UserMessage> selectByExample(UserMessageExample example) {
-        return userMessageMapper.selectByExample(example);
-    }
-
-    @Override
-    public PagedResult selectByExampleByPage(UserMessageExample example, Integer pageNo, Integer pageSize) {
+    public PagedResult queryMsgByCondition(String userId,String statement, Integer pageNo, Integer pageSize) {
+        UserMessageExample example = new UserMessageExample();
+        List<UserMessage> result;
         pageNo = pageNo == null?1:pageNo;
         pageSize = pageSize == null?10:pageSize;
         PageHelper.startPage(pageNo,pageSize);
-        return BeanUtil.toPagedResult(userMessageMapper.selectByExample(example));
-    }
-
-    @Override
-    public UserMessage selectByPrimaryKey(Long messageId) {
-        return userMessageMapper.selectByPrimaryKey(messageId);
-    }
-
-    @Override
-    public int updateByExampleSelective(UserMessage record, UserMessageExample example) {
-        return userMessageMapper.updateByExampleSelective(record,example);
-    }
-
-    @Override
-    public int updateByExample(UserMessage record, UserMessageExample example) {
-        return userMessageMapper.updateByExampleSelective(record,example);
-    }
-
-    @Override
-    public int updateByPrimaryKeySelective(UserMessage record) {
-        return userMessageMapper.updateByPrimaryKeySelective(record);
-    }
-
-    @Override
-    public int updateByPrimaryKey(UserMessage record) {
-        return userMessageMapper.updateByPrimaryKey(record);
+        try {
+            if(StringUtil.isNotNullAndNotEmpty(userId)){
+                long userIdLong = Long.parseLong(userId);
+                example.or().andUserIdEqualTo(userIdLong);
+            }
+            int statementInt = Integer.parseInt(statement);
+            switch (statementInt){
+                case 0:
+                    result = userMessageMapper.selectByExample(example);
+                    break;
+                default:
+                    example.or().andStatementEqualTo(statementInt);
+                    result = userMessageMapper.selectByExample(example);
+                    break;
+            }
+            return BeanUtil.toPagedResult(result);
+        } catch (Exception e) {
+            LOG.warn(e.getMessage(),e);
+            return null;
+        }
     }
 }

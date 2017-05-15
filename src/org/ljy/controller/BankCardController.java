@@ -1,6 +1,5 @@
 package org.ljy.controller;
 
-import org.apache.log4j.Logger;
 import org.ljy.common.MsgConstants;
 import org.ljy.domain.BankCard;
 import org.ljy.service.BankCardService;
@@ -18,9 +17,7 @@ import java.util.Map;
  * Created by ljy56 on 2017/5/11.
  */
 @Controller
-public class BankCardController {
-    private static Logger LOG = Logger.getLogger(BankCardController.class);
-
+public class BankCardController extends BaseController{
     @Resource
     private UserService userService;
 

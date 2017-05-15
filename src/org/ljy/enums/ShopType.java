@@ -12,17 +12,17 @@ public enum ShopType {
     OUTDOOR(6,"户外"),
     HEALTH(7,"健康");
 
-    private int typeInt;
-    private String typeName;
+    private int key;
+    private String value;
 
     ShopType(int typeInt, String typeName) {
-        this.typeInt = typeInt;
-        this.typeName = typeName;
+        this.key = typeInt;
+        this.value = typeName;
     }
 
-    public int key() {return this.typeInt;}
+    public int key() {return this.key;}
 
     public String value() {
-        return this.typeName;
+        return this.value;
     }
 }

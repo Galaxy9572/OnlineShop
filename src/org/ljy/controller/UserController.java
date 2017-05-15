@@ -1,10 +1,12 @@
 package org.ljy.controller;
 
-import org.apache.log4j.Logger;
 import org.ljy.common.MsgConstants;
 import org.ljy.domain.Shop;
 import org.ljy.domain.ShopExample;
 import org.ljy.domain.User;
+import org.ljy.enums.GoodsType;
+import org.ljy.enums.OrderStatement;
+import org.ljy.enums.UserMessageStatement;
 import org.ljy.enums.UserType;
 import org.ljy.service.BankCardService;
 import org.ljy.service.ShopService;
@@ -17,16 +19,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Map;
 
 /**
  * @author 廖俊瑶
  */
 @Controller
-public class UserController {
-    private static Logger LOG = Logger.getLogger(UserController.class);
-
+public class UserController extends BaseController{
     @Resource
     private UserService userService;
 
@@ -45,7 +49,7 @@ public class UserController {
      * @return 首页
      */
     @RequestMapping("/")
-    public String index() {
+    public String index(HttpServletRequest request) {
         return "../../index";
     }
 
@@ -85,7 +89,16 @@ public class UserController {
      * @return 买家中心页面
      */
     @RequestMapping("/user/buyerCenter")
-    public String buyerCenterPage() {
+    public String buyerCenterPage(HttpServletRequest request) {
+        List<GoodsType> goods = new ArrayList<GoodsType>();
+        Collections.addAll(goods,GoodsType.values());//将GoodsType的所有值加入List
+        request.setAttribute("goodsType",goods);
+        List<OrderStatement> orders = new ArrayList<OrderStatement>();
+        Collections.addAll(orders,OrderStatement.values());
+        request.setAttribute("orderStatement",orders);
+        List<UserMessageStatement> msgs = new ArrayList<UserMessageStatement>();
+        Collections.addAll(msgs,UserMessageStatement.values());
+        request.setAttribute("userMsgStatement",msgs);
         return "user/buyerCenter";
     }
 
@@ -117,7 +130,7 @@ public class UserController {
             return ajaxMap;
         } catch (Exception e) {
             ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.SYSTEM_ERROR);
-            LOG.warn("userController userRegister异常\n" + e.getMessage(), e);
+            LOG.warn(e.getMessage(), e);
             return ajaxMap;
         }
     }
@@ -155,7 +168,7 @@ public class UserController {
             return ajaxMap;
         } catch (Exception e) {
             ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.SYSTEM_ERROR);
-            LOG.warn("userController userLogin异常\n" + e.getMessage(), e);
+            LOG.warn(e.getMessage(), e);
             return ajaxMap;
         }
     }
@@ -194,7 +207,7 @@ public class UserController {
             return ajaxMap;
         } catch (Exception e) {
             ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.SYSTEM_ERROR);
-            LOG.warn("userController modifyInfo异常\n" + e.getMessage(), e);
+            LOG.warn(e.getMessage(), e);
             return ajaxMap;
         }
     }

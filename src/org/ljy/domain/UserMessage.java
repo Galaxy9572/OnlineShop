@@ -2,84 +2,88 @@ package org.ljy.domain;
 
 import java.util.Date;
 
-public class UserMessage{
+public class UserMessage {
+    private Long messageId;
 
-	private Long messageId;
-	private Long userId;
-	private String fromUserId;
-	private String context;
-	private Integer statement;
-	private Date createTime;
-	private Date modifyTime;
+    private Long userId;
 
-	public UserMessage(Long messageId, Long userId, String fromUserId, String context, Integer statement,
-			Date createTime, Date modifyTime) {
-		this.messageId = messageId;
-		this.userId = userId;
-		this.fromUserId = fromUserId;
-		this.context = context;
-		this.statement = statement;
-		this.createTime = createTime;
-		this.modifyTime = modifyTime;
-	}
+    private Long fromUserId;
 
-	public UserMessage() {
-		super();
-	}
+    private String context;
 
-	public Long getMessageId() {
-		return messageId;
-	}
+    private Integer statement;
 
-	public void setMessageId(Long messageId) {
-		this.messageId = messageId;
-	}
+    private Date createTime;
 
-	public Long getUserId() {
-		return userId;
-	}
+    private Date modifyTime;
 
-	public void setUserId(Long userId) {
-		this.userId = userId;
-	}
+    public UserMessage(Long messageId, Long userId, Long fromUserId, String context, Integer statement, Date createTime, Date modifyTime) {
+        this.messageId = messageId;
+        this.userId = userId;
+        this.fromUserId = fromUserId;
+        this.context = context;
+        this.statement = statement;
+        this.createTime = createTime;
+        this.modifyTime = modifyTime;
+    }
 
-	public String getFromUserId() {
-		return fromUserId;
-	}
+    public UserMessage() {
+        super();
+    }
 
-	public void setFromUserId(String fromUserId) {
-		this.fromUserId = fromUserId == null ? null : fromUserId.trim();
-	}
+    public Long getMessageId() {
+        return messageId;
+    }
 
-	public String getContext() {
-		return context;
-	}
+    public void setMessageId(Long messageId) {
+        this.messageId = messageId;
+    }
 
-	public void setContext(String context) {
-		this.context = context == null ? null : context.trim();
-	}
+    public Long getUserId() {
+        return userId;
+    }
 
-	public Integer getStatement() {
-		return statement;
-	}
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
 
-	public void setStatement(Integer statement) {
-		this.statement = statement;
-	}
+    public Long getFromUserId() {
+        return fromUserId;
+    }
 
-	public Date getCreateTime() {
-		return createTime;
-	}
+    public void setFromUserId(Long fromUserId) {
+        this.fromUserId = fromUserId;
+    }
 
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
+    public String getContext() {
+        return context;
+    }
 
-	public Date getModifyTime() {
-		return modifyTime;
-	}
+    public void setContext(String context) {
+        this.context = context == null ? null : context.trim();
+    }
 
-	public void setModifyTime(Date modifyTime) {
-		this.modifyTime = modifyTime;
-	}
+    public Integer getStatement() {
+        return statement;
+    }
+
+    public void setStatement(Integer statement) {
+        this.statement = statement;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getModifyTime() {
+        return modifyTime;
+    }
+
+    public void setModifyTime(Date modifyTime) {
+        this.modifyTime = modifyTime;
+    }
 }

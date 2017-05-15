@@ -15,11 +15,3 @@ var logout = function () {
         }
     },{type:"question"});
 };
-
-var goodsList = function (type) {
-    console.log(type);
-    $.ajax({
-        url:"goods/"+type,
-        type:"get"
-    });
-};

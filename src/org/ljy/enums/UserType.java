@@ -13,16 +13,16 @@ public enum UserType {
      * 管理员
      */
 	ADMIN(3,"管理员");
-	private int userType;
-	private String typeName;
+	private int key;
+	private String value;
 
 	UserType(int userType,String typeName) {
-		this.userType = userType;
-		this.typeName = typeName;
+		this.key = userType;
+		this.value = typeName;
 	}
 
 	public int key() {
-	    return this.userType;
+	    return this.key;
 	}
-	public String value(){return this.typeName;}
+	public String value(){return this.value;}
 }

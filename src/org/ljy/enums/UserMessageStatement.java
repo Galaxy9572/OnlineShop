@@ -7,19 +7,19 @@ public enum UserMessageStatement {
     READ(0,"已读"),
     NOTREAD(1,"未读");
 
-    private int statement;
+    private int key;
     private String value;
 
     UserMessageStatement(int statement, String value) {
-        this.statement = statement;
+        this.key = statement;
         this.value = value;
     }
 
-    public int getStatement() {
-        return statement;
+    public int key() {
+        return key;
     }
 
-    public String getValue() {
+    public String value() {
         return value;
     }
 }

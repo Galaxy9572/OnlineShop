@@ -4,33 +4,17 @@ import org.ljy.common.PagedResult;
 import org.ljy.domain.UserMessage;
 import org.ljy.domain.UserMessageExample;
 
-import java.util.List;
-
 /**
  * Created by ljy56 on 2017/4/19.
  */
 public interface UserMessageService {
     long countByExample(UserMessageExample example);
 
-    int deleteByExample(UserMessageExample example);
+    boolean sendMessage(UserMessage message);
 
-    int deleteByPrimaryKey(Long messageId);
+    boolean deleteMessageByUserId(Long messageId);
 
-    int insert(UserMessage record);
+    boolean updateMessage(UserMessage message);
 
-    int insertSelective(UserMessage record);
-
-    List<UserMessage> selectByExample(UserMessageExample example);
-
-    PagedResult selectByExampleByPage(UserMessageExample example, Integer pageNo, Integer pageSize);
-
-    UserMessage selectByPrimaryKey(Long messageId);
-
-    int updateByExampleSelective(UserMessage record, UserMessageExample example);
-
-    int updateByExample(UserMessage record, UserMessageExample example);
-
-    int updateByPrimaryKeySelective(UserMessage record);
-
-    int updateByPrimaryKey(UserMessage record);
+    PagedResult queryMsgByCondition(String userId,String statement, Integer pageNo, Integer pageSize);
 }

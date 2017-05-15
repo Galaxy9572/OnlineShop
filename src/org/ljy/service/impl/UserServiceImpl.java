@@ -44,7 +44,7 @@ public class UserServiceImpl implements UserService {
             }
             return result;
         } catch (Exception e) {
-            LOG.info("userService checkIfCanReg异常\n" + e.getMessage(), e);
+            LOG.warn(e.getMessage(), e);
             return null;
         }
     }
@@ -62,7 +62,7 @@ public class UserServiceImpl implements UserService {
             }
             return result;
         } catch (Exception e) {
-            LOG.warn("userService userLogin异常\n" + e.getMessage(), e);
+            LOG.warn(e.getMessage(), e);
             return null;
         }
     }
@@ -78,7 +78,7 @@ public class UserServiceImpl implements UserService {
             }
             return result.size() <= 0;
         } catch (Exception e) {
-            LOG.info("userService checkIfCanReg异常\n" + e.getMessage(), e);
+            LOG.warn(e.getMessage(), e);
             return false;
         }
     }
@@ -95,7 +95,7 @@ public class UserServiceImpl implements UserService {
             }
             return result.size() > 0;
         } catch (Exception e) {
-            LOG.info("userService checkIfCanLogin异常\n" + e.getMessage(), e);
+            LOG.warn(e.getMessage(), e);
             return false;
         }
     }
@@ -111,7 +111,7 @@ public class UserServiceImpl implements UserService {
             }
             return isSuccess > 0;
         } catch (Exception e) {
-            LOG.info("userService modifyInfo异常\n" + e.getMessage(), e);
+            LOG.warn(e.getMessage(), e);
             return false;
         }
     }

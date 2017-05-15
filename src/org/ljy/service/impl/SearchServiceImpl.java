@@ -1,7 +1,6 @@
 package org.ljy.service.impl;
 
 import org.apache.log4j.Logger;
-import org.ljy.controller.UserController;
 import org.ljy.dao.GoodsMapper;
 import org.ljy.dao.ShopMapper;
 import org.ljy.dao.UserMapper;

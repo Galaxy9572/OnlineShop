@@ -129,13 +129,14 @@
                         <th width="8%">商品ID</th>
                         <th width="8%">商店ID</th>
                         <th width="10%">商品名</th>
-                        <th width="10%">商品种类</th>
+                        <th width="6%">商品种类</th>
                         <th width="15%">价格</th>
                         <th width="5%">折扣</th>
+                        <th width="5%">评分</th>
                         <th width="5%">状态</th>
-                        <th width="12%">创建时间</th>
-                        <th width="12%">修改时间</th>
-                        <th width="15%">操作</th>
+                        <th width="14%">创建时间</th>
+                        <th width="14%">修改时间</th>
+                        <th width="10%">操作</th>
                     </tr>
                     </thead>
 

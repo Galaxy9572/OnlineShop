@@ -1,6 +1,5 @@
 package org.ljy.controller;
 
-import org.apache.log4j.Logger;
 import org.ljy.service.SearchService;
 import org.ljy.util.AjaxUtil;
 import org.ljy.util.StringUtil;
@@ -14,10 +13,11 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author ljy56
+ */
 @Controller
-public class SearchController{
-	private static Logger LOG = Logger.getLogger(SearchController.class);
-
+public class SearchController extends BaseController{
 	@Resource
 	private SearchService searchService;
 

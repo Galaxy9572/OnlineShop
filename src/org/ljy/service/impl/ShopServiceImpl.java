@@ -1,19 +1,18 @@
 package org.ljy.service.impl;
 
 import com.github.pagehelper.PageHelper;
-import org.apache.log4j.Logger;
 import org.ljy.common.PagedResult;
 import org.ljy.dao.ShopMapper;
 import org.ljy.dao.UserMapper;
 import org.ljy.domain.Shop;
 import org.ljy.domain.ShopExample;
 import org.ljy.domain.User;
-import org.ljy.domain.UserExample;
 import org.ljy.enums.UserType;
 import org.ljy.service.ShopService;
-import org.ljy.service.UserService;
 import org.ljy.util.BeanUtil;
 import org.ljy.util.StringUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -22,7 +21,7 @@ import java.util.List;
 
 @Service("shopService")
 public class ShopServiceImpl implements ShopService {
-    private static Logger LOG = Logger.getLogger(ShopServiceImpl.class);
+    private Logger LOG = LoggerFactory.getLogger(this.getClass());
     @Resource
     private UserMapper userMapper;
 

@@ -7,26 +7,25 @@ import org.ljy.domain.ShoppingCartExample;
 import java.util.List;
 
 public interface ShoppingCartMapper {
+    long countByExample(ShoppingCartExample example);
 
-	long countByExample(ShoppingCartExample example);
+    int deleteByExample(ShoppingCartExample example);
 
-	int deleteByExample(ShoppingCartExample example);
+    int deleteByPrimaryKey(Long cartId);
 
-	int deleteByPrimaryKey(Long cartId);
+    int insert(ShoppingCart record);
 
-	int insert(ShoppingCart record);
+    int insertSelective(ShoppingCart record);
 
-	int insertSelective(ShoppingCart record);
+    List<ShoppingCart> selectByExample(ShoppingCartExample example);
 
-	List<ShoppingCart> selectByExample(ShoppingCartExample example);
+    ShoppingCart selectByPrimaryKey(Long cartId);
 
-	ShoppingCart selectByPrimaryKey(Long cartId);
+    int updateByExampleSelective(@Param("record") ShoppingCart record, @Param("example") ShoppingCartExample example);
 
-	int updateByExampleSelective(@Param("record") ShoppingCart record, @Param("example") ShoppingCartExample example);
+    int updateByExample(@Param("record") ShoppingCart record, @Param("example") ShoppingCartExample example);
 
-	int updateByExample(@Param("record") ShoppingCart record, @Param("example") ShoppingCartExample example);
+    int updateByPrimaryKeySelective(ShoppingCart record);
 
-	int updateByPrimaryKeySelective(ShoppingCart record);
-
-	int updateByPrimaryKey(ShoppingCart record);
+    int updateByPrimaryKey(ShoppingCart record);
 }

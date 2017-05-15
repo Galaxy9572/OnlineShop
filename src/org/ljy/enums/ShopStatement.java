@@ -8,16 +8,16 @@ public enum ShopStatement {
     ILLEGAL(2,"违规"),
     CLOSED(0,"关闭");
 
-    private int statement;
+    private int key;
     private String value;
 
     ShopStatement(int statement, String value) {
-        this.statement = statement;
+        this.key = statement;
         this.value = value;
     }
 
-    public int getStatement() {
-        return statement;
+    public int getKey() {
+        return key;
     }
 
     public String getValue() {

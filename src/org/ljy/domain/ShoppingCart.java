@@ -2,63 +2,66 @@ package org.ljy.domain;
 
 import java.util.Date;
 
-public class ShoppingCart{
+public class ShoppingCart {
+    private Long cartId;
 
-	private Long cartId;
-	private Long userId;
-	private String goodsId;
-	private Date createTime;
-	private Date modifyTime;
+    private Long userId;
 
-	public ShoppingCart(Long cartId, Long userId, String goodsId, Date createTime, Date modifyTime) {
-		this.cartId = cartId;
-		this.userId = userId;
-		this.goodsId = goodsId;
-		this.createTime = createTime;
-		this.modifyTime = modifyTime;
-	}
+    private String goodsId;
 
-	public ShoppingCart() {
-		super();
-	}
+    private Date createTime;
 
-	public Long getCartId() {
-		return cartId;
-	}
+    private Date modifyTime;
 
-	public void setCartId(Long cartId) {
-		this.cartId = cartId;
-	}
+    public ShoppingCart(Long cartId, Long userId, String goodsId, Date createTime, Date modifyTime) {
+        this.cartId = cartId;
+        this.userId = userId;
+        this.goodsId = goodsId;
+        this.createTime = createTime;
+        this.modifyTime = modifyTime;
+    }
 
-	public Long getUserId() {
-		return userId;
-	}
+    public ShoppingCart() {
+        super();
+    }
 
-	public void setUserId(Long userId) {
-		this.userId = userId;
-	}
+    public Long getCartId() {
+        return cartId;
+    }
 
-	public String getGoodsId() {
-		return goodsId;
-	}
+    public void setCartId(Long cartId) {
+        this.cartId = cartId;
+    }
 
-	public void setGoodsId(String goodsId) {
-		this.goodsId = goodsId == null ? null : goodsId.trim();
-	}
+    public Long getUserId() {
+        return userId;
+    }
 
-	public Date getCreateTime() {
-		return createTime;
-	}
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
 
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
+    public String getGoodsId() {
+        return goodsId;
+    }
 
-	public Date getModifyTime() {
-		return modifyTime;
-	}
+    public void setGoodsId(String goodsId) {
+        this.goodsId = goodsId == null ? null : goodsId.trim();
+    }
 
-	public void setModifyTime(Date modifyTime) {
-		this.modifyTime = modifyTime;
-	}
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getModifyTime() {
+        return modifyTime;
+    }
+
+    public void setModifyTime(Date modifyTime) {
+        this.modifyTime = modifyTime;
+    }
 }

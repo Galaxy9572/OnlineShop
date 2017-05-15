@@ -1,6 +1,5 @@
 package org.ljy.controller;
 
-import org.apache.log4j.Logger;
 import org.ljy.common.MsgConstants;
 import org.ljy.common.PagedResult;
 import org.ljy.domain.ShopExample;
@@ -30,7 +29,6 @@ import java.util.Map;
  */
 @Controller
 public class AdminController extends BaseController {
-    private static Logger LOG = Logger.getLogger(AdminController.class);
     @Resource
     private AdminService adminService;
 
@@ -71,7 +69,7 @@ public class AdminController extends BaseController {
     @RequestMapping("/admin/deleteUser")
     @ResponseBody
     public Map<String, String> deleteUser(String userId){
-        Map<String, String> ajaxMap = null;
+        Map<String, String> ajaxMap;
         try {
             if(StringUtil.isNotNullAndNotEmpty(userId)){
                 UserExample example = new UserExample();
@@ -123,7 +121,7 @@ public class AdminController extends BaseController {
             }
         } catch (Exception e) {
             LOG.warn(e.getMessage(), e);
-            return responseFail(MsgConstants.SYSTEM_ERROR + e.getMessage());
+            return responseFail(MsgConstants.SYSTEM_ERROR);
         }
     }
 
@@ -167,7 +165,7 @@ public class AdminController extends BaseController {
     @RequestMapping("/admin/deleteShop")
     @ResponseBody
     public Map<String, String> deleteShop(String shopId){
-        Map<String, String> ajaxMap = null;
+        Map<String, String> ajaxMap;
         try {
             if(StringUtil.isNotNullAndNotEmpty(shopId)){
                 boolean flag = adminService.deleteShopById(Long.parseLong(shopId));
@@ -189,7 +187,7 @@ public class AdminController extends BaseController {
     @RequestMapping("/admin/deleteGoods")
     @ResponseBody
     public Map<String, String> deleteGoods(String goodsId){
-        Map<String, String> ajaxMap = null;
+        Map<String, String> ajaxMap;
         try {
             if(StringUtil.isNotNullAndNotEmpty(goodsId)){
                 boolean flag = adminService.deleteGoodsById(Long.parseLong(goodsId));

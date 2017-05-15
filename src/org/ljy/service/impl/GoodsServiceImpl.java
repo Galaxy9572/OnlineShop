@@ -8,14 +8,17 @@ import org.ljy.domain.GoodsExample;
 import org.ljy.service.GoodsService;
 import org.ljy.util.BeanUtil;
 import org.ljy.util.StringUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
 
 @Service("goodsService")
 public class GoodsServiceImpl implements GoodsService {
-
+    private Logger LOG = LoggerFactory.getLogger(this.getClass());
     @Resource
     private GoodsMapper goodsMapper;
 
@@ -26,25 +29,38 @@ public class GoodsServiceImpl implements GoodsService {
 
     @Override
     public boolean addGoods(Goods goods) {
-        int flag = goodsMapper.insertSelective(goods);
-        return flag > 0;
+        try {
+            Date date = new Date();
+            goods.setCreateTime(date);
+            goods.setModifyTime(date);
+            int flag = goodsMapper.insertSelective(goods);
+            return flag > 0;
+        } catch (Exception e) {
+            LOG.warn(e.getMessage(),e);
+            return false;
+        }
     }
 
     @Override
     public boolean deleteGoodsById(Long goodsId) {
-        int flag = goodsMapper.deleteByPrimaryKey(goodsId);
-        return flag > 0;
+        try {
+            int flag = goodsMapper.deleteByPrimaryKey(goodsId);
+            return flag > 0;
+        } catch (Exception e) {
+            LOG.warn(e.getMessage(),e);
+            return false;
+        }
     }
 
     @Override
     public boolean updateGoods(Goods goods) {
-        int flag = goodsMapper.updateByPrimaryKeySelective(goods);
-        return flag > 0;
-    }
-
-    @Override
-    public List<Goods> queryGoods(GoodsExample example) {
-        return goodsMapper.selectByExampleWithBLOBs(example);
+        try {
+            int flag = goodsMapper.updateByPrimaryKeySelective(goods);
+            return flag > 0;
+        } catch (Exception e) {
+            LOG.warn(e.getMessage(),e);
+            return false;
+        }
     }
 
     @Override
@@ -52,22 +68,27 @@ public class GoodsServiceImpl implements GoodsService {
         pageNo = pageNo == null ? 1 : pageNo;
         pageSize = pageSize == null ? 10 : pageSize;
         PageHelper.startPage(pageNo, pageSize);
-        List<Goods> result = null;
+        List<Goods> result;
         GoodsExample example = new GoodsExample();
         int goodsTypeInt = 0;
-        if (StringUtil.isNotNullAndNotEmpty(goodsName)) {
-            example.or().andGoodsNameLike("%" + goodsName + "%");
+        try {
+            if (StringUtil.isNotNullAndNotEmpty(goodsName)) {
+                example.or().andGoodsNameLike("%" + goodsName + "%");
+            }
+            switch (goodsTypeInt) {
+                case 0:
+                    result = goodsMapper.selectByExampleWithBLOBs(example);
+                    break;
+                default:
+                    example.or().andGoodsTypeEqualTo(goodsTypeInt);
+                    result = goodsMapper.selectByExample(example);
+                    break;
+            }
+            return BeanUtil.toPagedResult(result);
+        } catch (Exception e) {
+            LOG.warn(e.getMessage(),e);
+            return null;
         }
-        switch (goodsTypeInt) {
-            case 0:
-                result = goodsMapper.selectByExample(example);
-                break;
-            default:
-                example.or().andGoodsTypeEqualTo(goodsTypeInt);
-                result = goodsMapper.selectByExample(example);
-                break;
-        }
-        return BeanUtil.toPagedResult(result);
     }
 
 }

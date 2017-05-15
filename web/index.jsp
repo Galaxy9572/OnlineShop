@@ -9,7 +9,6 @@
 <html>
 <head>
 <title>网上商城</title>
-	<!DOCTYPE html>
 	<link rel="stylesheet" type="text/css" href="css/index_banner.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="css/beAlert.css">
 	<link rel="stylesheet" type="text/css" href="css/public.css">
@@ -38,7 +37,9 @@
 			<div id="div_top_user">
 				<div id="div_user_operate">
 					<img id="portrait" alt="portrait" src="image/default-head.png" />
-					<a href="shop/sellerCenter">卖家中心</a>
+					<c:if test="${sessionScope.user.userType != 3}">
+						<a href="shop/sellerCenter">卖家中心</a>
+					</c:if>
 					&nbsp;
                     <a href="user/buyerCenter">买家中心</a>
 					<c:choose>
@@ -75,8 +76,8 @@
 						<p class="catalog_name">男装</p>
 						<hr class="catalog_separator">
 						<ul>
-							<li><a href="javascript:void(0)" onclick="goodsList('manSuit')">外套</a></li>
-							<li><a href="javascript:goodsList('manShoePants');">鞋裤</a></li>
+							<li><a href="goods/list?type=1">上衣</a></li>
+							<li><a href="goods/list?type=3">鞋</a></li>
 						</ul>
 					</div>
 					<div id="div_middle_catalog_woman" class="div_catalog">
@@ -84,8 +85,8 @@
 						<p class="catalog_name">女装</p>
 						<hr class="catalog_separator">
 						<ul>
-							<li><a href="">外套</a></li>
-							<li><a href="">鞋裤</a></li>
+							<li><a href="goods/list?type=4">上衣</a></li>
+							<li><a href="goods/list?type=6">鞋</a></li>
 						</ul>
 					</div>
 					<div id="div_middle_catalog_read" class="div_catalog">
@@ -93,8 +94,8 @@
 						<p class="catalog_name">阅读</p>
 						<hr class="catalog_separator">
 						<ul>
-							<li><a href="">文学</a></li>
-							<li><a href="">科幻</a></li>
+							<li><a href="goods/list?type=4">文学</a></li>
+							<li><a href="goods/list?type=9">科幻</a></li>
 						</ul>
 					</div>
 					<div id="div_middle_catalog_digital" class="div_catalog">
@@ -102,8 +103,8 @@
 						<p class="catalog_name">数码</p>
 						<hr class="catalog_separator">
 						<ul>
-							<li><a href="">电脑</a></li>
-							<li><a href="">手机</a></li>
+							<li><a href="goods/list?type=7">电脑</a></li>
+							<li><a href="goods/list?type=8">手机</a></li>
 						</ul>
 					</div>
 					<div id="div_middle_catalog_outdoor" class="div_catalog">
@@ -118,9 +119,8 @@
 				</div>
 			</div>
 
-
 			<div id="div_bottom">
-				<div id="div_bottom_rights" class=".bottom_rights">
+				<div id="div_bottom_rights">
 					<hr class="bottom_separator">
 					<p>
 						基于SpringMVC、Spring和MyBatis的网上商城<br>

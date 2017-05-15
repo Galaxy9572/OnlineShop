@@ -3,8 +3,10 @@ package org.ljy.controller;
 import org.springframework.stereotype.Controller;
 
 /**
- * Created by ljy56 on 2017/4/13.
+ * ljy56
+ * 2017/5/13
  */
 @Controller
-public class OrderController {
+public class UserCollectionController extends BaseController {
+
 }

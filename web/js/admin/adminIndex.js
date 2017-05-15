@@ -417,7 +417,7 @@ function goodsManageTable(goodsName, goodsType, pageNumber, pageSize) {
                                 .append("<td>" + this.goodsName + "</td>")
                                 .append("<td>" + this.goodsType + "</td>")
                                 .append("<td>" + this.price + "</td>")
-                                .append("<td>" + this.discout + "</td>")
+                                .append("<td>" + this.discount + "</td>")
                                 .append("<td>" + this.rank + "</td>")
                                 .append("<td>" + this.statement + "</td>")
                                 .append("<td>" + this.createTime + "</td>")

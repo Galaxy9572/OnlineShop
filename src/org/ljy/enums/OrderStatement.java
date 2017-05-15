@@ -6,19 +6,25 @@ package org.ljy.enums;
  * 2017年1月15日 15:45:24
  */
 public enum OrderStatement {
-	NOTPAYED("未付款"),PAYED("已付款");
-	private String statement;
+	NOTPAYED(1,"未付款"),
+	PAYED(2,"已付款"),
+	NOT_SEND(3,"待发货"),
+	DELIVERY(4,"在途中"),
+	RECEIVED(5,"已收货");
 
-	OrderStatement(String statement) {
-		this.statement = statement;
+	private int key;
+	private String value;
+
+	OrderStatement(int key, String value) {
+		this.key = key;
+		this.value = value;
 	}
 
-	public String getStatement() {
-		return statement;
+	public int key() {
+		return key;
 	}
 
-	public void setStatement(String statement) {
-		this.statement = statement;
+	public String value() {
+		return value;
 	}
-	
 }

@@ -5,21 +5,18 @@ import java.util.Date;
 public class BankCard {
     private Long bankCardId;
 
-    private String userId;
+    private Long userId;
 
     private String bankName;
-
-    private Long paymentId;
 
     private Date createTime;
 
     private Date modifyTime;
 
-    public BankCard(Long bankCardId, String userId, String bankName, Long paymentId, Date createTime, Date modifyTime) {
+    public BankCard(Long bankCardId, Long userId, String bankName, Date createTime, Date modifyTime) {
         this.bankCardId = bankCardId;
         this.userId = userId;
         this.bankName = bankName;
-        this.paymentId = paymentId;
         this.createTime = createTime;
         this.modifyTime = modifyTime;
     }
@@ -36,12 +33,12 @@ public class BankCard {
         this.bankCardId = bankCardId;
     }
 
-    public String getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId == null ? null : userId.trim();
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     public String getBankName() {
@@ -50,14 +47,6 @@ public class BankCard {
 
     public void setBankName(String bankName) {
         this.bankName = bankName == null ? null : bankName.trim();
-    }
-
-    public Long getPaymentId() {
-        return paymentId;
-    }
-
-    public void setPaymentId(Long paymentId) {
-        this.paymentId = paymentId;
     }
 
     public Date getCreateTime() {

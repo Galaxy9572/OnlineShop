@@ -2,74 +2,77 @@ package org.ljy.domain;
 
 import java.util.Date;
 
-public class UserCollection{
+public class UserCollection {
+    private Long collectionId;
 
-	private Long collectionId;
-	private Long userId;
-	private String shopId;
-	private String goodsId;
-	private Date createTime;
-	private Date modifyTime;
+    private Long userId;
 
-	public UserCollection(Long collectionId, Long userId, String shopId, String goodsId, Date createTime,
-			Date modifyTime) {
-		this.collectionId = collectionId;
-		this.userId = userId;
-		this.shopId = shopId;
-		this.goodsId = goodsId;
-		this.createTime = createTime;
-		this.modifyTime = modifyTime;
-	}
+    private Long shopId;
 
-	public UserCollection() {
-		super();
-	}
+    private Long goodsId;
 
-	public Long getCollectionId() {
-		return collectionId;
-	}
+    private Date createTime;
 
-	public void setCollectionId(Long collectionId) {
-		this.collectionId = collectionId;
-	}
+    private Date modifyTime;
 
-	public Long getUserId() {
-		return userId;
-	}
+    public UserCollection(Long collectionId, Long userId, Long shopId, Long goodsId, Date createTime, Date modifyTime) {
+        this.collectionId = collectionId;
+        this.userId = userId;
+        this.shopId = shopId;
+        this.goodsId = goodsId;
+        this.createTime = createTime;
+        this.modifyTime = modifyTime;
+    }
 
-	public void setUserId(Long userId) {
-		this.userId = userId;
-	}
+    public UserCollection() {
+        super();
+    }
 
-	public String getShopId() {
-		return shopId;
-	}
+    public Long getCollectionId() {
+        return collectionId;
+    }
 
-	public void setShopId(String shopId) {
-		this.shopId = shopId == null ? null : shopId.trim();
-	}
+    public void setCollectionId(Long collectionId) {
+        this.collectionId = collectionId;
+    }
 
-	public String getGoodsId() {
-		return goodsId;
-	}
+    public Long getUserId() {
+        return userId;
+    }
 
-	public void setGoodsId(String goodsId) {
-		this.goodsId = goodsId == null ? null : goodsId.trim();
-	}
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
 
-	public Date getCreateTime() {
-		return createTime;
-	}
+    public Long getShopId() {
+        return shopId;
+    }
 
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
+    public void setShopId(Long shopId) {
+        this.shopId = shopId;
+    }
 
-	public Date getModifyTime() {
-		return modifyTime;
-	}
+    public Long getGoodsId() {
+        return goodsId;
+    }
 
-	public void setModifyTime(Date modifyTime) {
-		this.modifyTime = modifyTime;
-	}
+    public void setGoodsId(Long goodsId) {
+        this.goodsId = goodsId;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getModifyTime() {
+        return modifyTime;
+    }
+
+    public void setModifyTime(Date modifyTime) {
+        this.modifyTime = modifyTime;
+    }
 }
