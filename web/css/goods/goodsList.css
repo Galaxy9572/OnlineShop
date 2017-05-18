@@ -21,3 +21,55 @@
     float: left;
     color: #f0ca37;
 }
+
+.div_middle{
+    padding:0;
+    width:1500px;
+    margin:10px auto;
+    text-align:left;
+    text-indent: 20px;
+
+}
+
+.div_goodsList{
+    float: left;
+    width:20%;
+    height:35%;
+    margin-right:8%;
+    margin-top:2%;
+    margin-bottom:3%;
+    box-shadow: 0 0 20px #ccc;
+}
+
+.div_goodsImg img{
+    width:100%;
+    height:80%;
+    margin:0 auto;
+    display:block;
+}
+
+.div_goodsDetail button{
+    border:0;
+    display: inline-block;
+    padding:0 10px;
+    text-align: center;
+    height:30px;
+    line-height: 30px;
+    background: #CCCCCC;
+    color: #fff;
+    font-size:14px;
+    border-right:3px;
+
+}
+
+.div_goodsDetail .productPrice{
+    margin-top: 10px;
+    margin-left: 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: #f89406;
+}
+
+.div_goodsDetail .addCart{
+  float: left;
+}

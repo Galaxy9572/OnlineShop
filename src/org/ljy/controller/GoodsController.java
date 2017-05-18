@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -33,9 +34,17 @@ public class GoodsController extends BaseController{
             case 8:goodsType = "手机";break;
             case 9:goodsType = "书籍";break;
         }
-
+        List<Goods> goodsList = goodsService.queryGoodsByType(type);
+        request.setAttribute("goodsList",goodsList);
         request.setAttribute("goodsType",goodsType);
         return "goods/goodsList";
+    }
+
+    @RequestMapping("/goods/goodsDetail")
+    public String goodsDetail(HttpServletRequest request,Long id){
+        Goods goods = goodsService.querySingleGoods(id);
+        request.setAttribute("goodsDetail",goods);
+        return "goods/goodsDetail";
     }
 
     @RequestMapping("/goods/addGoods")

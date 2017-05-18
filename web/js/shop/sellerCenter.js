@@ -20,9 +20,10 @@ var showInfo = function (data) {
 };
 
 var addGoods = function () {
+    console.log("goodsType:"+$("#select_addGoodsType").find("option:selected").val());
     var shopId = $("#input_shopId").val();
     var goodsName = $("#input_goodsName").val();
-    var goodsType = $("#select_goodsType").find("option:selected").val();
+    var goodsType = $("#select_addGoodsType").find("option:selected").val();
     var price = $("#input_price").val();
     var discount = $("#input_discount").val();
     console.log(shopId);

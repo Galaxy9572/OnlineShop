@@ -64,6 +64,30 @@ public class GoodsServiceImpl implements GoodsService {
     }
 
     @Override
+    public Goods querySingleGoods(Long goodsId) {
+        try {
+            return goodsMapper.selectByPrimaryKey(goodsId);
+        } catch (Exception e) {
+            LOG.warn(e.getMessage(),e);
+            return null;
+        }
+    }
+
+    @Override
+    public List<Goods> queryGoodsByType(int type) {
+        List<Goods> result;
+        GoodsExample example = new GoodsExample();
+        try {
+            example.or().andGoodsTypeEqualTo(type);
+            result = goodsMapper.selectByExampleWithBLOBs(example);
+            return result;
+        } catch (Exception e) {
+            LOG.warn(e.getMessage(),e);
+            return null;
+        }
+    }
+
+    @Override
     public PagedResult queryGoodsByPage(String goodsType, String goodsName, Integer pageNo, Integer pageSize) {
         pageNo = pageNo == null ? 1 : pageNo;
         pageSize = pageSize == null ? 10 : pageSize;
@@ -90,5 +114,7 @@ public class GoodsServiceImpl implements GoodsService {
             return null;
         }
     }
+
+
 
 }

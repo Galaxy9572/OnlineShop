@@ -28,11 +28,27 @@
             <h1>商品列表 -- ${requestScope.goodsType}</h1>
         </div>
     </div>
-    <div id="div_middle">
+    <div class="div_middle">
+        <c:forEach var="item" items="${requestScope.goodsList}">
+            <div class="div_goodsList">
+                <div class="div_goodsImg">
+                    <a href="<%=path%>/goods/goodsDetail?id=${item.goodsId}" target="_blank">
+                        <img  src="<%=path%>/image/goods/mansuit1.jpg"/>
+                    </a>
+                </div>
+                <div class="div_goodsDetail">
+                    <p class="productPrice">￥${item.price}</p>
+                    <a href="<%=path%>/goods/goodsDetail?id=${item.goodsId}" target="_blank">
+                        <p class="productName">${item.goodsName}</p>
+                    </a>
+                </div>
+            </div>
+        </c:forEach>
 
     </div>
     <div id="div_bottom">
 
     </div>
 </body>
+<input type="hidden" value="${requestScope.goodsType}">
 </html>
