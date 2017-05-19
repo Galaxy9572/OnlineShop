@@ -11,13 +11,40 @@ var showInfo = function (data) {
     }
 };
 
+var checkInfo = function () {
+    var bankCardName = $("#bankCardName").val();
+    var bankCardId = $("#bankCardId").val();
+    if(bankCardName === "" || bankCardId === ""){
+        alert("请将信息填写完整哦",null,{type:'error'});
+        return false;
+    }
+    return true;
+};
+
+var addBankCard = function () {
+    if(checkInfo()){
+        var userId = $("#input_userId").val();
+        var bankCardName = $("#bankCardName").val();
+        var bankCardId = $("#bankCardId").val();
+        $.post(
+            "deleteBankCard",{
+                "userId":userId,
+                "bankCardId":bankCardId,
+                "bankCardName":bankCardName
+            },function (data) {
+                showInfo(data);
+            },"json"
+        );
+    }
+};
+
 var deleteBankCard = function (bankCardId) {
     $.ajax({
         url:"deleteBankcardById",
         type:"post",
         dataType:"json",
         data:{
-            "bakCardId":bankCardId
+            "bankCardId":bankCardId
         },
         success:function (data) {
             showInfo(data);

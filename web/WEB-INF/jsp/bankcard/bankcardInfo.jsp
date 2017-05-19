@@ -33,18 +33,29 @@
         </div>
         <div id="div_right">
             <div id="div_addBankcard" class="content">
-
+                <h3 class="tableTitle">添加银行卡</h3>
+                <table id="addBankCardTable">
+                    <tr>
+                        <td>银行名称</td><td><input type="text" id="bankCardName" class="inputs"/></td>
+                    </tr>
+                    <tr>
+                        <td>卡号</td><td><input type="text" id="bankCardId" class="inputs"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button id="bt_submit">确定</button></td>
+                    </tr>
+                </table>
             </div>
             <div id="div_myBankcard" class="content">
                 <c:forEach var="item" items="${requestScope.myBancards}">
                     <div class="div_bankcard">
                         <img src="<%=path%>/image/common/bankcard.png" class="bankcardImg"/>
                         <div class="div_bankcard_info">
-                            银行：${item.bankNae}
+                            银行：${item.bankName}
                             卡号：${item.bankCardId}
                         </div>
                         <div class="div_bankcard_operate">
-                            <a rel="javascript:void(0);" onclick="deleteBankCard(${item.bankCardId});">删除</a>
+                            <a href="javascript:void(0);" onclick="deleteBankCard(${item.bankCardId});">删除</a>
                         </div>
                     </div>
                 </c:forEach>
@@ -54,5 +65,6 @@
     <div id="div_bottom">
 
     </div>
+    <input id="input_userId" type="hidden" value="${sessionScope.user.userId}"/>
 </body>
 </html>

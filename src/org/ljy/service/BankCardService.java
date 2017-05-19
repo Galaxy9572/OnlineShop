@@ -4,6 +4,8 @@ import org.ljy.common.PagedResult;
 import org.ljy.domain.BankCard;
 import org.ljy.domain.BankCardExample;
 
+import java.util.List;
+
 public interface BankCardService {
     long countByExample(BankCardExample example);
 
@@ -12,6 +14,8 @@ public interface BankCardService {
     boolean deleteBankCardByBankCardId(Long id);
 
     boolean updateBankCard(BankCard bankCard);
+
+    List<BankCard> queryBankCard(Long userId);
 
     PagedResult queryBankCardByConditionByPage(String queryType, String condition, Integer pageNumber, Integer pageSize);
 }

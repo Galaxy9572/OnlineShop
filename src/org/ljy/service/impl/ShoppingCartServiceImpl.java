@@ -1,16 +1,23 @@
 package org.ljy.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import org.ljy.common.PagedResult;
 import org.ljy.dao.ShoppingCartMapper;
 import org.ljy.domain.ShoppingCart;
 import org.ljy.domain.ShoppingCartExample;
 import org.ljy.service.ShoppingCartService;
+import org.ljy.util.BeanUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
 
 @Service("shoppingService")
 public class ShoppingCartServiceImpl implements ShoppingCartService {
+    private Logger LOG = LoggerFactory.getLogger(this.getClass());
 
 	@Resource
 	private ShoppingCartMapper shoppingCartMapper;
@@ -21,53 +28,47 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 	}
 
 	@Override
-	public int deleteByExample(ShoppingCartExample example) {
-		return shoppingCartMapper.deleteByExample(example);
+	public boolean addToCart(ShoppingCart shoppingCart) {
+        int flag = 0;
+        try {
+            Date date = new Date();
+            shoppingCart.setCreateTime(date);
+            shoppingCart.setModifyTime(date);
+            flag = shoppingCartMapper.insertSelective(shoppingCart);
+            return flag > 0;
+        } catch (Exception e) {
+            LOG.warn(e.getMessage(),e);
+            return false;
+        }
 	}
 
 	@Override
-	public int deleteByPrimaryKey(Long cartId) {
-		return shoppingCartMapper.deleteByPrimaryKey(cartId);
-	}
+	public boolean removeFromCart(Long cartId) {
+        try {
+            int flag = shoppingCartMapper.deleteByPrimaryKey(cartId);
+            return flag > 0;
+        } catch (Exception e) {
+            LOG.warn(e.getMessage(),e);
+            return false;
+        }
+    }
 
-	@Override
-	public int insert(ShoppingCart record) {
-		return shoppingCartMapper.insert(record);
-	}
-
-	@Override
-	public int insertSelective(ShoppingCart record) {
-		return shoppingCartMapper.insertSelective(record);
-	}
-
-	@Override
-	public List<ShoppingCart> selectByExample(ShoppingCartExample example) {
-		return shoppingCartMapper.selectByExample(example);
-	}
-
-	@Override
-	public ShoppingCart selectByPrimaryKey(Long cartId) {
-		return shoppingCartMapper.selectByPrimaryKey(cartId);
-	}
-
-	@Override
-	public int updateByExampleSelective(ShoppingCart record, ShoppingCartExample example) {
-		return shoppingCartMapper.updateByExampleSelective(record, example);
-	}
-
-	@Override
-	public int updateByExample(ShoppingCart record, ShoppingCartExample example) {
-		return shoppingCartMapper.updateByExample(record, example);
-	}
-
-	@Override
-	public int updateByPrimaryKeySelective(ShoppingCart record) {
-		return shoppingCartMapper.updateByPrimaryKeySelective(record);
-	}
-
-	@Override
-	public int updateByPrimaryKey(ShoppingCart record) {
-		return shoppingCartMapper.updateByPrimaryKey(record);
-	}
+    @Override
+    public PagedResult queryShoppingCartByPage(Long userId, Integer pageNo, Integer pageSize) {
+        PagedResult result;
+        List<ShoppingCart> lists;
+        ShoppingCartExample example = new ShoppingCartExample();
+        pageNo = pageNo == null ? 1 : pageNo;
+        pageSize = pageSize == null ? 10 : pageSize;
+        PageHelper.startPage(pageNo, pageSize);
+        try {
+            example.or().andUserIdEqualTo(userId);
+            lists = shoppingCartMapper.selectByExample(example);
+            return BeanUtil.toPagedResult(lists);
+        } catch (Exception e) {
+            LOG.warn(e.getMessage(),e);
+            return null;
+        }
+    }
 
 }

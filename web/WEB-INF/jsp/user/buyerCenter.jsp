@@ -91,15 +91,16 @@
                 <thead class="genTableTitle">
                 <tr>
                     <th width="5%"><input type="checkbox">&nbsp;全选</th>
-                    <th width="15%">商品名</th>
-                    <th width="15%">价格</th>
-                    <th width="15%">时间</th>
+                    <th width="15%">商品ID</th>
+                    <th width="15%">加入时间</th>
+                    <th width="15%">修改时间</th>
                     <th width="5%">操作</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody id="cartTableBody">
                 </tbody>
             </table>
+            <div id="cartPaginator"></div>
         </div>
         <div id="div_bought" class="content">
             <h3 class="tableTitle">已买到的宝贝</h3>
@@ -118,10 +119,16 @@
                 <thead class="genTableTitle">
                 <tr>
                     <th width="5%"><input type="checkbox">&nbsp;全选</th>
-                    <th width="15%">商品名</th>
+                    <th width="8%">商品ID</th>
+                    <th width="10%">商品名</th>
+                    <th width="6%">商品种类</th>
                     <th width="15%">价格</th>
-                    <th width="15%">时间</th>
-                    <th width="5%">操作</th>
+                    <th width="5%">折扣</th>
+                    <th width="5%">评分</th>
+                    <th width="5%">状态</th>
+                    <th width="14%">创建时间</th>
+                    <th width="14%">修改时间</th>
+                    <th width="10%">操作</th>
                 </tr>
                 </thead>
                 <tbody id="boughtTableBody">

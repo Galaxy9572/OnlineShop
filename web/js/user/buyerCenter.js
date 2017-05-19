@@ -77,6 +77,31 @@ var orderTableOptions = {
     }
 };
 
+var cartTableOptions = {
+    currentPage: 1,  //当前页数
+    totalPages: 10,  //总页数，这里只是暂时的，后头会根据查出来的条件进行更改
+    size: "normal",
+    alignment: "center",
+    itemTexts: function (type, page, current) {
+        switch (type) {
+            case "first":
+                return "第一页";
+            case "prev":
+                return "前一页";
+            case "next":
+                return "后一页";
+            case "last":
+                return "最后页";
+            case "page":
+                return page;
+        }
+    },
+    onPageClicked: function (e, originalEvent, type, page) {
+        var userId = $("#input_userId").val();
+        cartTable(userId, page, PAGESIZE);//默认每页最多10条
+    }
+};
+
 var msgTableOptions = {
     currentPage: 1,  //当前页数
     totalPages: 10,  //总页数，这里只是暂时的，后头会根据查出来的条件进行更改
@@ -324,6 +349,75 @@ function msgTable(userId, statement, pageNumber, pageSize) {
     });
 }
 
+//生成表格
+function cartTable(userId, pageNumber, pageSize) {
+    var url = "../shoppingCart/queryShoppingCart"; //请求的URL
+    var reqParams = {
+        'userId': userId,
+        'pageNumber': pageNumber,
+        'pageSize': pageSize
+    };//请求数据
+    $(function () {
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: reqParams,
+            async: false,
+            dataType: "json",
+            success: function (data) {
+                if (data.isError === false) {
+                    // options.totalPages = data.pages;
+                    var newoptions = {
+                        currentPage: 1,  //当前页数
+                        totalPages: data.pages == 0 ? 1 : data.pages,  //总页数
+                        size: "normal",
+                        alignment: "center",
+                        itemTexts: function (type, page, current) {
+                            switch (type) {
+                                case "first":
+                                    return "第一页";
+                                case "prev":
+                                    return "前一页";
+                                case "next":
+                                    return "后一页";
+                                case "last":
+                                    return "最后页";
+                                case "page":
+                                    return page;
+                            }
+                        },
+                        onPageClicked: function (e, originalEvent, type, page) {
+                            var userId = $("#input_userId").val();
+                            cartTable(userId, statement, page, PAGESIZE);//默认每页最多10条
+                        }
+                    };
+                    $('#mcartPaginator').bootstrapPaginator("setOptions", newoptions); //重新设置总页面数目
+                    var dataList = data.dataList;
+                    $("#cartTableBody").empty();//清空表格内容
+                    if (dataList.length > 0) {
+                        $(dataList).each(function () {//重新生成
+                            $("#cartTableBody").append('<tr>')
+                                .append("<td>" + "<input type='checkbox' data-cartId='" + this.cartId + "'</td>")
+                                .append("<td>" + this.goodsId + "</td>")
+                                .append("<td>" + this.createTime + "</td>")
+                                .append("<td>" + this.modifyTime + "</td>")
+                                .append("<td>" + '<input type="button" value="删除">' + "</td>")
+                                .append('</tr>');
+                        });
+                    } else {
+                        $("#cartTableBody").append('<tr><th colspan ="6"><center>暂无消息</center></th></tr>');
+                    }
+                } else {
+                    alert(data.errorMsg);
+                }
+            },
+            error: function (e) {
+                alert("查询失败:" + e);
+            }
+        });
+    });
+}
+
 //渲染完就执行
 $(function () {
     var userId = $("#input_userId").val();
@@ -349,6 +443,15 @@ $(function () {
         var userId = $("#input_userId").val();
         var orderStatement = $("#select_orderStatement").find("option:selected").val();
         orderTable(userId,orderStatement, 1, PAGESIZE);
+    });
+
+    //生成底部分页栏
+    $('#cartPaginator').bootstrapPaginator(cartTableOptions);
+    cartTable(userId, 1, 10);//默认空白查全部
+    //创建结算规则
+    $("#bt_msgQuerySubmit").bind("click", function () {
+        var userId = $("#input_userId").val();
+        cartTable(userId, 1, PAGESIZE);
     });
 
     //生成底部分页栏

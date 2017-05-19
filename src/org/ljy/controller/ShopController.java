@@ -65,6 +65,11 @@ public class ShopController extends BaseController{
         }
     }
 
+    /**
+     * 开店页面
+     * @param request HttpServletRequest
+     * @return 开店页面
+     */
     @RequestMapping("/shop/openShop")
     public String openShopPage(HttpServletRequest request){
         List<ShopType> shops = new ArrayList<ShopType>();
@@ -73,6 +78,11 @@ public class ShopController extends BaseController{
         return "shop/openShop";
     }
 
+    /**
+     * 卖家中心页面
+     * @param request HttpServletRequest
+     * @return 卖家中心页面
+     */
     @RequestMapping("/shop/shopManage")
     public String shopManagePage(HttpServletRequest request){
         List<GoodsType> goods = new ArrayList<GoodsType>();
@@ -82,6 +92,13 @@ public class ShopController extends BaseController{
         return "shop/sellerCenter";
     }
 
+    /**
+     * 开店
+     * @param session HttpSession
+     * @param user User
+     * @param shop Shop
+     * @return ajaxMap
+     */
     @RequestMapping("/shop/openShop/confirm")
     @ResponseBody
     public Map<String,String> openShop(HttpSession session, User user,Shop shop){

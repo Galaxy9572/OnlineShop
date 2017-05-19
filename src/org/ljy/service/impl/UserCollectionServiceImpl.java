@@ -1,82 +1,52 @@
 package org.ljy.service.impl;
 
-import com.github.pagehelper.PageHelper;
-import org.ljy.common.PagedResult;
 import org.ljy.dao.UserCollectionMapper;
 import org.ljy.domain.UserCollection;
 import org.ljy.domain.UserCollectionExample;
 import org.ljy.service.UserCollectionService;
-import org.ljy.util.BeanUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.List;
+import java.util.Date;
 
 /**
  * Created by ljy56 on 2017/4/19.
  */
+@Service("userCollectionService")
 public class UserCollectionServiceImpl implements UserCollectionService {
+    private Logger LOG = LoggerFactory.getLogger(this.getClass());
     @Resource
     private UserCollectionMapper userCollectionMapper;
+
     @Override
     public long countByExample(UserCollectionExample example) {
         return userCollectionMapper.countByExample(example);
     }
 
     @Override
-    public int deleteByExample(UserCollectionExample example) {
-        return userCollectionMapper.deleteByExample(example);
+    public boolean collect(UserCollection userCollection) {
+        try {
+            Date date = new Date();
+            userCollection.setCreateTime(date);
+            userCollection.setModifyTime(date);
+            int flag = userCollectionMapper.insertSelective(userCollection);
+            return flag > 0;
+        } catch (Exception e) {
+            LOG.warn(e.getMessage(),e);
+            return false;
+        }
     }
 
     @Override
-    public int deleteByPrimaryKey(Long collectionId) {
-        return userCollectionMapper.deleteByPrimaryKey(collectionId);
-    }
-
-    @Override
-    public int insert(UserCollection record) {
-        return userCollectionMapper.insert(record);
-    }
-
-    @Override
-    public int insertSelective(UserCollection record) {
-        return userCollectionMapper.insertSelective(record);
-    }
-
-    @Override
-    public List<UserCollection> selectByExample(UserCollectionExample example) {
-        return userCollectionMapper.selectByExample(example);
-    }
-
-    @Override
-    public PagedResult selectByExampleByPage(UserCollectionExample example, Integer pageNo, Integer pageSize) {
-        pageNo = pageNo == null?1:pageNo;
-        pageSize = pageSize == null?10:pageSize;
-        PageHelper.startPage(pageNo,pageSize);
-        return BeanUtil.toPagedResult(userCollectionMapper.selectByExample(example));
-    }
-
-    @Override
-    public UserCollection selectByPrimaryKey(Long collectionId) {
-        return userCollectionMapper.selectByPrimaryKey(collectionId);
-    }
-
-    @Override
-    public int updateByExampleSelective(UserCollection record, UserCollectionExample example) {
-        return userCollectionMapper.updateByExampleSelective(record, example);
-    }
-
-    @Override
-    public int updateByExample(UserCollection record, UserCollectionExample example) {
-        return userCollectionMapper.updateByExample(record, example);
-    }
-
-    @Override
-    public int updateByPrimaryKeySelective(UserCollection record) {
-        return userCollectionMapper.updateByPrimaryKeySelective(record);
-    }
-
-    @Override
-    public int updateByPrimaryKey(UserCollection record) {
-        return userCollectionMapper.updateByPrimaryKey(record);
+    public boolean removeCollection(Long collectionId) {
+        try {
+            int flag = userCollectionMapper.deleteByPrimaryKey(collectionId);
+            return flag > 0;
+        } catch (Exception e) {
+            LOG.warn(e.getMessage(),e);
+            return false;
+        }
     }
 }

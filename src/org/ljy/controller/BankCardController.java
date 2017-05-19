@@ -47,4 +47,23 @@ public class BankCardController extends BaseController{
             return ajaxMap;
         }
     }
+
+    @RequestMapping("/bankcard/deleteBankCard")
+    @ResponseBody
+    public Map<String,String> deleteBankCard(HttpServletRequest request, Long bankCardId){
+        Map<String, String> ajaxMap;
+        try {
+            boolean bool = bankCardService.deleteBankCardByBankCardId(bankCardId);
+            if(bool){
+                ajaxMap = AjaxUtil.generateResponseAjax("1", MsgConstants.OPERATE_SUCCESS);
+            }else{
+                ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.OPERATE_FAILURE);
+            }
+            return ajaxMap;
+        } catch (Exception e) {
+            LOG.warn(e.getMessage(),e);
+            ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.SYSTEM_ERROR);
+            return ajaxMap;
+        }
+    }
 }

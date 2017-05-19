@@ -24,20 +24,17 @@
 
 .div_middle{
     padding:0;
-    width:1500px;
+    width:90%;
     margin:10px auto;
     text-align:left;
-    text-indent: 20px;
-
+    text-indent: 2%;/*文字缩进*/
 }
 
 .div_goodsList{
     float: left;
     width:20%;
     height:35%;
-    margin-right:8%;
-    margin-top:2%;
-    margin-bottom:3%;
+    margin: 2% 2% 2% 3%;/*上右下左*/
     box-shadow: 0 0 20px #ccc;
 }
 
