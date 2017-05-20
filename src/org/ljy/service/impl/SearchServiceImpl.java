@@ -30,7 +30,7 @@ public class SearchServiceImpl implements SearchService {
     @Override
     public List<?> search(String keyWord, int type) {
         boolean bool = StringUtil.isNotNullAndNotEmpty(keyWord);
-        List<?> result = new ArrayList<>();
+        List<?> result;
         try {
             if (bool) {//非空
                 switch (type) {

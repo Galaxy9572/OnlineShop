@@ -33,68 +33,69 @@
 				<input id="input_search" type="text" maxlength="15" name="keyWord" placeholder="搜索用户、商品、商家"> <input id="bt_search"
 					type="submit" value="">
 			</div>
+		</div>
+		<div id="div_middle">
 			<div id="div_searchResult">
 				<table id="searchResultTable" class="orderTable">
 					<thead class="tableTitle">
-                    <tr>
-                        <c:choose>
-                            <c:when test="${requestScope.userSearchResult != null}">
-                                <th width="5%"><input type="checkbox">&nbsp;全选</th>
-                                <th width="15%">用户名</th>
-                                <th width="15%">用户类型</th>
-                                <th width="5%">操作</th>
-                            </c:when>
-                            <c:when test="${requestScope.goodsSearchResult != null}">
-                                <th width="5%"><input type="checkbox">&nbsp;全选</th>
-                                <th width="15%">商品名</th>
-                                <th width="15%">所属商店</th>
-                                <th width="10%">价格</th>
-                                <th width="10%">折扣</th>
-                                <th width="5%">操作</th>
-                            </c:when>
+					<tr>
+						<c:choose>
+							<c:when test="${requestScope.userSearchResult != null}">
+								<th width="5%"><input type="checkbox">&nbsp;全选</th>
+								<th width="15%">用户名</th>
+								<th width="15%">用户类型</th>
+								<th width="5%">操作</th>
+							</c:when>
+							<c:when test="${requestScope.goodsSearchResult != null}">
+								<th width="5%"><input type="checkbox">&nbsp;全选</th>
+								<th width="15%">商品名</th>
+								<th width="15%">所属商店</th>
+								<th width="10%">价格</th>
+								<th width="10%">折扣</th>
+								<th width="5%">操作</th>
+							</c:when>
 							<c:when test="${requestScope.shopSearchResult != null}">
 								<th width="5%"><input type="checkbox">&nbsp;全选</th>
 								<th width="15%">商店名</th>
 								<th width="15%">地区</th>
 								<th width="5%">操作</th>
 							</c:when>
-                        </c:choose>
+						</c:choose>
 					</tr>
 					</thead>
 					<tbody>
-                    <tr>
-					<c:choose>
-						<c:when test="${requestScope.userSearchResult == null || requestScope.goodsSearchResult == null || requestScope.shopSearchResult == null}">
-							<td colspan="5">暂无记录</td>
-						</c:when>
-                        <c:when test="${requestScope.userSearchResult != null}">
-                            <th width="5%"><input type="checkbox">&nbsp;全选</th>
-                            <th width="15%">用户名</th>
-                            <th width="15%">用户类型</th>
-                            <th width="5%">操作</th>
-                        </c:when>
-                        <c:when test="${requestScope.goodsSearchResult != null}">
-                            <th width="5%"><input type="checkbox">&nbsp;全选</th>
-                            <th width="15%">商品名</th>
-                            <th width="15%">所属商店</th>
-                            <th width="10%">价格</th>
-                            <th width="10%">折扣</th>
-                            <th width="5%">操作</th>
-                        </c:when>
-                        <c:when test="${requestScope.shopSearchResult != null}">
-                            <th width="5%"><input type="checkbox">&nbsp;全选</th>
-                            <th width="15%">商店名</th>
-                            <th width="15%">地区</th>
-                            <th width="5%">操作</th>
-                        </c:when>
-                    </c:choose>
-                    </tr>
-                    </tbody>
-                </table>
+					<tr>
+						<c:choose>
+							<c:when test="${requestScope.userSearchResult == null || requestScope.goodsSearchResult == null || requestScope.shopSearchResult == null}">
+								<td colspan="5">暂无记录</td>
+							</c:when>
+							<c:when test="${requestScope.userSearchResult != null}">
+								<th width="5%"><input type="checkbox">&nbsp;全选</th>
+								<th width="15%">用户名</th>
+								<th width="15%">用户类型</th>
+								<th width="5%">操作</th>
+							</c:when>
+							<c:when test="${requestScope.goodsSearchResult != null}">
+								<th width="5%"><input type="checkbox">&nbsp;全选</th>
+								<th width="15%">商品名</th>
+								<th width="15%">所属商店</th>
+								<th width="10%">价格</th>
+								<th width="10%">折扣</th>
+								<th width="5%">操作</th>
+							</c:when>
+							<c:when test="${requestScope.shopSearchResult != null}">
+								<th width="5%"><input type="checkbox">&nbsp;全选</th>
+								<th width="15%">商店名</th>
+								<th width="15%">地区</th>
+								<th width="5%">操作</th>
+							</c:when>
+						</c:choose>
+					</tr>
+					</tbody>
+				</table>
 			</div>
 
 		</div>
-		<div id="div_middle"></div>
 		<div id="div_bottom">
 			<div id="div_bottom_rights" class="bottom_rights">
 				<hr class="bottom_separator">

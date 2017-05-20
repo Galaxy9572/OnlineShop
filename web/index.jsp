@@ -25,15 +25,17 @@
 			<div id="div_top_logo">
 				<img id="img_logo" src="image/logo.png">
 			</div>
-			<div id="div_search">
-				<select id="select_search">
-                    <option value="1">用户</option>
-                    <option value="2">商品</option>
-                    <option value="3">商家</option>
-				</select>
-				<input id="input_search" type="text" maxlength="15" placeholder="搜索用户、商品、商家"> 
-				<input id="bt_search" type="button" value="" onclick="doSearch()">
-			</div>
+			<form action="search" method="get">
+				<div id="div_search">
+					<select id="select_search" name = "type">
+						<option value="1">用户</option>
+						<option value="2">商品</option>
+						<option value="3">商家</option>
+					</select>
+					<input id="input_search" type="text" name="keyWord" maxlength="15" placeholder="搜索用户、商品、商家">
+					<input id="bt_search" type="submit" value="搜索" onclick="doSearch()">
+				</div>
+			</form>
 			<div id="div_top_user">
 				<div id="div_user_operate">
 					<img id="portrait" alt="portrait" src="image/default-head.png" />

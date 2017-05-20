@@ -3,9 +3,7 @@ var doSearch = function() {
     var type = $("#select_search").find("option:selected").val();
     if (keyWord === "") {
         alert("搜索内容不能为空哦");
-        return;
     }
-    $.get("search", {"type": type, "keyWord": keyWord}, "json");
 };
 
 var logout = function () {

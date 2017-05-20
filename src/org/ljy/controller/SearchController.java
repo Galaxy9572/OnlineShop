@@ -1,17 +1,13 @@
 package org.ljy.controller;
 
 import org.ljy.service.SearchService;
-import org.ljy.util.AjaxUtil;
 import org.ljy.util.StringUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author ljy56
@@ -30,10 +26,8 @@ public class SearchController extends BaseController{
 		return "search/searchResult";
 	}
 
-	@RequestMapping(value = "/search", method= RequestMethod.GET)
-    @ResponseBody
+	@RequestMapping("/search")
 	public String search(HttpServletRequest request, String keyWord, String type){
-	    Map<String,String> ajaxMap = null;
 		boolean bool = StringUtil.isNotNullAndNotEmpty(keyWord) && StringUtil.isNotNullAndNotEmpty(type);
 		try {
 			if(bool){//非空
@@ -42,27 +36,24 @@ public class SearchController extends BaseController{
                     case 1://用户
                         List<?> users = searchService.search(keyWord,typeInt);
                         request.setAttribute("userSearchResult",users);
-                        break;
+                        return "search/searchResult";
                     case 2://商品
                         List<?> goods = searchService.search(keyWord,typeInt);
                         request.setAttribute("goodsSearchResult",goods);
-                        break;
+                        return "search/searchResult";
                     case 3://商家
                         List<?> shops = searchService.search(keyWord,typeInt);
                         request.setAttribute("shopSearchResult",shops);
-                        break;
+                        return "search/searchResult";
                     default:
-                        ajaxMap = AjaxUtil.generateResponseAjax("0", null);
-                        return searchResultPage();
+                        return "search/searchResult";
                 }
             }else{
                 request.setAttribute("searchResult",null);
-                ajaxMap = AjaxUtil.generateResponseAjax("0", null);
             }
 		} catch (NumberFormatException e) {
 			LOG.warn("searchService异常"+e.getMessage(),e);
-            ajaxMap = AjaxUtil.generateResponseAjax("0", null);
 		}
-		return searchResultPage();
+		return "search/searchResult";
 	}
 }
