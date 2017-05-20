@@ -59,32 +59,50 @@ public class AdminController extends BaseController {
             Long allShopNum = shopService.countByExample(null);
             Long allGoodsNum = goodsService.countByExample(null);
             request.setAttribute("shopTypes", shopTypes);
-            request.setAttribute("allUserNum",allUserNum);
-            request.setAttribute("allShopNum",allShopNum);
-            request.setAttribute("allGoodsNum",allGoodsNum);
+            request.setAttribute("allUserNum", allUserNum);
+            request.setAttribute("allShopNum", allShopNum);
+            request.setAttribute("allGoodsNum", allGoodsNum);
             return "admin/adminIndex";
         }
     }
 
-    @RequestMapping("/admin/deleteUser")
+    @RequestMapping("/admin/addAdmin")
     @ResponseBody
-    public Map<String, String> deleteUser(String userId){
+    public Map<String, String> addAdmin(User user) {
         Map<String, String> ajaxMap;
         try {
-            if(StringUtil.isNotNullAndNotEmpty(userId)){
+            boolean flag = adminService.addAdmin(user);
+            if (flag) {
+                ajaxMap = AjaxUtil.generateResponseAjax("1", MsgConstants.OPERATE_SUCCESS);
+            } else {
+                ajaxMap = AjaxUtil.generateResponseAjax("0", MsgConstants.OPERATE_FAILURE);
+            }
+        } catch (NumberFormatException e) {
+            ajaxMap = AjaxUtil.generateResponseAjax("0", MsgConstants.SYSTEM_ERROR);
+        }
+        return ajaxMap;
+    }
+
+
+    @RequestMapping("/admin/deleteUser")
+    @ResponseBody
+    public Map<String, String> deleteUser(String userId) {
+        Map<String, String> ajaxMap;
+        try {
+            if (StringUtil.isNotNullAndNotEmpty(userId)) {
                 UserExample example = new UserExample();
                 example.or().andUserIdEqualTo(Long.parseLong(userId));
                 boolean flag = adminService.deleteUser(example);
-                if(flag){
-                    ajaxMap = AjaxUtil.generateResponseAjax("1",MsgConstants.OPERATE_SUCCESS);
-                }else{
-                    ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.OPERATE_FAILURE);
+                if (flag) {
+                    ajaxMap = AjaxUtil.generateResponseAjax("1", MsgConstants.OPERATE_SUCCESS);
+                } else {
+                    ajaxMap = AjaxUtil.generateResponseAjax("0", MsgConstants.OPERATE_FAILURE);
                 }
-            }else{
-                ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.WRONG_PARAMETERS);
+            } else {
+                ajaxMap = AjaxUtil.generateResponseAjax("0", MsgConstants.WRONG_PARAMETERS);
             }
         } catch (NumberFormatException e) {
-            ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.SYSTEM_ERROR);
+            ajaxMap = AjaxUtil.generateResponseAjax("0", MsgConstants.SYSTEM_ERROR);
         }
         return ajaxMap;
     }
@@ -141,7 +159,7 @@ public class AdminController extends BaseController {
             if (StringUtil.isNotNullAndNotEmpty(shopType)) {
                 shopTypeInt = Integer.parseInt(shopType);
                 if (StringUtil.isNotNullAndNotEmpty(shopName)) {
-                    example.or().andShopNameLike("%"+shopName+"%");
+                    example.or().andShopNameLike("%" + shopName + "%");
                 }
                 switch (shopTypeInt) {
                     case 0:
@@ -153,7 +171,7 @@ public class AdminController extends BaseController {
                         break;
                 }
                 return responseSuccess(result);
-            }else{
+            } else {
                 return responseFail(MsgConstants.WRONG_PARAMETERS);
             }
         } catch (Exception e) {
@@ -164,43 +182,43 @@ public class AdminController extends BaseController {
 
     @RequestMapping("/admin/deleteShop")
     @ResponseBody
-    public Map<String, String> deleteShop(String shopId){
+    public Map<String, String> deleteShop(String shopId) {
         Map<String, String> ajaxMap;
         try {
-            if(StringUtil.isNotNullAndNotEmpty(shopId)){
+            if (StringUtil.isNotNullAndNotEmpty(shopId)) {
                 boolean flag = adminService.deleteShopById(Long.parseLong(shopId));
-                if(flag){
-                    ajaxMap = AjaxUtil.generateResponseAjax("1",MsgConstants.OPERATE_SUCCESS);
-                }else{
-                    ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.OPERATE_FAILURE);
+                if (flag) {
+                    ajaxMap = AjaxUtil.generateResponseAjax("1", MsgConstants.OPERATE_SUCCESS);
+                } else {
+                    ajaxMap = AjaxUtil.generateResponseAjax("0", MsgConstants.OPERATE_FAILURE);
                 }
-            }else{
-                ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.WRONG_PARAMETERS);
+            } else {
+                ajaxMap = AjaxUtil.generateResponseAjax("0", MsgConstants.WRONG_PARAMETERS);
             }
         } catch (Exception e) {
-            ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.SYSTEM_ERROR);
-            LOG.warn(e.getMessage(),e);
+            ajaxMap = AjaxUtil.generateResponseAjax("0", MsgConstants.SYSTEM_ERROR);
+            LOG.warn(e.getMessage(), e);
         }
         return ajaxMap;
     }
 
     @RequestMapping("/admin/deleteGoods")
     @ResponseBody
-    public Map<String, String> deleteGoods(String goodsId){
+    public Map<String, String> deleteGoods(String goodsId) {
         Map<String, String> ajaxMap;
         try {
-            if(StringUtil.isNotNullAndNotEmpty(goodsId)){
+            if (StringUtil.isNotNullAndNotEmpty(goodsId)) {
                 boolean flag = adminService.deleteGoodsById(Long.parseLong(goodsId));
-                if(flag){
-                    ajaxMap = AjaxUtil.generateResponseAjax("1",MsgConstants.OPERATE_SUCCESS);
-                }else{
-                    ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.OPERATE_FAILURE);
+                if (flag) {
+                    ajaxMap = AjaxUtil.generateResponseAjax("1", MsgConstants.OPERATE_SUCCESS);
+                } else {
+                    ajaxMap = AjaxUtil.generateResponseAjax("0", MsgConstants.OPERATE_FAILURE);
                 }
-            }else{
-                ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.WRONG_PARAMETERS);
+            } else {
+                ajaxMap = AjaxUtil.generateResponseAjax("0", MsgConstants.WRONG_PARAMETERS);
             }
         } catch (Exception e) {
-            ajaxMap = AjaxUtil.generateResponseAjax("0",MsgConstants.SYSTEM_ERROR);
+            ajaxMap = AjaxUtil.generateResponseAjax("0", MsgConstants.SYSTEM_ERROR);
         }
         return ajaxMap;
     }

@@ -12,6 +12,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Date;
 
 @Service("ordersService")
 public class OrdersServiceImpl implements OrdersService {
@@ -27,6 +28,9 @@ public class OrdersServiceImpl implements OrdersService {
     @Override
     public boolean addOrder(Orders orders) {
         try {
+            Date date = new Date();
+            orders.setCreateDate(date);
+            orders.setModifyDate(date);
             int flag = ordersMapper.insertSelective(orders);
             return flag > 0;
         } catch (Exception e) {

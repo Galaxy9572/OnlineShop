@@ -24,13 +24,13 @@ var checkInfo = function () {
 var addBankCard = function () {
     if(checkInfo()){
         var userId = $("#input_userId").val();
-        var bankCardName = $("#bankCardName").val();
+        var bankName = $("#bankName").val();
         var bankCardId = $("#bankCardId").val();
         $.post(
-            "deleteBankCard",{
+            "addBankCard",{
                 "userId":userId,
                 "bankCardId":bankCardId,
-                "bankCardName":bankCardName
+                "bankName":bankName
             },function (data) {
                 showInfo(data);
             },"json"
@@ -39,15 +39,21 @@ var addBankCard = function () {
 };
 
 var deleteBankCard = function (bankCardId) {
-    $.ajax({
-        url:"deleteBankcardById",
-        type:"post",
-        dataType:"json",
-        data:{
-            "bankCardId":bankCardId
-        },
-        success:function (data) {
-            showInfo(data);
+    confirm("你确定要删除吗", "操作将无法复原！", function (isConfirm) {
+        if (isConfirm) {
+            $.ajax({
+                url:"deleteBankCard",
+                type:"post",
+                dataType:"json",
+                data:{
+                    "bankCardId":bankCardId
+                },
+                success:function (data) {
+                    showInfo(data);
+                }
+            });
+        } else {
+            //取消按钮：什么都不干
         }
-    });
+    }, {confirmButtonText: '确定', cancelButtonText: '取消', width: 400});
 };

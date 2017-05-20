@@ -23,6 +23,67 @@ var showInfo = function (data) {
     }
 };
 
+var deleteMsg = function (msgId) {
+    confirm("你确定要删除吗", "操作将无法复原！", function (isConfirm) {
+        if (isConfirm) {
+            console.log(msgId);
+            $.ajax({
+                url: "../userMsg/deleteMsg",
+                type: "post",
+                dataType: "json",
+                data: {
+                    "messageId":msgId
+                },
+                success: function (data) {
+                    showInfo(data);
+                }
+            });
+        } else {
+            //取消按钮：什么都不干
+        }
+    }, {confirmButtonText: '确定', cancelButtonText: '取消', width: 400});
+};
+
+var deleteCart = function (cartId) {
+    confirm("你确定要删除吗", "操作将无法复原！", function (isConfirm) {
+        if (isConfirm) {
+            $.ajax({
+                url: "../shoppingCart/removeFromCart",
+                type: "post",
+                dataType: "json",
+                data: {
+                    "cartId":cartId
+                },
+                success: function (data) {
+                    showInfo(data);
+                }
+            });
+        } else {
+            //取消按钮：什么都不干
+        }
+    }, {confirmButtonText: '确定', cancelButtonText: '取消', width: 400});
+};
+
+var deleteOrder = function (orderId) {
+    confirm("你确定要删除吗", "操作将无法复原！", function (isConfirm) {
+        if (isConfirm) {
+            $.ajax({
+                url: "../order/deleteOrder",
+                type: "post",
+                dataType: "json",
+                data: {
+                    "orderId":orderId
+                },
+                success: function (data) {
+                    showInfo(data);
+                }
+            });
+        } else {
+            //取消按钮：什么都不干
+        }
+    }, {confirmButtonText: '确定', cancelButtonText: '取消', width: 400});
+};
+
 var PAGESIZE = 10;
 var boughtTableOptions = {
     currentPage: 1,  //当前页数
@@ -256,12 +317,13 @@ function orderTable(userId,statement,pageNumber, pageSize) {
                         $(dataList).each(function () {//重新生成
                             $("#orderTableBody").append('<tr>')
                                 .append("<td>" + "<input type='checkbox' data-msgId='" + this.messageId + "'</td>")
-                                .append("<td>" + this.fromUserId + "</td>")
-                                .append("<td>" + this.context + "</td>")
+                                .append("<td>" + this.userId + "</td>")
+                                .append("<td>" + this.goodsId + "</td>")
                                 .append("<td>" + this.statement + "</td>")
-                                .append("<td>" + this.createTime + "</td>")
-                                .append("<td>" + '<input type="button" value="删除">' + "</td>")
-                                .append('</tr>');
+                                .append("<td>" + this.createDate + "</td>")
+                                .append("<td>" + this.modifyDate + "</td>")
+                                .append("<td>" + "<input type='button' value='删除' onclick='deleteOrder("+this.orderId+");'>" + "</td>")
+                                .append("</tr>");
                         });
                     } else {
                         $("#orderTableBody").append('<tr><th colspan ="6"><center>暂无消息</center></th></tr>');
@@ -279,7 +341,7 @@ function orderTable(userId,statement,pageNumber, pageSize) {
 
 //生成表格
 function msgTable(userId, statement, pageNumber, pageSize) {
-    var url = "../user/queryMsgByCondition"; //请求的URL
+    var url = "../userMsg/queryMsgByCondition"; //请求的URL
     var reqParams = {
         'userId': userId,
         'statement': statement,
@@ -332,7 +394,7 @@ function msgTable(userId, statement, pageNumber, pageSize) {
                                 .append("<td>" + this.context + "</td>")
                                 .append("<td>" + this.statement + "</td>")
                                 .append("<td>" + this.createTime + "</td>")
-                                .append("<td>" + '<input type="button" value="删除">' + "</td>")
+                                .append("<td>" + "<input type='button' value='删除' onclick='deleteMsg("+this.messageId+")'>" + "</td>")
                                 .append('</tr>');
                         });
                     } else {
@@ -401,7 +463,7 @@ function cartTable(userId, pageNumber, pageSize) {
                                 .append("<td>" + this.goodsId + "</td>")
                                 .append("<td>" + this.createTime + "</td>")
                                 .append("<td>" + this.modifyTime + "</td>")
-                                .append("<td>" + '<input type="button" value="删除">' + "</td>")
+                                .append("<td>" + "<input type='button' value='删除' onclick='deleteCart("+this.cartId+")'>" + "</td>")
                                 .append('</tr>');
                         });
                     } else {

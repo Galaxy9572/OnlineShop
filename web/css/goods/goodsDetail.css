@@ -117,3 +117,56 @@
     margin: 2% auto;
     box-shadow: 0 0 10px #eee;
 }
+
+#div_payForm{
+    display: none;
+    width: 20%;
+    height: 25%;
+    position: fixed;
+    top: 30%;
+    left: 40%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px #ccc;
+    z-index: 10;
+}
+
+#bt_payForm_confirm{
+    width: 20%;
+    height: 15%;
+    color: #fff;
+    background: #3cf;
+    border: 0;
+    border-radius: 10%;
+    margin: 1% 3%;
+}
+
+#bt_payForm_cancel{
+    width: 20%;
+    height: 15%;
+    color: #fff;
+    background: #CCCCCC;
+    border: 0;
+    border-radius: 10%;
+    margin: 1% 3%;
+}
+
+#payInfoTable{
+    width: 100%;
+    height: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#div_background{
+    display: none;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+}

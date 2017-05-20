@@ -48,8 +48,8 @@
                                 <option value="1">买家</option>
                                 <option value="2">卖家</option>
                             </select>
-                    <input type="button" id="multiDeleteUser" value="批量删除" onclick="deleteUsers();">
-                    <input type="button" value="搜索" id="bt_userQuerySubmit" class="bt_search">
+                    <input type="button" value="搜索" id="bt_userQuerySubmit">
+                    <input type="button" value="添加管理员" id="bt_addAdmin" onclick="addAdmin()">
                     <br><br>
                 </div>
                 <table id="userManageTable" class="genTable">
@@ -168,5 +168,26 @@
     <div id="div_bottom">
 
     </div>
+    <div id="div_addAdmin">
+        <h3>添加管理员</h3>
+        <div id="div_adminInfo">
+            <table id="adminInfoTable">
+                <tr>
+                    <td>用户名</td><td><input type="text" id="input_adminName"/></td>
+                </tr>
+                <tr>
+                    <td>密码</td>
+                    <td>
+                        <input type="password" id="input_password"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <button id="bt_cancel" onclick="cancelAdd()">取消</button>
+            <button id="bt_confirm" onclick="confirmAdd()">确定</button>
+        </div>
+    </div>
+    <div id="div_background"></div>
 </body>
 </html>

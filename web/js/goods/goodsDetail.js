@@ -51,5 +51,32 @@ var addToCart = function () {
 };
 
 var buyNow = function () {
+    if($("#input_userId").val() === ""){
+        window.location.href = "../user/login";
+        return;
+    }
+    $("#div_payForm").show();
+    $("#div_background").show();
+};
 
+var cancelPay = function () {
+    $("#div_payForm").hide();
+    $("#div_background").hide();
+};
+
+var confirmPay = function () {
+    var userId = $("#input_userId").val();
+    var goodsId = $("#input_goodsId").val();
+    var sellerId = $("#input_sellerId").val();
+    $.post(
+        "../order/addOrder",{
+            "goodsId":goodsId,
+            "userId":userId,
+            "sellerId":sellerId
+        },
+        function (data) {
+            showInfo(data);
+            cancelPay();
+        },"json"
+    );
 };

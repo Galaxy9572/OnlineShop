@@ -14,6 +14,7 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -32,6 +33,9 @@ public class UserMessageServiceImpl implements UserMessageService {
     @Override
     public boolean sendMessage(UserMessage message) {
         try {
+            Date date = new Date();
+            message.setCreateTime(date);
+            message.setModifyTime(date);
             int flag = userMessageMapper.insertSelective(message);
             return flag > 0;
         } catch (DataAccessException e) {
@@ -41,7 +45,7 @@ public class UserMessageServiceImpl implements UserMessageService {
     }
 
     @Override
-    public boolean deleteMessageByUserId(Long messageId) {
+    public boolean deleteMessageByMessage(Long messageId) {
         try {
             int flag = userMessageMapper.deleteByPrimaryKey(messageId);
             return flag > 0;
@@ -70,10 +74,8 @@ public class UserMessageServiceImpl implements UserMessageService {
         pageSize = pageSize == null?10:pageSize;
         PageHelper.startPage(pageNo,pageSize);
         try {
-            if(StringUtil.isNotNullAndNotEmpty(userId)){
-                long userIdLong = Long.parseLong(userId);
-                example.or().andUserIdEqualTo(userIdLong);
-            }
+            long userIdLong = Long.parseLong(userId);
+            example.or().andUserIdEqualTo(userIdLong);
             int statementInt = Integer.parseInt(statement);
             switch (statementInt){
                 case 0:

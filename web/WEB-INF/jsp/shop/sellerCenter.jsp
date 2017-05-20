@@ -114,13 +114,10 @@
                 <table id="orderTable" class="genTable">
                     <thead class="genTableTitle">
                     <tr>
-                        <th width="8%">ID</th>
-                        <th width="10%">商品名</th>
-                        <th width="8%">商品类型</th>
-                        <th width="8%">价格</th>
-                        <th width="8%">折扣</th>
-                        <th width="8%">评分</th>
-                          <th width="10%">状态</th>
+                        <th width="5%"><input type="checkbox" id="cbSelectAllOrders">&nbsp;全选</th>
+                        <th width="8%">买家ID</th>
+                        <th width="10%">商品ID</th>
+                        <th width="10%">状态</th>
                         <th width="15%">创建时间</th>
                         <th width="15%">修改时间</th>
                         <th width="10%">操作</th>

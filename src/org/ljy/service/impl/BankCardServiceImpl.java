@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
 
 @Service("bankCardService")
@@ -29,6 +30,9 @@ public class BankCardServiceImpl implements BankCardService {
     @Override
     public boolean addBankCard(BankCard bankCard) {
         try {
+            Date date = new Date();
+            bankCard.setCreateTime(date);
+            bankCard.setModifyTime(date);
             int flag = bankCardMapper.insertSelective(bankCard);
             return flag > 0;
         } catch (Exception e) {

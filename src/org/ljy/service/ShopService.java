@@ -14,6 +14,8 @@ public interface ShopService {
 
     Shop getShop(ShopExample example);
 
+    Shop getShopByShopId(Long shopId);
+
     PagedResult selectByExampleWithBLOBsByPage(ShopExample example, Integer pageNo, Integer pageSize);
 
     PagedResult selectByExampleByPage(ShopExample example,Integer pageNo, Integer pageSize);

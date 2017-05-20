@@ -12,7 +12,7 @@ public interface UserMessageService {
 
     boolean sendMessage(UserMessage message);
 
-    boolean deleteMessageByUserId(Long messageId);
+    boolean deleteMessageByMessage(Long messageId);
 
     boolean updateMessage(UserMessage message);
 

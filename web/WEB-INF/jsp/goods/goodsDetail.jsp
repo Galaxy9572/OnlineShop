@@ -42,20 +42,46 @@
                 </a>
             </div>
             <div id="div_ops">
-                <button id="bt_buyNow">立即购买</button>
+                <button id="bt_buyNow" onclick="buyNow()">立即购买</button>
                 <button id="addToCart" onclick="addToCart()">加入购物车</button>
             </div>
         </div>
     </div>
 
-    <div id="div_shopInfo">
+   <%-- <div id="div_shopInfo">
 
-    </div>
+    </div>--%>
 </div>
 <div id="div_bottom">
 
 </div>
+<div id="div_payForm">
+    <h3>付款</h3>
+    <div id="div_payInfo">
+        <table id="payInfoTable">
+            <tr>
+                <td>应付</td><td>￥${requestScope.goodsDetail.price}</td>
+            </tr>
+            <tr>
+                <td>银行卡</td>
+                <td>
+                    <select>
+                        <c:forEach var="item" items="${requestScope.myBankCards}">
+                            <option value="${item.bankCardId}">${item.bankName}</option>
+                        </c:forEach>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <button id="bt_payForm_cancel" onclick="cancelPay()">取消</button>
+        <button id="bt_payForm_confirm" onclick="confirmPay()">确定</button>
+    </div>
+</div>
+<div id="div_background"></div>
 <input id="input_userId" type="hidden" value="${sessionScope.user.userId}"/>
+<input id="input_sellerId" type="hidden" value="${requestScope.sellerId}"/>
 <input id="input_shopId" type="hidden" value="${sessionScope.userShop.shopId}"/>
 <input id="input_goodsId" type="hidden" value="${requestScope.goodsDetail.goodsId}"/>
 </body>

@@ -52,6 +52,40 @@ var getSelectedUserIds = function () {
     return userIds;
 };
 
+var addAdmin = function () {
+    $("#div_background").show();
+    $("#div_addAdmin").show();
+};
+
+var cancelAdd = function () {
+    $("#div_addAdmin").hide();
+    $("#div_background").hide();
+};
+
+var confirmAdd = function () {
+    var userName = $("#input_adminName").val();
+    var password = $("#input_password").val();
+    confirm("你确定要添加管理员吗", "操作将无法复原！", function (isConfirm) {
+        if (isConfirm) {
+            var userIds = getSelectedUserIds();
+            $.ajax({
+                url: "addAdmin",
+                type: "post",
+                dataType: "json",
+                data: {
+                    "userName": userName,
+                    "password":password
+                },
+                success: function (data) {
+                    showInfo(data);
+                }
+            });
+        } else {
+            //取消按钮：什么都不干
+        }
+    }, {confirmButtonText: '确定', cancelButtonText: '取消', width: 400});
+};
+
 var deleteUser = function (userId) {
     confirm("你确定要删除吗", "操作将无法复原！", function (isConfirm) {
         if (isConfirm) {
@@ -209,7 +243,7 @@ function userManageTable(userName, userType, pageNumber, pageSize) {
                                 .append("<td>" + "<input type='checkbox' class='userCheckboxes' data-userId='" + this.userId + "'</td>")
                                 .append("<td>" + this.userId + "</td>")
                                 .append("<td>" + this.userName + "</td>")
-                                .append("<td>" + this.userType + "</td>")
+                                .append("<td>"+this.userType+"</td>")
                                 .append("<td>" + this.email + "</td>")
                                 .append("<td>" + this.phone + "</td>")
                                 .append("<td>" + this.statement + "</td>")

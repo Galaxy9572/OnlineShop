@@ -78,7 +78,22 @@ public class ShopServiceImpl implements ShopService {
 
     @Override
     public Shop getShop(ShopExample example) {
-        return shopMapper.selectByExampleWithBLOBs(example).get(0);
+        try {
+            return shopMapper.selectByExampleWithBLOBs(example).get(0);
+        } catch (Exception e) {
+            LOG.warn(e.getMessage(),e);
+            return null;
+        }
+    }
+
+    @Override
+    public Shop getShopByShopId(Long shopId) {
+        try {
+            return shopMapper.selectByPrimaryKey(shopId);
+        } catch (Exception e) {
+            LOG.warn(e.getMessage(),e);
+            return null;
+        }
     }
 
     @Override

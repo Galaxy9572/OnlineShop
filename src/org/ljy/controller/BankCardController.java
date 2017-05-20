@@ -2,6 +2,7 @@ package org.ljy.controller;
 
 import org.ljy.common.MsgConstants;
 import org.ljy.domain.BankCard;
+import org.ljy.domain.User;
 import org.ljy.service.BankCardService;
 import org.ljy.service.UserService;
 import org.ljy.util.AjaxUtil;
@@ -11,6 +12,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -25,7 +28,14 @@ public class BankCardController extends BaseController{
     private BankCardService bankCardService;
 
     @RequestMapping("/bankcard/info")
-    public String bankCardInfoPage(){
+    public String bankCardInfoPage(HttpSession session,HttpServletRequest request){
+        try {
+            User user = (User) session.getAttribute("user");
+            List<BankCard> bankCards = bankCardService.queryBankCard(user.getUserId());
+            request.setAttribute("myBankCards",bankCards);
+        } catch (Exception e) {
+            LOG.warn(e.getMessage(),e);
+        }
         return "bankcard/bankcardInfo";
     }
 

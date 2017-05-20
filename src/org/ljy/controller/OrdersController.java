@@ -3,7 +3,9 @@ package org.ljy.controller;
 import org.ljy.common.MsgConstants;
 import org.ljy.common.PagedResult;
 import org.ljy.domain.Orders;
+import org.ljy.domain.UserMessage;
 import org.ljy.service.OrdersService;
+import org.ljy.service.UserMessageService;
 import org.ljy.util.AjaxUtil;
 import org.ljy.util.StringUtil;
 import org.springframework.stereotype.Controller;
@@ -23,12 +25,20 @@ public class OrdersController extends BaseController{
     @Resource
     private OrdersService ordersService;
 
+    @Resource
+    private UserMessageService userMessageService;
+
     @RequestMapping("/order/addOrder")
     @ResponseBody
     public Map<String,String> addOrder(HttpServletRequest request,Orders orders){
         Map<String, String> ajaxMap;
         try {
             boolean bool = ordersService.addOrder(orders);
+            UserMessage message = new UserMessage();
+            message.setFromUserId(orders.getUserId());
+            message.setUserId(orders.getSellerId());
+            message.setContext("你有新的订单，请及时处理");
+            bool = userMessageService.sendMessage(message);
             if(bool){
                 ajaxMap = AjaxUtil.generateResponseAjax("1",MsgConstants.OPERATE_SUCCESS);
             }else{
@@ -82,7 +92,7 @@ public class OrdersController extends BaseController{
 
     @RequestMapping("/order/queryOrderByCondition")
     @ResponseBody
-    public String queryOrderByCondition(HttpServletRequest request,String queryType,String userId, String statement, Integer pageNumber, Integer pageSize){
+    public String queryOrderByCondition(HttpServletRequest request,String queryType,String userType, String userId, String statement, Integer pageNumber, Integer pageSize){
         PagedResult result;
         try {
             if(StringUtil.isNotNullAndNotEmpty(queryType)&&StringUtil.isNotNullAndNotEmpty(userId)&&StringUtil.isNotNullAndNotEmpty(statement)){

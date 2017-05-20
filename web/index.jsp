@@ -76,8 +76,8 @@
 						<p class="catalog_name">男装</p>
 						<hr class="catalog_separator">
 						<ul>
-							<li><a href="goods/list?type=1">上衣</a></li>
-							<li><a href="goods/list?type=3">鞋</a></li>
+							<li><a href="goods/list?type=1" target="_blank">上衣</a></li>
+							<li><a href="goods/list?type=3" target="_blank">鞋</a></li>
 						</ul>
 					</div>
 					<div id="div_middle_catalog_woman" class="div_catalog">
@@ -85,8 +85,8 @@
 						<p class="catalog_name">女装</p>
 						<hr class="catalog_separator">
 						<ul>
-							<li><a href="goods/list?type=4">上衣</a></li>
-							<li><a href="goods/list?type=6">鞋</a></li>
+							<li><a href="goods/list?type=4" target="_blank">上衣</a></li>
+							<li><a href="goods/list?type=6" target="_blank">鞋</a></li>
 						</ul>
 					</div>
 					<div id="div_middle_catalog_read" class="div_catalog">
@@ -94,8 +94,8 @@
 						<p class="catalog_name">阅读</p>
 						<hr class="catalog_separator">
 						<ul>
-							<li><a href="goods/list?type=4">文学</a></li>
-							<li><a href="goods/list?type=9">科幻</a></li>
+							<li><a href="goods/list?type=4" target="_blank">文学</a></li>
+							<li><a href="goods/list?type=9" target="_blank">科幻</a></li>
 						</ul>
 					</div>
 					<div id="div_middle_catalog_digital" class="div_catalog">
@@ -103,8 +103,8 @@
 						<p class="catalog_name">数码</p>
 						<hr class="catalog_separator">
 						<ul>
-							<li><a href="goods/list?type=7">电脑</a></li>
-							<li><a href="goods/list?type=8">手机</a></li>
+							<li><a href="goods/list?type=7" target="_blank">电脑</a></li>
+							<li><a href="goods/list?type=8" target="_blank">手机</a></li>
 						</ul>
 					</div>
 					<div id="div_middle_catalog_outdoor" class="div_catalog">
@@ -112,8 +112,8 @@
 						<p class="catalog_name">户外</p>
 						<hr class="catalog_separator">
 						<ul>
-							<li><a href="">运动</a></li>
-							<li><a href="">探险</a></li>
+							<li><a href="" target="_blank">运动</a></li>
+							<li><a href="" target="_blank">探险</a></li>
 						</ul>
 					</div>
 				</div>
